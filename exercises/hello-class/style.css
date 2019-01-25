@@ -1,0 +1,8 @@
+h1 {
+    background-color: rgba(19, 32, 41, 0.9); 
+    /* a the fourth one is opacity clraify how to get extension */
+    color: #cccccc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 300; 
+}

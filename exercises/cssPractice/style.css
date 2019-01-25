@@ -1,0 +1,34 @@
+/* CSS resets/ default styling for whole page */
+* {
+    margin: 0;
+}
+
+
+h3 {
+    border: 1px solid green;
+}
+
+.my-h3-class {
+    border: 3px dotted violet;
+    color: coral;
+}
+
+#my-h3-id {
+    font-family: 'Courier New', Courier, monospace
+
+}
+
+#container {
+    border: 2px dashed cornflowerblue;
+
+}
+
+#container h1 {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+div#container ul li {
+    border: 1px dotted violet;
+    list-style: roman;
+}
