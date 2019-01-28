@@ -1,62 +1,72 @@
 
 
-console.log("The Preliminaries")
-// Write an if statement that prints "is greater than" if 5 is greater than 3
+// Write a loop that will print out all the names of the people of the people array
+
+var peopleArray = [
+    {
+      name: "Harrison Ford",
+      occupation: "Actor"
+    },
+    {
+      name: "Justin Bieber",
+      occupation: "Singer"
+    },
+    {
+      name: "Vladimir Putin",
+      occupation: "Politician"
+    },
+    {
+      name: "Oprah",
+      occupation: "Entertainer"
+    }
+  ]
+
+  for (i=0;i < peopleArray.length; i++) {
+      console.log(peopleArray[i].name + " " + peopleArray[i].occupation)
+  }
 
 
-if (5 > 3) {
-    console.log("5 is greater than 3");
+// Write a loop that pushes the names into a names array, and the occupations into an occupations array.
+names = [];
+occupations = [];
+
+for (i=0; i < peopleArray.length; i++) {
+    names.push(peopleArray[i].name);
+    occupations.push(peopleArray[i].occupation);
+    }
+
+    console.log(names);
+    console.log(occupations);
+
+
+// Write a loop that pushes every other name to an array starting with "Harrison Ford", and every other occupation to another array starting with "Singer".
+// ????????
+harrison = [];
+for(i+0; i >peopleArray.length;i++) {
+    if (i % 2 == 0) {
+        harrison.push(peopleArray.splice(i));
+    }
+
+    console.log(harrison);
+    
+    
 }
+//harrison.push(peopleArray.splice(i % 2 ==0));
 
-// Write an if statement that prints "is the length" if the length of "cat" is 3
+// mondo way of finding odd and even
 
-var cat = "cat"
-if (cat.length = 3) {
-    console.log(cat.length + " is the length of cat")
-}
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// Write an if/else statement that checks if "cat" is equal to "dog" and prints, "not the same" when they are not equal.
+// // filter out all elements that are located at an even index in the array.
 
-var cat = "cat";
-var dog = "dog";
+// let x = arr.filter((element, index) => {
+//   return index % 2 === 0;
+// })
 
-if (cat !== dog) {
-    console.log("not the same")
-}
-
-console.log("Bronze Medal")
-
-// Using the below object, write an if statement that prints <theNameOfThePersonInObject> is allowed to go to the movie if they are old enough (18 or older), and the opposite if they are not older than 18.
+// console.log(x) 
+// // [1, 3, 5, 7, 9]
 
 
-var person = {
-  name: "Bobby",
-  age: 12
-}
+//The gold medals 
 
-if (person.age >= 18) {
-    console.log(person.name + " is allowed to go to the movies")
-} else {
-    console.log(person.name + " is not allowed to go to the movies")
-}
-
-
-// Using that same object, only allow them into the movie if their name starts with "B"
-
-nameArray = ["B", "o", "b", "b", "y"];
-nameArray.toLowerCase;
-
-if (person.name[0] === "B") {
-    console.log("Hi " + person.name + " you can come to the movies because your name starts with a B")
-}
-
-// Using that same object, only allow them into the movie if their name starts with "B" and they are older than 18.
-
-if (person.name[0] === "B" && person.age > 18) {
-    console.log("Hi " +person.name + " you can come to the movies because you're older than 18 and your name starts with a B") 
-} else {
-    console.log("Sorry " + person.name + " you can't come to the movies because you're either not older than 18 or you name does not start with a B")
-}
-
-console.log("Silver Medal")
-
+// 
