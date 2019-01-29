@@ -1,0 +1,30 @@
+* {
+    color: red;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: black;
+}
+
+p {
+    display: inline-block;
+    width: auto;
+}
+
+div {
+    /* box-sizing: border-box; */ 
+    /* with/ or without it it doesn't overflow on the design  */
+    display: inline-block;
+    margin: 10px;
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: solid red 5px;
+    
+}
+
+ /* review box model sizing  */
