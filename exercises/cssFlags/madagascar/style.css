@@ -1,0 +1,41 @@
+/* madagascar */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* width: 100%; */   
+}
+
+/* div {
+    /* border: 5px solid white; */
+    /* float: left;
+} */ 
+
+.white {
+    float: right;
+    /* display: inline-block; */
+    background-color: white;
+    width: 25%; 
+    height: 100px; 
+}
+
+
+
+.red {
+    /* float: left; */
+    display: inline-block;
+    background-color: red;
+    width: 600px;
+    height: 300px;
+    
+}
+
+
+.green {
+    /* float: left; */
+    display: inline-block;
+    background-color: green;
+    width: 600px;
+    height: 300px;
+
+}

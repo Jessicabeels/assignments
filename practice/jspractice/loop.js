@@ -13,7 +13,7 @@
 // if(i === 5){ 
 //         break;
 //     }
-    
+
 // var users = [
 //     { name: "Steve", age: 20 },
 //     {name: "Alan", age: 28},
@@ -37,18 +37,19 @@
 
 
 for (let i = 0; i <= 100; i++) {
-    if(i % 2 !== 0) {
+    if (i % 2 !== 0) {
         console.log(i)
     }
 }
 
-   
-//do while loops 
 
-do {
-    //playing game
-}
-while(isAlive) {
-    var randomNUm = Math.floor(Math.random())
-}
+// //do while loops 
+
+// do {
+//     //playing game
+// }
+// while(isAlive) {
+//     var randomNUm = Math.floor(Math.random())
+// }
+
 

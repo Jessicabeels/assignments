@@ -1,0 +1,68 @@
+/* france */
+
+* {
+    margin:30px black;
+    background-color: black;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+
+
+.france {
+
+width: 30%;
+height: auto;
+
+
+
+
+
+
+
+}
+.body {
+    /* margin: 50px; */
+    display: inline-block;
+    width: auto;
+}
+
+
+.flag {
+    padding: 15px;
+}
+
+div {
+    float: left;
+    
+}
+
+.left {
+    float: left
+}
+
+.blue {
+    width: 33.33%;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.white {
+    width: 33.33%;
+    height: 200px;
+    background-color: white;
+    display: inline-block;
+}
+
+.red {
+    width: 33.33%;
+    height: 200px;
+    background-color:red;
+    display: inline-block;
+}
+
+
+
+

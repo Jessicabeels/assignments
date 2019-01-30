@@ -1,0 +1,22 @@
+/* germany */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 33.33%;
+}
+
+.red {
+    background-color: red;
+    height: 33.33%;
+}
+
+.black {
+    background-color: black;
+    height: 33.33%;
+}
