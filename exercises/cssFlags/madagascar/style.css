@@ -11,6 +11,15 @@
     /* float: left;
 } */ 
 
+
+.right {
+    float: right;
+}
+
+
+.left {
+    float: left;
+}
 .white {
     float: right;
     /* display: inline-block; */
@@ -25,7 +34,7 @@
     /* float: left; */
     display: inline-block;
     background-color: red;
-    width: 600px;
+    width: 75%;
     height: 300px;
     
 }
@@ -35,7 +44,7 @@
     /* float: left; */
     display: inline-block;
     background-color: green;
-    width: 600px;
+    width: 75%;
     height: 300px;
 
 }

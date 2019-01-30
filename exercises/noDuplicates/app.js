@@ -1,28 +1,4 @@
-// var input = "bookkeeper larry";
-// //Output: "bokepr lay"
-
-// function noDuplicates(str) {
-//     for (i = 0; i < str.length; i++) {
-//         var arr = str.split('');
-//         // return arr;
-//         var uniqueArr = [];
-//         for(let i = 0; i < arr.length; i++) {
-//             if (uniqueArr.indexOf(arr[i])) === -1) {
-//             uniqueArr.push(arr[i])
-//         }
-//     }
-
-//     return uniqueArr;
-    
-// }
-
-// console.log(noDuplicates("bookkeeper latty"))
-
-// make the string an array so letters are separate
-// compare duplicates
-// remove duplicates
-
-var input = "bookkeerp larry"
+var input = "Bookkeeper larry"
 function removeDuplicates(str){
     
     var arr = str.split('');
@@ -36,4 +12,4 @@ function removeDuplicates(str){
     return str1
 }
 
-console.log(removeDuplicates(input)); // [ 'DELHI', 'NEWYORK', 'GOA', 'MUMBAI', 'CALIFORNIA' ]
+console.log(removeDuplicates(input)); 

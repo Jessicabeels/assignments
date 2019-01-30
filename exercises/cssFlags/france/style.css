@@ -14,14 +14,12 @@
 
 width: 30%;
 height: auto;
-
-
-
-
-
-
-
 }
+
+.left {
+    float: left;
+}
+
 .body {
     /* margin: 50px; */
     display: inline-block;
@@ -31,6 +29,8 @@ height: auto;
 
 .flag {
     padding: 15px;
+    width: 30%;
+    height: auto;
 }
 
 div {
@@ -63,6 +63,9 @@ div {
     display: inline-block;
 }
 
+.green {
+    background-color: green;
+}
 
 
 
