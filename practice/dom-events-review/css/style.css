@@ -1,0 +1,18 @@
+* {
+    outline: none;
+}
+
+.main-title {
+    text-align: center;
+    font-weight: lighter;
+    background-color: dodgerblue;
+    font-family: sans-serif;
+}
+
+input,
+button {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 20px;
+}
