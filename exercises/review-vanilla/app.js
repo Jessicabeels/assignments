@@ -90,17 +90,71 @@
 //         //without BREAK would just be continued logging bc when true just keeps going
 
 
-var num = 10;
+// var num = 10;
 
-// if (num===10) {
-//     return true;
-// } else {
-//     return false
+// // if (num===10) {
+// //     return true;
+// // } else {
+// //     return false
+// // }
+
+// // //or 
+
+// console.log(num === 10);
+
+// //ternary operator 
+// num === 10 ? console.log("num is 10") : console.log("the number is not 10")
+
+//FUnctions 
+
+//1. Write a function that uses a for loop to return a new
+//array with the numbers 0 - 100 inside of it
+
+// function generateArr() {
+
+//     var result = [];
+//     for(var i = 0; i < 100; i++) {
+//         result.push(i)
+//     }
+//     return result.join(' ')
 // }
+// //make a function 
+// //make an empty array
+// //use a for loop to go throw numbers 0-100
+//     //push current number into empty array
+// // return thr final value in the now not empty array
 
-// //or 
+// //log the function call to the console
+// console.log(generateArr())
 
-console.log(num === 10);
+// var newArr = generateArr
 
-//ternary operator 
-num === 10 ? console.log("num is 10") : console.log("the number is not 10")
+
+// var matrix = [ 
+//     [1,2,3, 6,7],
+//     [4,5,6],
+//     [7,8,9]
+
+// ]
+
+
+// console.log(matrix[0],[2])
+// console.log(matrix[1], [1])
+// console.log(matrix [2], [3])
+
+
+var matrix = []
+var k = 0
+
+for(var i = 0; i < 10; i++){
+    matrix[i] = [] // matrix === [[]]
+    for(var j = 0; j < 10; j++ ) {
+        // matrix[i][j] = j 
+        matrix[i][j] = 0
+    // console.log(j)
+    }
+}
+//starts with i loop and then j loops 3 times. for every time i runs 1x, j runs 3x
+
+console.log(matrix)
+

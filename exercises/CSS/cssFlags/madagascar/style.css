@@ -1,5 +1,57 @@
 /* madagascar */
 
+
+body{
+    position: relative;
+    width: 960px;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    position: relative;
+}
+
+.flag-name{
+    position: relative;
+    margin-top: 2px;
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 50px;
+    text-align: center;
+
+
+}
+/* vicky notes */
+/* //parent tag = relative and child tag =absolute */
+
+
+.madagascar {
+    border: 5px soild black;
+    position: relative;
+    background: white;
+    width: 500px;
+    height: 330px;
+}
+
+.madagascar .red {
+    position: absolute;
+    background-color: red;
+    width: 375px;
+    height: 175px;
+    left: 275px;
+    
+}
+
+.madagascar .green {
+    position: absolute;
+    background-color: green;
+    width: 375px;
+    height: 175px;
+    top: 150px;
+    left: 275px;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,39 +64,4 @@
 } */ 
 
 
-.right {
-    float: right;
-}
-
-
-.left {
-    float: left;
-}
-.white {
-    float: right;
-    /* display: inline-block; */
-    background-color: white;
-    width: 25%; 
-    height: 100px; 
-}
-
-
-
-.red {
-    /* float: left; */
-    display: inline-block;
-    background-color: red;
-    width: 75%;
-    height: 300px;
-    
-}
-
-
-.green {
-    /* float: left; */
-    display: inline-block;
-    background-color: green;
-    width: 75%;
-    height: 300px;
-
-}
+/* . */

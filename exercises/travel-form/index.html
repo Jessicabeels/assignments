@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,54 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <h1> Pegasus Air </h1>
+<body>
+    <h1> Pegasus Private Jets </h1>
+    <h2> Please fill out the following form</h2>
     <form name="info">
-        <h4>Name</h4>
-        First:<input name = "first-name" type = "text" placeholder = "First" required>
-        Last:<input name = "last-name" type = "text" placeholder= "Last" required>
+        <h4>Name:</h4>
+        First:<input value="" type="text" name = "firstlast" placeholder="First" >
+        Last:<input value=""  type="text" name="firstlast" placeholder="Last" >
 
         <h4>Age:</h4>
-        <input name = "age" type = "number" placeholder = "Age" min = "0" max = "120" required>
+        <input value='' name="age" type="number" placeholder="Age" min="0" max="120" >
+        <!-- /says error is here -->
 
         <h4>Gender:</h4>
 
-        Male <input name = "male" type = "radio" required>
-        Female <input name = "female" type = "radio" required>
+        Male <input value="male-value" name="gender" type="radio" >
+        Female <input value="female-value" name="gender" type="radio" >
+
+        <h4>Location:</h4>
+        <select name="location">
+            <option value = "New York"> New York </option>
+            <option value = "Toyko"> Toyko </option>
+            <option value = "Dubai"> Dubai </option>
+            <option value = "Paris"> Paris </option>       
+        </select>
+
+        <h4>Dietary Restrictions:</h4>
+            <label><input type = "checkbox" name="diet"/>Vegetarian</label>
+            <label><input type = "checkbox" name="diet"/> Pescatarian  </label>
+            <label><input type = "checkbox" name="diet"/> Vegan </label>
+
+       
         
-        <h4>Location</h4>
-        <input name = "location" type = >
-
-        <h4>Dietary Restrictions</h4>
-        <input name = "diet" >
-
+        <br> 
+        <br>   
+        <br>
         <button>Submit</button>
 
     </form>
 
-   
+    <br>
+    <div id="container">
+            Your information 
+    </div>
 
-<script src="app.js"></script>
+
+
+    <script src="app.js"></script>
 </body>
+
 </html>
