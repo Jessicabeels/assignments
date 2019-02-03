@@ -11,20 +11,20 @@
 
 <body>
     <h1> Pegasus Private Jets </h1>
-    <h2> Please fill out the following form</h2>
+    <img src=https://images.unsplash.com/photo-1513912909943-53aac2542cc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60>
+    <h4>Private luxury chartered air experience</h4>
+    <h5> Please fill out the following form:</h5>
     <form name="info">
         <h4>Name:</h4>
-        First:<input value="" type="text" name = "firstlast" placeholder="First" >
-        Last:<input value=""  type="text" name="firstlast" placeholder="Last" >
+        First:<input value="" type="text" name = "first" placeholder="First" >
+        Last:<input value=""  type="text" name="last" placeholder="Last" >
 
         <h4>Age:</h4>
         <input value='' name="age" type="number" placeholder="Age" min="0" max="120" >
-        <!-- /says error is here -->
-
+        
         <h4>Gender:</h4>
-
-        Male <input value="male-value" name="gender" type="radio" >
-        Female <input value="female-value" name="gender" type="radio" >
+        Male <input value="male" name="gender" type="radio" >
+        Female <input value="female" name="gender" type="radio" >
 
         <h4>Location:</h4>
         <select name="location">
@@ -35,9 +35,9 @@
         </select>
 
         <h4>Dietary Restrictions:</h4>
-            <label><input type = "checkbox" name="diet"/>Vegetarian</label>
-            <label><input type = "checkbox" name="diet"/> Pescatarian  </label>
-            <label><input type = "checkbox" name="diet"/> Vegan </label>
+            <label><input type = "checkbox" value = "Vegetarian" name="diet"/>Vegetarian</label>
+            <label><input type = "checkbox" value = "Pescatarian" name="diet"/> Pescatarian  </label>
+            <label><input type = "checkbox" value = "Vegan" name="diet"/> Vegan </label>
 
        
         
@@ -49,9 +49,7 @@
     </form>
 
     <br>
-    <div id="container">
-            Your information 
-    </div>
+   
 
 
 
