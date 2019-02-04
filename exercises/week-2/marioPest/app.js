@@ -20,7 +20,7 @@ form.addEventListener("submit", function (event) {
     var countGoombas = form.goombas.value
     container.innerHTML = ""
     //add the inputs values together
-    var finalCount = Number(countGoombas) + Number(countBombs) + Number(countCheeps);
+    var finalCount = Number(countGoombas * 5) + Number(countBombs * 7) + Number(countCheeps * 11);
     console.log(countBombs)
     console.log(finalCount)
     console.log(typeof finalCount)
@@ -31,7 +31,7 @@ form.addEventListener("submit", function (event) {
     //create a  element to put input in
     var inputPlace = document.createElement("inputPlace")
     //give element stuff from input
-    inputPlace.textContent = finalCount
+    inputPlace.textContent = "$" + finalCount
     //append child
     container.appendChild(inputPlace)
 
