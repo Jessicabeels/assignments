@@ -56,5 +56,5 @@ function getUserChoice (userInput){
     console.log(determineWinner(userChoice,computerChoice))
   };
     
-  playGame();
+  alert(playGame());
     
