@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+
+.words {
+    font-family: monospace;
+    color: #f3f3f3;
+    text-align: center;
+}

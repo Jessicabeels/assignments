@@ -1,12 +1,8 @@
 * {
-  /* border: 1px solid black; */
+ 
   margin: 0;
   box-sizing: border-box;
-  /* margin-top: 30px; */
-  /* margin-bottom: 20px; */
-  /* background-color: antiquewhite */
-  /* background-image: no repeat url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Los_Angeles%2C_Winter_2016.jpg/1200px-Los_Angeles%2C_Winter_2016.jpgZ"); */
-}
+  }
 
 
 /* Style the navbar */
@@ -14,7 +10,7 @@
   overflow: hidden;
   background-color: #333;
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 /* Navbar links */

@@ -47,7 +47,7 @@
     border: 5pt solid white;
 }
 
-@media(min-width: 100pt) {
+@media(max-width: 768pt) {
     .orange, .green, .blue, .magenta, .babypink{
         width: 100%;
     }

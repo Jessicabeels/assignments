@@ -80,8 +80,33 @@ console.log(generateByeBye("Morty", 12));
 
 //or just need
 
-var display = document.getElementById('container')
+// var display = document.getElementById('container')
 
-display.innerHTML = "<h1 class='title-class'>Hello World</h1>"
+// display.innerHTML = "<h1 class='title-class'>Hello World</h1>"
 
 // display.appendChild(title)
+
+
+//Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.
+
+// function month_name(num) {
+// 	var monthArray = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+// 	var month = monthArray[num -1]
+// 	return month
+// }
+
+// console.log(month_name(7));
+
+//Create a function that takes an array of numbers. Return the largest number in the array.
+
+
+function findLargestNum(arr) {
+	var arrMax = Math.max.apply(null, arr)
+	return arrMax
+}
+
+console.log(findLargestNum())
+
+
+//Create a function that returns the number of argument it was called with.
+
