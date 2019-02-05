@@ -1,0 +1,62 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: black;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: column */
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* centeres according to row...but when you go from row to column goes up and down */
+    align-items: center;
+    background-color: blue;
+    width: 100vw;
+    /* height: 100vh; */
+    height: 100%;
+}
+
+/* @media(min-width: 500pt) {
+    .container{
+        width: 50vw;
+    }
+} */
+
+.card {
+    background: rgb(95, 86, 86);
+    width: 150pt;
+    height: 200pt;
+    margin: 20pt;
+}
+
+.first {
+    background: red;
+    align-self: flex-end;
+}
+
+.last {
+    background: green;
+}
+
+.navbar {
+    background: purple;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* justify-content: flex-start; */
+    justify-content: space-around;
+    /* justified based on axis */
+    align-items: center;
+    /* aligned based on items */
+    padding: 50pt;
+    font-size: 20pt;
+
+}

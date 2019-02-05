@@ -1,69 +1,105 @@
 * {
+    margin: 0;
     box-sizing: border-box;
   }
 
 #header {
     
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
     margin-top: 40px;
-
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
 }
 
-#mario {
-    position: absolute;
-    margin-top: -330px;
-    float: left;
-    width: 7%;
-    padding: 45px;
-    margin-left: 1300px;
+
+#background {
+    background: url('https://i.pinimg.com/originals/54/b5/e4/54b5e461a747c36e4649edafbb9e606d.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
+
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10pt;
+    
+}
+
+#bombs, #cheeps, #goombas {
+    width: 10%;
+    height: 20%;
+}
+
+
 
 h1, h4 {
-    text-align: center;
     font-family: 'Inconsolata', monospace;
+    text-align: center;
+    padding: 10pt;
 }
 
 input {
-    width: 300px;
-    height: 50px;
+    width: 100pt;
+    height: 20pt;
     font-size: 14px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.12), 0 8px 10px rgba(0,0,0,0.24);
+}
+
+
+.buttons {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  margin:auto;
+} 
+
+ 
+
+#container {
+display: flex;
+justify-content: center;
+font-family: 'Inconsolata', monospace;
+padding: 10px;
+margin: 7px;
+width: 10%;
+background-color:red;
+color: #ffffff;
+box-shadow: 0 1px 8px rgba(0,0,0,0.12), 0 8px 10px rgba(0,0,0,0.24);
+}
+
+footer {
+    display: flex;
+    opacity: 0.5;
+    font-family: 'Inconsolata', monospace;
+    width: 30%;
+    position: absolute;
+    height: auto; 
+    color: #ffffff;
+    background-color: black;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-form div {
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    width: 498px;
-}
-
-#container, #Submit  {
-  text-align: center;
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 8%;
-  font-family: 'Inconsolata', monospace;
-  padding: 40px;
-  /* margin-bottom: 7px; */
-  background-color:rgb(219, 161, 52);
-  color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 10pt;
+    flex-shrink: 0; 
 }
 
 
+@media(max-width: 768pt) {
+    footer, #container{
+        width: 100%;
+    }
 
-#bombs, #cheeps {
-    width: 60%;
 }
 
-#turtles {
-    float: right;
-}
-
-#goombas {
-    margin-left: 70px;
-}
