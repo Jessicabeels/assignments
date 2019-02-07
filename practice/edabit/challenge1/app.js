@@ -110,3 +110,27 @@ console.log(findLargestNum())
 
 //Create a function that returns the number of argument it was called with.
 
+
+function reverse(bool) {
+	if (bool === true){
+		return 'false'
+	} else if ( bool === false){
+		return 'true'
+	} else {
+		return 'boolean expected'
+	}
+}
+
+console.log(reverse(true))
+
+
+//Create a function that takes an array of numbers 
+//and returns the smallest number in the set.
+
+var arrTest = [34, -345, -1, 100]
+
+function findSmallestNum(arr) {
+	return Math.min(arr)
+}
+
+console.log(findSmallestNum([34, -345, -1, 100]))
