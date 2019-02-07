@@ -99,6 +99,7 @@ footer {
     display: flex;
     opacity: 0.5;
     font-family: 'Inconsolata', monospace;
+    font-weight: lighter;
     position: fixed;
     z-index: 2;
     right: 0;
