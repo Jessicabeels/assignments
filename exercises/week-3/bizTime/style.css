@@ -52,7 +52,7 @@ h4 {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 }
@@ -147,10 +147,10 @@ div.background {
 
 div.transbox {
   margin: 60pt;
-  background-color: #ffffff;
+  background-color: #ffffff6f;
   border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); 
+  /* opacity: 0.6;
+  filter: alpha(opacity=60);  */
   text-align: center;
 }
 
@@ -162,3 +162,16 @@ div.transbox p {
 
 
 /* //////////////////////////TRANS BOX///////////////////////////////////////////////////////////// */
+
+
+@media(max-width: 400pt) {
+  /* footer, #container, #navbar a {
+      width: 50%;
+  } */
+
+  #navbar a {
+    text-align: left;
+    font-size: 70%;
+  }
+
+}

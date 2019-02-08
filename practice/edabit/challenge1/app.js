@@ -15,14 +15,14 @@
 
 //a function is a collection of statements that we can re-use
 //should do something very specific
-    //below a function declaration
-    //brackets are the scope of the function, everything is local to the function.
+//below a function declaration
+//brackets are the scope of the function, everything is local to the function.
 
-    var helloString =  generateHello() //can call above too
+var helloString = generateHello() //can call above too
 
-function generateHello () {
-    var a = "hello"
-    return a
+function generateHello() {
+	var a = "hello"
+	return a
 }
 
 var helloString = generateHello //without parentheses we're saving in new variable, with () we are calling it
@@ -40,16 +40,16 @@ console.log(helloString())
 //     return a;
 // }
 
-function generateHi (name, age) {
-    var a = "hi"
-    return a + " " + name + ", you're " + age + " years old.";
+function generateHi(name, age) {
+	var a = "hi"
+	return a + " " + name + ", you're " + age + " years old.";
 }
 
 
 
-var generateByeBye = function(name, age) {
-    var a = "bye bye"
-    return a + " " + name + ", you're " + age + " years old.";
+var generateByeBye = function (name, age) {
+	var a = "bye bye"
+	return a + " " + name + ", you're " + age + " years old.";
 }
 
 console.log(generateHi("Rick", 687));
@@ -112,9 +112,9 @@ console.log(findLargestNum())
 
 
 function reverse(bool) {
-	if (bool === true){
+	if (bool === true) {
 		return 'false'
-	} else if ( bool === false){
+	} else if (bool === false) {
 		return 'true'
 	} else {
 		return 'boolean expected'
@@ -130,7 +130,58 @@ console.log(reverse(true))
 var arrTest = [34, -345, -1, 100]
 
 function findSmallestNum(arr) {
-	return Math.min(arr)
+	return Math.min.apply(null, arr)
+
 }
 
 console.log(findSmallestNum([34, -345, -1, 100]))
+
+//Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
+
+function Go(num) {
+
+	if (num >= 1 && num <= 60) {
+		var str = "-" 
+		return str.repeat(num)
+	} else {
+		return error
+	}
+
+}
+
+console.log(Go(5))
+
+
+//Create a function that accepts a string (of a persons first and last name) 
+//and returns a string with the first and last name swapped.
+
+function firstLast(str){
+	return str.split(' ').reverse()
+}
+
+console.log(firstLast("Donald Trump"))
+
+
+//Create a function to multiply all values in an array by the amount of values in that array.
+
+//MultiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]
+
+// function MultiplyByLength(arr) {
+// 	var sum = []
+// 	for (var i = 0; i < arr.length; i++) {
+// 		var num = arr.length
+// 		sum = arr[i] * num
+// 	}
+// 	return sum
+// }
+
+// console.log(MultiplyByLength([2, 3, 1, 0]))
+
+function MultiplyByLength(arr) {
+	arr.reduce()
+	return sum
+}
+
+console.log(MultiplyByLength([2, 3, 1, 0]))
+

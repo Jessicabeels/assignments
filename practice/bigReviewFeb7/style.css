@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+}
+
+
+#container {
+    display: flex;
+    /* //you can/should have several flex bloxes instead of just one giant all encompassing one */
+    width: 350px;
+    height: 400px;
+    /* //row is default so to change that use flex-direction */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin: auto; */
+
+}
+
+/* #box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+} */
+
+/* or ...does same thing*/
+#container > div{
+    width: 100px;
+    height: 100px;
+    background-image: url(https://images.unsplash.com/photo-1549482146-9c774ffa7fa2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+/* ^ causes parallax */
+}
+
+
+@media (min-width: 400px) and (max-width: 550px){
+
+    #box {
+        background-color: purple;
+    }
+}
+
+
+/* if you start with mobile it all starts with min width */
+@media (min-width: 550px){
+    #container {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ipad */
+
+
+
+/* Web */
