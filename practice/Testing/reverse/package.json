@@ -1,0 +1,15 @@
+{
+  "name": "reverse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reverse.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}

@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+}
+
+/* 
+transition-property
+transition-duration
+transiton-timing-function
+transition-delay */
+
+
+#box {
+    /* transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 250ms; */
+    transition: all 1s linear;
+    width: 200px;
+    height: 250px;
+    background-color: dodgerblue;
+}
+
+/* //put transtiiton properties on the base class */
+
+#box:hover {
+    width: 400px;
+    border-radius: 20px;
+    background-color: purple;
+}
+
+
+
+#click-box {
+    width: 100px;
+    height: 100px;
+    background-color: firebrick;
+    transition: opacity 1s linear;
+}
+/* ids are more specific than classes */
+
+.disappear {
+    opacity: 0 ;
+}
+
+/* .disappear {
+    opacity: 0 !important;
+}  */
+/* // overrides ids */
+
+
+/* 
+
+Pay attention to:nav bar is flexed¸ so a tags can line up, height 100vh so can see, absolute postion so can be moved off page, transition 
+
+(option + z wrap text)
+
+transition: all 1z cubic-beizer(0,0,0)
+    //go into inspect to modify
+
+*/

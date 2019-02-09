@@ -179,8 +179,12 @@ console.log(firstLast("Donald Trump"))
 // console.log(MultiplyByLength([2, 3, 1, 0]))
 
 function MultiplyByLength(arr) {
-	arr.reduce()
-	return sum
+	var num = arr.length 
+	for (var i = 0; i< arr.length; i++){
+		var newArr = arr.splice() 
+		return newArr;
+	}
+	
 }
 
 console.log(MultiplyByLength([2, 3, 1, 0]))
