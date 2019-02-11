@@ -1,4 +1,3 @@
-
 var peopleArray = [{
     name: "Harrison Ford",
     occupation: "Actor"
@@ -44,24 +43,24 @@ var peopleArray = [{
 // // ????????
 
 
-var array1 = [];
-  var array2 = [];
-  for (i = 0; i > peopleArray.length; i++) {
-    if (i% 2){
-      array2.push(peopleArray[i].occupation)
-    } else{
-      array1.push(peopleArray[i].name)
-    }
-  }
+// var array1 = [];
+// var array2 = [];
+// for (i = 0; i > peopleArray.length; i++) {
+//   if (i % 2) {
+//     array2.push(peopleArray[i].occupation)
+//   } else {
+//     array1.push(peopleArray[i].name)
+//   }
+// }
 
-  // console.log("\n3: ");
-  console.log("array1 =" + array1 )
-  console.log("array2 =" + array2)
+// // console.log("\n3: ");
+// console.log("array1 =" + array1)
+// console.log("array2 =" + array2)
 
 // function pushNameArray(peopleArray) {
 //   
-    
-    
+
+
 //     (peopleArray[i].name % 2 == 0) {
 //       harrison.push(peopleArray[i].slice(i));
 //       console.log(harrison);
@@ -100,22 +99,18 @@ var array1 = [];
 
 // //Write a loop that pushes every other name to an array starting with "Harrison Ford",
 // // and every other occupation to another array starting with "Singer".
-// // var namesArr = []
-// // var occupationsArr = []
 
+var namesArr = []
+var occupationsArr = []
+  for (i = 0; i < peopleArray.length; i++) {
+    if (i % 2 === 0) {
+      namesArr.push(peopleArray[i].name)
+    } else {
+      occupationsArr.push(peopleArray[i].occupation)
+    }
+  }
 
-
-
-// // function pushNameArray( ) {
-//   for (i=0; i <peopleArray.length; i++) {
-//     if (peopleArray[i] % 2 === 0) {
-//       namesArr.push(peopleArray[i].name) 
-//       console.log(namesArr)
-//     } else if (peopleArray[i] % 2 != 0){
-//       occupationsArr.push(peopleArray[i].occupation)
-//       console.log(occupationsArr)
-//     }
-//   }
-// }
-
-// pushNameArray(peopleArray);
+  console.log(namesArr)
+  console.log(occupationsArr)
+//   [ 'Harrison Ford', 'Vladimir Putin' ]
+// [ 'Singer', 'Entertainer' ]
