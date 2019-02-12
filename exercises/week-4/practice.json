@@ -1,0 +1,10 @@
+{
+	"key": "value",
+	"age": 10,
+	"isAlive": true,
+	"friends": ["Jake"],
+	"address": {
+		"street": "123 street",
+		"city": "SLC"
+	}
+}

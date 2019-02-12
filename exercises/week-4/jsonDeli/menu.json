@@ -1,0 +1,74 @@
+{
+    "title": "JSON's Deli",
+    "menu": {
+
+
+        "appetizers": [
+            {"Name": "chacuterie board",
+            "ingredients": ["cheese", "other things"],
+            "description": "The cheese board that I had to practice pronoucing many times",
+            "isSold": true 
+        },
+
+            {"Name":"biscuts",
+            "ingredients": ["bread", "butter", "honey"],
+            "description": "Gluten in its best form",
+            "isSold": true 
+        },
+
+            {"Name":"truffle fries",
+            "ingredients": ["fries", "truffle-ness"],
+            "description": "Potentially one of the best things ever"
+        },
+            {"Name": "dehydrated brussel sprout chips",
+            "ingredients": ["brussel sprouts", "no water", "garlic salt"],
+            "description": "who needs water",
+            "isSold": true
+            },
+            "a block of cheese"
+        ],
+        "cold sandwiches": [
+            "BLT",
+            "PBJ",
+            "bread"
+        ],
+        "hot sandwiches": [
+            "Caprese",
+            "Burger",
+            "Pastrami ",
+            "Grilled Cheese",
+            "Fried Chicken Sandwich"
+        ],
+        "desserts": [
+            "lemon bar",
+            "German Chocolate cookies",
+            "Pumpkin Pie"
+        ],
+        "drinks": [ 
+            
+            { 
+                "name": "Bold Crew",
+                "ingredients": ["coffee", "vibes"],
+                "description": "The coffee that wakes you up and energizes both you and everyone around you",
+                "isSold": true
+            },
+            { 
+                "name": "Liz Lemon tea",
+                "ingredients": ["Lemons", "sugar"],
+                "description": "Man what a week! Lemon, its Tuesday",
+                "isSold": true
+            },
+            "Chardonnay",
+            { 
+                "name": "Pinot Noir, Caviar, Mynmar, Midsize Car",
+                "ingredients": ["coffee", "vibes"],
+                "description": "The coffee that wakes you up and energizes both you and everyone around you",
+                "isSold": true
+            },
+            "London Fogg",
+            "Arnold Palmer"
+        ]
+
+
+    }
+}
