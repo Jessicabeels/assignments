@@ -22,27 +22,27 @@ var enemyChosen = {
 
 var enemies = [{
         name: 'The Night King',
-        health: 500,
+        health: 200,
         inventory: ['Ice Spear', 'Ice Dragon', 'Wights']
     },
     {
         name: 'Joffery Lannister/Barathian',
-        health: 200,
+        health: 80,
         inventory: ['a Napolean Complex', 'The Mountain', 'Lannister Gold']
     },
     {
         name: 'Walder Frey',
-        health: 300,
+        health: 50,
         inventory: ['Betrayal', 'Creepiness', 'Being a shady hoe (im still mad)']
     },
     {
         name: 'Cersei Lannister',
-        health: 400,
+        health: 100,
         inventory: ['Wildfire', 'Clapbacks', 'Deviousness ']
     },
     {
         name: 'Stannis Baratheon',
-        // health: 100,
+        health: 40,
         inventory: [' Being exceptionally boring ', 'Personality of a Lobster ', 'Killing his own daughter and making you briefly pause in shock ']
     }
 ]
@@ -57,10 +57,12 @@ function walk() {
     // if number is 1 === attack
     if (chance === 1) {
         console.log("You've been ATTTAAACKED")
+        console.log("           ")
         sleep.sleep(1);
         attack()
     } else {
         console.log("Nothing happened, uneventful day really.")
+        console.log("           ")
         sleep.sleep(1);
         ask.keyInSelect(options, "What would you like to do? ")
         // ask.keyIn( 'W', "What would you like to do? " )
@@ -101,9 +103,11 @@ function attack() {
 
 function fight() {
     var toFight = ask.keyInYN('Do you want to defend yourself?')
+    console.log("           ")
     sleep.sleep(1);
     if (toFight) {
         console.log("Let's get it! Prepare for battle ")
+        console.log("           ")
         printInventory()
     } else {
         run()
@@ -138,11 +142,13 @@ function run() {
 function asessInventory() {
 
     var userChoice = ask.keyInSelect(player.inventory, "What weapon will you choose?")
+    console.log("           ")
     if (userChoice <= 4) {
         console.log(" You will attack your enemy " + enemyChosen.name + " with " + player.inventory[userChoice])
+        console.log("           ")
         sleep.sleep(1);
         enemyFight()
-    } else if (userChoice > 4){
+    } else if (userChoice > 4) {
         console.log("You're SOL pal. You died.")
         console.log(" _____  ")
         console.log("/  +  \ ")
@@ -190,8 +196,10 @@ function asessInventory() {
 
 function printInventory() {
     console.log("You need to know where you're at in order to attack")
+    console.log("           ")
     sleep.sleep(1);
     print = ask.question("Type print to get your inventory:  ")
+    console.log("           ")
     sleep.sleep(1);
     if (print) {
         console.log(player.name + ", you have " + player.inventory + " and your health is " + player.health)
@@ -205,7 +213,7 @@ function printInventory() {
 
 
 function enemyFight() {
-    var attacking = Math.floor(Math.random() * 3)
+    // var attacking = Math.floor(Math.random() * 2)
     sleep.sleep(1);
     console.log("          /| ________________")
     console.log("    O|===|* >________________ >")
@@ -213,12 +221,30 @@ function enemyFight() {
     console.log("                                               ________________|\'")
     console.log("                                              < ________________< * |===|0")
     console.log("                                                               |/                ")
-
-    if (attacking === 0) {
+    sleep.sleep(1);
+    var yourAttack = Math.floor(Math.random() * 100)
+    console.log("Your attack is " + yourAttack)
+    sleep.sleep(1);
+    enemyChosen.health = -yourAttack
+    var playerDamage = Math.floor(Math.random() * 100)
+    player.health = player.health-playerDamage
+    console.log("The damage the enemy did is " + playerDamage)
+    console.log("           ")
+    if (enemyChosen.health > playerDamage) {
+        console.log("You've been attacked back!")
+        console.log("           ")
+        sleep.sleep(1);
+        var playerDamage = Math.floor(Math.random() * 100)
+        player.health = player.health-playerDamage
+        console.log("The damage the enemy did is" + playerDamage)
+        console.log("           ")
+        sleep.sleep(1);
+        console.log("           ")
+        console.log("Your enemy's health is now " + enemyChosen.health)
+        console.log("           ")
+        sleep.sleep(1);
         console.log("The Battle has finished!")
-        var playerDamage = Math.floor(Math.random() * 100)
-        player.health =- playerDamage
-        sleep.sleep(1);
+        console.log("           ")
         console.log("(___  \( )/  ___)")
         console.log("   (___ | | ___) ")
         console.log("      /'| ('\    ")
@@ -226,41 +252,17 @@ function enemyFight() {
         console.log("      `.!' .'    ")
         console.log("       / .'\     ")
         console.log("       \|/ /     ")
-        console.log("        /.<      ")	
+        console.log("        /.<      ")
         console.log("       (| |)     ")
         console.log("        | '      ")
         console.log("        `-'      ")
         sleep.sleep(1);
-        console.log("You health is now " + player.health)
-        sleep.sleep(1);
-        enemyInventory()
-    } else if (attacking === 1) {
-        console.log("They got you!")
-        sleep.sleep(1);
-        var playerDamage = Math.floor(Math.random() * 100)
-        player.health = player.health - playerDamage
-        // player.health = Math.floor(Math.random() * 100)
-        console.log("(___  \( )/  ___)")
-        console.log("   (___ | | ___) ")
-        console.log("      /'| ('\    ")
-        console.log("     ( (| |) )   ")
-        console.log("      `.!' .'    ")
-        console.log("       / .'\     ")
-        console.log("       \|/ /     ")
-        console.log("        /.<      ")	
-        console.log("       (| |)     ")
-        console.log("        | '      ")
-        console.log("        `-'      ")
-        sleep.sleep(1);
+        console.log("           ")
         console.log("Your health is now " + player.health)
         sleep.sleep(1);
         enemyInventory()
-    } else if (attacking === 2) {
-        console.log("Your enemy did some damage!")
-        sleep.sleep(1);
-        var playerDamage = Math.floor(Math.random() * 100)
-        player.health = player.health - playerDamage
-        // player.health = Math.floor(Math.random() * 100)
+    } else {
+        console.log("The Battle has finished!")
         console.log("(___  \( )/  ___)")
         console.log("   (___ | | ___) ")
         console.log("      /'| ('\    ")
@@ -268,7 +270,7 @@ function enemyFight() {
         console.log("      `.!' .'    ")
         console.log("       / .'\     ")
         console.log("       \|/ /     ")
-        console.log("        /.<      ")	
+        console.log("        /.<      ")
         console.log("       (| |)     ")
         console.log("        | '      ")
         console.log("        `-'      ")
@@ -278,7 +280,106 @@ function enemyFight() {
         enemyInventory()
     }
 
+
 }
+
+
+
+
+// if (attacking === 0) {
+//     var yourAttack = Math.floor(Math.random() * 100)
+//     console.log("Your attack is " + yourAttack)
+//     sleep.sleep(1);
+//     enemyChosen.health = -yourAttack
+//     if (enemyChosen.health > 0) {
+//         console.log("You've been attacked back!")
+//         sleep.sleep(1);
+//         var playerDamage = Math.floor(Math.random() * 100)
+//         console.log("Your damage is " + playerDamage)
+//         sleep.sleep(1);
+//         enemyInventory()
+//     } else {
+//         console.log("You've won!")
+//         sleep.sleep(1);
+//         enemyInventory()
+//     }
+//     player.health = -playerDamage
+//     if (player.health > enemyChosen.health) {
+//         sleep.sleep(1);
+//         console.log("The Battle has finished!")
+//         console.log("(___  \( )/  ___)")
+//         console.log("   (___ | | ___) ")
+//         console.log("      /'| ('\    ")
+//         console.log("     ( (| |) )   ")
+//         console.log("      `.!' .'    ")
+//         console.log("       / .'\     ")
+//         console.log("       \|/ /     ")
+//         console.log("        /.<      ")
+//         console.log("       (| |)     ")
+//         console.log("        | '      ")
+//         console.log("        `-'      ")
+//         sleep.sleep(1);
+//         console.log("You health is now " + player.health)
+//         sleep.sleep(1);
+//         enemyInventory()
+//     }
+// } else if (attacking === 1) {
+//     console.log("They hit you!")
+//     sleep.sleep(1);
+//     if (enemyChosen.health > 0) {
+//         console.log("You've been attacked back!")
+//         sleep.sleep(1);
+//         var playerDamage = Math.floor(Math.random() * 100)
+//         console.log("Your damage is " + playerDamage)
+//         sleep.sleep(1);
+//     } else {
+//         console.log("You've won!")
+//         sleep.sleep(1);
+//         enemyInventory()
+
+//     }
+//     player.health = -playerDamage
+//     if (player.health > enemyChosen.health) {
+//         // player.health = Math.floor(Math.random() * 100)
+//         console.log("(___  \( )/  ___)")
+//         console.log("   (___ | | ___) ")
+//         console.log("      /'| ('\    ")
+//         console.log("     ( (| |) )   ")
+//         console.log("      `.!' .'    ")
+//         console.log("       / .'\     ")
+//         console.log("       \|/ /     ")
+//         console.log("        /.<      ")
+//         console.log("       (| |)     ")
+//         console.log("        | '      ")
+//         console.log("        `-'      ")
+//         sleep.sleep(1);
+//         console.log("Your health is now " + player.health)
+//         sleep.sleep(1);
+//         enemyInventory()
+// } else if (attacking === 2) {
+//     console.log("Your enemy did some damage!")
+//     sleep.sleep(1);
+//     var playerDamage = Math.floor(Math.random() * 100)
+//     player.health = player.health - playerDamage
+//     // player.health = Math.floor(Math.random() * 100)
+//     console.log("(___  \( )/  ___)")
+//     console.log("   (___ | | ___) ")
+//     console.log("      /'| ('\    ")
+//     console.log("     ( (| |) )   ")
+//     console.log("      `.!' .'    ")
+//     console.log("       / .'\     ")
+//     console.log("       \|/ /     ")
+//     console.log("        /.<      ")
+//     console.log("       (| |)     ")
+//     console.log("        | '      ")
+//     console.log("        `-'      ")
+//     sleep.sleep(1);
+//     console.log("Your health is now " + player.health)
+//     sleep.sleep(1);
+//     enemyInventory()
+//         }
+//     }
+// }
 
 function enemyInventory() {
     sleep.sleep(1);
@@ -286,6 +387,7 @@ function enemyInventory() {
     if (player.health > 0) {
         console.log("Great work " + player.name + ", you now have access to the inventory of your defeated enemy, " + enemyChosen.name)
         sleep.sleep(1);
+        console.log("           ")
         console.log("You now also have " + enemyChosen.inventory + " in your inventory!")
         player.inventory = player.inventory.concat(enemyChosen.inventory)
         player.health += 10
@@ -296,10 +398,11 @@ function enemyInventory() {
         console.log("      `.!' .'    ")
         console.log("       / .'\     ")
         console.log("       \|/ /     ")
-        console.log("        /.<      ")	
+        console.log("        /.<      ")
         console.log("       (| |)     ")
         console.log("        | '      ")
         console.log("        `-'      ")
+        console.log("           ")
         console.log("And you've gained 10+ health! Making your total health " + player.health)
     } else {
         console.log(" _____  ")
@@ -307,6 +410,7 @@ function enemyInventory() {
         console.log("| ~~~ | ")
         console.log("|R.I.P| ")
         console.log("|_____| ")
+        console.log("           ")
         console.log("Your health is too low! You died!! RIP")
 
     }
