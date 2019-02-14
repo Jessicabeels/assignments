@@ -191,3 +191,29 @@ console.log(voterResults(voters)); // Returned value shown below:
   olds: 4 
 }
 */
+//////////////////////
+
+
+axios.get("https://api.vschool").then(function(response){
+    // console.log(response.data)
+    var todos = response.data
+    listTodos(todos)
+    // for(var i =0; i < todos.length; i++){
+    //     var title = document.createElement('h1')
+    //     title.textContent = todos[i].title
+    //     todoList.appendChild(title)
+    }
+}).catch(function(error){
+    console.log(error)
+})
+
+
+
+function listTodos(todos){
+    for(var i =0; i < todos.length; i++){
+        var title = document.createElement('h1')
+        title.textContent = todos[i].title
+        todoList.appendChild(title)
+}
+}
+//pull from same url using in postman to show on page. 
