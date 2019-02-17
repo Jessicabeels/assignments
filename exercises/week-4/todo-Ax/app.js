@@ -1,33 +1,35 @@
-const todoList = document.getElementById('container')
+const todoList = document.getElementById("container")
 
 const postForm = document.formStuff
 
 
 
 ///////////////GET////////////////////
-
-
 //use axios to get list
 function getStuff() {
     axios.get("https://api.vschool.io/jess/todo").then(function (response) {
         //console.log(response);
-        const todos = response.data
-        listTodos(todos)
+        let todos = response.data
+        console.log(todos)
+        Promise.resolve(todos).then(res =>{
+            listTodos(todos)
+        })
     }).catch(error => console.log(error))
 }
 
 function listTodos(todosArr) {
+    console.log(todosArr)
     for (let i = 0; i < todosArr.length; i++) {
-//3 sections
-        //show up on the DOM
+        //3 sections
+        //show up on the DOM, create elements
         const container = document.createElement('div')
         const title = document.createElement('h1')
         const pic = document.createElement('img')
 
         //edit the element/ give it content
         container.classList.add("todo-container")
-        title.textContent = todos[i].title
-        pic.setAttribute("src", todos[i].imgUrl)
+        title.textContent = todosArr[i].title
+        pic.setAttribute("src", todosArr[i].imgUrl)
 
         //add strike through
         if (todosArr[i].completed) {
@@ -35,18 +37,17 @@ function listTodos(todosArr) {
         }
 
         //append
-        todoList.appendChild(title)
-        todosListContainer.appendChild(container)
-        todoList.appendChild(pic)
+        container.appendChild(title)
+        container.appendChild(pic)
+        todoList.appendChild(container)
+        
         //name id in html todoListcotainer
 
     }
 }
 
 
-///////////////Form///////////////////
-
-
+///////////////Form///////////////////POST
 //select form element
 
 postForm.addEventListener("submit", (e) => {
@@ -60,23 +61,13 @@ postForm.addEventListener("submit", (e) => {
     }
     postForm.title.value = ""
 
-    
-    //varibale new name = document name.input name.value
-    var titleInput = postForm.todoTitle.value
-    var descriptInput = postForm.todoDescription.value
-    var priceInput = postForm.price.value
-    var imgInput = postForm.price.value
-
-
-    //var newTodo object
-    var newTodo = {
-        "title": titleInput,
-        "description": descriptInput,
-        "price": priceInput,
-        "imgUrl": imgInput
-    }
-
+    axios.post("http://api.vschoolio.jess/todo", newTodo).then(response => {
+        todosListContainer.innerHTML = ""
+        getStuff()
+    }).catch(error => console.log(err))
 })
+
+getStuff()
 
 
 
@@ -90,23 +81,23 @@ postForm.addEventListener("submit", (e) => {
 
 
 ///////////////////////Post, need an object for content
-function postStuff() {
-    axios.post("https://api.vschool.io/jess/todo", {
-        "title": "",
-        "description": "",
-        "price": "",
-        "img": ""
-        //newTodo
-    }).then(function (response) {
-        console.log(response)
-        var todos = response.data
-        listTodos(todos)
-    }).catch(function (error) {
-        console.log(error)
-    })
+// function postStuff() {
+//     axios.post("https://api.vschool.io/jess/todo", {
+//         "title": "",
+//         "description": "",
+//         "price": "",
+//         "img": ""
+//         //newTodo
+//     }).then(function (response) {
+//         console.log(response)
+//         var todos = response.data
+//         listTodos(todos)
+//     }).catch(function (error) {
+//         console.log(error)
+//     })
 
 
-}
+// }
 //prevent a million dishes with a form and event listener
 
 
@@ -118,9 +109,9 @@ function postStuff() {
 
 
 
-function listPostedTodos(todos) {
-    console.log(posttodos)
-    var titlePost = document.createElement('h2')
-    titlePost.textContent = posttodos.titlePost
-    todoList.appendChild(titlePost)
-}
+// function listPostedTodos(todos) {
+//     console.log(posttodos)
+//     var titlePost = document.createElement('h2')
+//     titlePost.textContent = posttodos.titlePost
+//     todoList.appendChild(titlePost)
+// }

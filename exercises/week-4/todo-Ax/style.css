@@ -1,38 +1,80 @@
+body {
+    background-image: url("https://previews.123rf.com/images/leungchopan/leungchopan1506/leungchopan150600626/41731819-cork-board-background.jpg");
+}
+
+header {
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 20%; */
+}
+
+h1 {
+    font-size: 35pt;
+    -webkit-text-stroke: white .5px; 
+}
 
 #container {
     display: grid;
-    /* grid-template-rows: 100px 100px 100px; */
-    grid-auto-rows: auto auto auto;
+    border: 1px solid black;
+    grid-template-columns: 300px 300px 300px;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 10pt;
+    -webkit-text-stroke: white .5px;
+    
 }
 
-/* //dircet child selector */
-.container > div {
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: row;
+    font-size: 10pt;
+    -webkit-text-stroke: white .2px;   
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    
+}
+
+/* these arent doing anything */
+ /* #task {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px; 
+    /* font-size: 2em; */
+    /* color: #ffeead; 
+    
+ } */
+
+
+#container > div {
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    color: #ffeead;
-}
+    border: 1px dotted black;
+    padding: 30px;
+    border-radius: 10px;
 
+}
 
 img {
-    width: 30%;
-}
-
-#container {
-    font-size: 6pt;
+    width: 20%;
 }
 
 
-.todo-continer{
-    border: 1px solid balck;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    border-radius: 4px;
-    padding: 5px;
-}
 
-.todo-continer h1 {
+@media(min-width: 768pt) {
+     body, #container {
+        width: 100%;
+    }
 
 }
