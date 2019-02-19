@@ -341,3 +341,22 @@ console.log(filterForDogs(animals))
 
 // I hope you enjoy your stay. Please ask the president of Hawaii if you need anything. 
 
+
+
+
+function nameLoc (name, location) {
+    console.log(`Hi ${name}!`)
+    console.log(`Welcome to ${location}`)
+    console.log(`I hope you enjoy your stay. Please ask the president of  ${location} if you need anything.`)
+}
+
+nameloc("Janice", "Hawaii")
+
+let pets = [ "dog", "cat"]
+
+function collectAnimals(...pets) {  
+    return pets
+}
+
+collectAnimals("dog", "cat", "mouse", "jackolope", "platypus"); 
+// ["dog", "cat", "mouse", "jackolope", "platypus"]

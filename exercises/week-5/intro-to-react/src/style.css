@@ -1,0 +1,15 @@
+.hello-world {
+    background-color: powderblue;
+    background-image: url(https://images.unsplash.com/photo-1550544910-8f26817ba35d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+

@@ -9,8 +9,8 @@ const postForm = document.formStuff
 function getStuff() {
     axios.get("https://api.vschool.io/jess/todo").then(function (response) {
         //console.log(response);
-        let todos = response.data
-        console.log(todos)
+        const todos = response.data
+        // console.log(todos)
         Promise.resolve(todos).then(res =>{
             listTodos(todos)
         })
@@ -54,18 +54,21 @@ postForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const newTodo = {
         titleInput: postForm.todoTitle.value,
-        description: postForm.todoDescription.value,
-        priceInput: postForm.price.value,
-        pic: postForm.pic.value
+        // description: postForm.todoDescription.value,
+        // priceInput: postForm.price.value,
+        // pic: postForm.pic.value
         
     }
+    console.log(newTodo)
     postForm.title.value = ""
 
-    axios.post("http://api.vschoolio.jess/todo", newTodo).then(response => {
+    axios.post("http://api.vschool.io/jess/todo", newTodo).then(response => {
         todosListContainer.innerHTML = ""
-        getStuff()
-    }).catch(error => console.log(err))
+        
+    }).catch(err => console.log(err))
+    getStuff()
 })
+
 
 getStuff()
 
@@ -78,40 +81,3 @@ getStuff()
 
 
 
-
-
-///////////////////////Post, need an object for content
-// function postStuff() {
-//     axios.post("https://api.vschool.io/jess/todo", {
-//         "title": "",
-//         "description": "",
-//         "price": "",
-//         "img": ""
-//         //newTodo
-//     }).then(function (response) {
-//         console.log(response)
-//         var todos = response.data
-//         listTodos(todos)
-//     }).catch(function (error) {
-//         console.log(error)
-//     })
-
-
-// }
-//prevent a million dishes with a form and event listener
-
-
-//Put, need an Id  to change content and an new object 
-
-
-//Delete, need an Id  to delete content
-
-
-
-
-// function listPostedTodos(todos) {
-//     console.log(posttodos)
-//     var titlePost = document.createElement('h2')
-//     titlePost.textContent = posttodos.titlePost
-//     todoList.appendChild(titlePost)
-// }
