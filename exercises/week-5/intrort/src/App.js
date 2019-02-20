@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from './Nav.js'
 import List from './List.js'
+import Footer from './foot.js'
 import './style.css'
 
 
@@ -15,6 +16,7 @@ function App() {
         <Nav />
         <p>The best dogsitting in the South Bay. Book your dog's vacation during your vacation!</p>
         <List />
+        <Footer />
         
         
     </div>
