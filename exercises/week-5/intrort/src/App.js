@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav.js'
+import List from './List.js'
 import './style.css'
 
 
@@ -10,10 +11,12 @@ function App() {
         <div className= "text"> 
             <h1 className = "title">Spot's Dog Sitting Spot</h1>   
         </div>
-        <div className = 'img'></div>
-        
+        <div className = 'img1'></div>
         <Nav />
-        <p>The best dogsitting in the South Bay. Book your dog's vacation while you're on vacation!</p>
+        <p>The best dogsitting in the South Bay. Book your dog's vacation during your vacation!</p>
+        <List />
+        
+        
     </div>
         )
     }

@@ -10,36 +10,38 @@
 </head>
 
 <body>
-    <h1 id="header">Task Habit</h1>
+    <h1 class="header">TASK HABIT</h1>
+    <div class="input">
+    <form name="formStuff" class="formstuff">
+            <div class="formback">
+                <div>
+                    <h4>Title</h4>
+                    <input type="text" name="todoTitle" placeholder="Title">
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <input type="text" name="todoDescription" placeholder="Description">
+                </div>
+                <div>
+                    <h4> Price</h4>
+                    <input type="number" name="price" min="0" max="10000000000" placeholder="price">
+                </div>
+                <div>
+                    <h4> Image </h4>
+                    <input type="text" name="imgUrl" src="" placeholder="url">
+                </div>
+            </div>
+        
 
-    <form name="formStuff">
-        <div class="input">
-            <div>
-                <h4>Title</h4>
-                <input type="text" name="todoTitle" placeholder="Title">
-            </div>
-            <div>
-                <h4>Description</h4>
-                <input type="text" name="todoDescription">
-            </div>
-            <div>
-                <h4> Price</h4>
-                <input type="number" name="price" min="0" max="10000000000">
-            </div>
-            <div>
-                <h4> Image </h4>
-                <input type="file" name="personal-image" accept="image/png, image/jpeg">
-            </div>
-        </div>
-
-        <button>Submit</button>
+        <button class='sub'>Submit</button>
+        <!-- <button>Submit</button> -->
     </form>
+</div>
 
-   
+
     <h1>Your Tasks</h1>
     <div id="container">
-            <h1></h1>
-            <img src="" alt="">
+
     </div>
 
 
