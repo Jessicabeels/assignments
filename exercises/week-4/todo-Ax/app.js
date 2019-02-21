@@ -21,7 +21,9 @@ function listTodos(todosArr) {
         //3 sections
         //show up on the DOM, create elements
         const container = document.createElement('div')
-        const title = document.createElement('h1')
+        const title = document.createElement('h3')
+        const price = document.createElement('h5')
+        const description = document.createElement('h5')
         const pic = document.createElement('img')
         const delBtn = document.createElement('button')
         const checkbox = document.createElement('input')
@@ -30,7 +32,9 @@ function listTodos(todosArr) {
         container.classList.add("todo-container")
         title.textContent = todosArr[i].title
         pic.setAttribute("src", todosArr[i].imgUrl)
-        pic.setAttribute("className", "api-img" )
+        pic.setAttribute("class", "api-img" )
+        price.textContent = todosArr[i].price
+        description.textContent=todosArr[i].description
 
         //second edits
         container["data-todoID"] = todosArr[i]._id
@@ -68,10 +72,16 @@ function listTodos(todosArr) {
         }
 
         //append
-        container.appendChild(title)
-        container.appendChild(pic)
-        container.appendChild(checkbox)
         container.appendChild(delBtn)
+        container.appendChild(checkbox)
+        
+        
+        container.appendChild(title)
+        container.appendChild(price)
+        container.appendChild(description)
+        
+        container.appendChild(pic)
+        
         todoList.appendChild(container)
     
         
@@ -90,7 +100,7 @@ postForm.addEventListener("submit", (e) => {
         title: postForm.todoTitle.value,
         description: postForm.todoDescription.value,
         price: postForm.price.value,
-        imgUrl: postForm.pic
+        imgUrl: postForm.imgUrl.value
         
     }
     console.log(newTodo)
