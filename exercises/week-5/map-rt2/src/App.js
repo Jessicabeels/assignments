@@ -43,7 +43,7 @@ const App = () => {
                                               key={i}
                                               name={character.name} 
                                               age={character.age} 
-                                              favColor={character.age}
+                                              favColor={character.favColor}
                                               friends={character.friends} /> )
 
 

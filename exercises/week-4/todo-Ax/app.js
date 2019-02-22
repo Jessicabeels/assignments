@@ -22,11 +22,14 @@ function listTodos(todosArr) {
         //show up on the DOM, create elements
         const container = document.createElement('div')
         const title = document.createElement('h3')
-        const price = document.createElement('h5')
+        const price = document.createElement('h6')
         const description = document.createElement('h5')
         const pic = document.createElement('img')
         const delBtn = document.createElement('button')
         const checkbox = document.createElement('input')
+        
+        
+        
 
         //edit the element/ give it content
         container.classList.add("todo-container")
@@ -39,8 +42,11 @@ function listTodos(todosArr) {
         //second edits
         container["data-todoID"] = todosArr[i]._id
         checkbox.type = 'checkbox'
+        checkbox.className = 'my-checkboxes'
+        console.log(checkbox)
         checkbox.checked = todosArr[i].completed
         delBtn.textContent = 'Delete'
+        delBtn.className ='my-delBtn'
 
         // //////
         // Checkbox PUT request for updating UI and DB
@@ -72,15 +78,24 @@ function listTodos(todosArr) {
         }
 
         //append
-        container.appendChild(delBtn)
-        container.appendChild(checkbox)
         
+        
+        
+        
+        
+      
+        container.appendChild(pic)
         
         container.appendChild(title)
-        container.appendChild(price)
         container.appendChild(description)
+        container.appendChild(price)
         
-        container.appendChild(pic)
+        container.appendChild(checkbox)
+        container.appendChild(delBtn)
+        
+        
+        
+        
         
         todoList.appendChild(container)
     

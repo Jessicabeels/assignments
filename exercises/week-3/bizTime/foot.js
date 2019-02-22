@@ -8,10 +8,12 @@ footForm.addEventListener('submit', function(e) {
   container2.innerHTML = " "
   // grab inputs value //variable new name = document name . input name . value
   var nameInput =foot.first.value
+  var emailInput=foot.email.value
   // console.log(nameInput)
   // console.log(nameInput)
-  var endPrint = ("Thank you " + nameInput + " for your support for Courtney's Foot. Please also venmo her $5000 dollars.")
+  var endPrint = ("Thank you " + nameInput + " for your support for our independent art. Your information has been added to our list.")
   nameInput.value = ""
+  emailInput.value = ""
   //create element
   var h2Thing = document.createElement('h2')
   //Give element content
