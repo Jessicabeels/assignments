@@ -1,5 +1,5 @@
 import React from 'react'
-
+import List from './List.js'
 
 const App = () => {
     let vacationSpots = [
@@ -28,7 +28,8 @@ const App = () => {
 
       return (
           <div>
-              
+              {vacationSpots}
+              <List />
           </div>
       )
 }

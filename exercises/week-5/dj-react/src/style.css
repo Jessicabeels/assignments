@@ -1,0 +1,6 @@
+.box1 {
+    width: 199%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
