@@ -37,36 +37,28 @@ class App extends React.Component {
         })
     }
         
+     handleChangeColor1 = () => {
+        const colors = ['white', 'black']
+        const currentColor = colors[Math.floor(Math.random() * colors.length)]
+        // console.log(currentColor)
+        this.setState({
+            bgColor1: currentColor,
+            bgColor2: currentColor,
+            bgColor3: currentColor,
+            bgColor4: currentColor
+        })
+    }
 
-    // handleChangeBlue = () => {
-    //     const colors = ['blue']
-    //     const currentColor = colors[Math.floor(Math.random() * colors.length)]
-    //     this.setState({
-    //         color1: currentColor
-    //     })
-    // }
+    handleChangeBox1 = () => {
+        const colors = ['red']
+        const currentColor = colors[Math.floor(Math.random() * colors.length)]
+        console.log(currentColor)
+        this.setState({
+            bgColor1: currentColor
+        })
+    }
 
-    // handleChangeColor2 = () => {
-    //     const colors = ['purple']
-    //     const currentColor = colors[Math.floor(Math.random() * colors.length)]
-    //     console.log(currentColor)
-    //     this.setState({
-    //         color1: currentColor
-    //     })
-    //     console.log(this.state.color1)
-    //     console.log(this.state.color2)
-    // }
-
-    // handleChangeColor1 = () => {
-    //     const colors = ['white', 'black']
-    //     const currentColor = colors[Math.floor(Math.random() * colors.length)]
-    //     // console.log(currentColor)
-    //     this.setState({
-    //         color1: currentColor
-    //     })
-    //     console.log(this.state.color1)
-    //     console.log(this.state.color2)
-    // }
+   
 
     render(){
         return (
@@ -86,11 +78,11 @@ class App extends React.Component {
                 <div>
                     <div style = {boxStyle}>Box4</div>
                 </div> */}
-                {/* <button onClick={this.handleChangeColor1}>Small Time</button>
-                <button onClick={this.handleChangeColor2}>Party DJ</button>
-                <button onClick={this.handleChangeAll}>All</button>
-                <button onClick={this.handleChangeBlue}>Professional DJ</button> */}
-                
+                <button onClick={this.handleChangeColor1}>Small Time</button>
+                <button onClick={this.handleChangeBox1}>Party DJ</button>
+                {/* <button onClick={this.handleChangeAll}>All</button>
+                <button onClick={this.handleChangeBlue}>Professional DJ</button>
+                 */}
                 
                 
                 
