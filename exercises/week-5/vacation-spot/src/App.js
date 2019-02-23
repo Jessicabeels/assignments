@@ -1,5 +1,6 @@
 import React from 'react'
 import List from './List.js'
+import './style.css'
 
 const App = () => {
     let vacationSpots = [
@@ -28,8 +29,7 @@ const App = () => {
 
       return (
           <div>
-              {vacationSpots}
-              <List />
+              <List vacations={vacationSpots}/>
           </div>
       )
 }
