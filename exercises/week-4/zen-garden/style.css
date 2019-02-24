@@ -1,10 +1,12 @@
 /* Specifing Row height */
 /* Media queries */
 /* When to set widths and heights */
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
 
 * {
     margin: 0;
     font-size: 35px;
+    /* box-sizing: border-box; */
 }
 
 
@@ -45,8 +47,14 @@
 
 
 @font-face { 
-    font-family: 'Julius Sans One';
-    src: url()
+    font-family: 'verdemoderna';
+    src: url('verdemoderna.eot');
+    src: url('verdemoderna.eot?#iefix') format('embedded-opentype'),
+    url('verdemoderna.woff') format('woff'),
+    url('verdemoderna.ttf') format('truetype'),
+    url('verdemoderna.svg#verdemoderna') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -56,8 +64,9 @@
     font-family: 'Julius Sans One';
     /* download and import fonts */
     font-weight: 40;
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
+    /* margin-bottom: 110px; */
 
 }
 
@@ -65,8 +74,10 @@
     font-family: 'Libre Baskerville';
     font-size: 50%;
     font-weight: 400;
+    padding: 10px;
     text-align: center;
     font-style: italic;
+    color: #ffffff99;
 }
 
 .icon {
@@ -76,15 +87,42 @@
     
 }
 
+body {
+    font-size: 13px;
+    margin: 20px;
+}
+
 section {
     background-color: white;
     color: rgb(85, 83, 83);
     line-height: 25px;
     font-family: 'Libre Baskerville', serif;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 400;
     margin: 20px;
+    padding: 20px;
 }
+
+section {
+    
+    font-size: 15px;
+    font-family: sans-serif;
+    
+}
+
+.section1 > p, .section2 > p, span, .section3 > p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.section1 > h2, .section2 > h2, .section3 > h2{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
 
 #zen-grid-container section:nth-child(2){
     
@@ -94,49 +132,46 @@ section {
 }
 
 
-.section1 > p, .section2 > p, span {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.section1 > h2, .section2 > h2 {
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-
 
 
 
 #zen-grid-container section:nth-child(3){
-    background-color: rgb(186, 223, 197);
+    background-color: rgb(210, 235, 217);
     background-image: url(http://www.csszengarden.com/214/contours@2x.png), url(http://www.csszengarden.com/214/bamboo.png);
-    display: flex;
+    background-size: cover;
+    background-position: center;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    font-size: 10px;
+    font-size: 13px;
+    /* width: 100%; */
+    margin: 30px;
+
 }
 
 #zen-grid-container section:nth-child(4){
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    /* width: 100%; */
+    margin: 20px;
+}
+
+.section4 {
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url("http://www.csszengarden.com/214/koi.jpg") ;
     background-color: teal;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#zen-grid-container footer:nth-child(5){
-    background-color: firebrick;
-    display: flex;
     justify-content: space-around;
+    color: #ffffff99;
+    background-size: 100%;
+    height: 200px;
 }
 
-section {
-    padding: 20px;
-    font-size: 27px;
-    font-family: sans-serif;
-}
+
+
+
 
 .link-container {
     display: flex;
@@ -177,6 +212,10 @@ section {
         background-image: url("http://www.csszengarden.com/214/gridlines.png"), url('http://www.csszengarden.com/214/contours@2x.png');
         
     }
+    .header-text {
+        margin-bottom: 90px;
+    }
+
 }
 
 
