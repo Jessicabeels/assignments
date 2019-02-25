@@ -6,16 +6,16 @@ const Spot = (props) => {
     return (
         <div className = 'list' style={
             {
-            padding: 15, 
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            fontSize: 15, 
+            // padding: 15, 
+            // display: 'flex',
+            // flexDirection: 'row',
+            // flexWrap: 'wrap',
+            // fontSize: 15, 
             // background: 'powderblue'
             }}>
             <div className="container"> 
                 <div>
-                <h1> {props.place}</h1>
+                <h1 style={{padding: 1, textAlign: "center"}}> {props.place}</h1>
                 <p className = "price" style={{padding: 2}}>Price: ${props.price} </p>
                 <p style={{padding: 2}}>Time To Go: {props.timeToGo}</p>
                 <img className = "img" src ={props.imgUrl} alt="location"></img>

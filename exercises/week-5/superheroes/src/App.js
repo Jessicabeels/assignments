@@ -4,13 +4,6 @@ import Superhero from './Superhero.js'
 
 
 class App extends React.Component {
-
-    clickHeroes = () => {
-        // let catchphrase = {catchphrase}
-        alert("hero catchphrase" ) //+ catch1
-
-    }
-
     constructor(props) {
         super(props);
         this.state = {isToggleOn: true};
@@ -21,30 +14,24 @@ class App extends React.Component {
     
       handleClick(e) {
         e.preventDefault();
-        alert('hero catchphrase');
+        // alert('hero catchphrase');
        
       }
 
 
     render(){
-        // const mappedHeros = data.heros.map((hero,i) => 
-        //     <div> 
-        //         <div style={{backgroundImage: `url(${hero.imgUrl})`, backgroundSize: "contain", height: 300, width: 400}}>
-        //             <h1 style={{color: "white"}}>Name: {hero.name}</h1>
-        //         </div>
-        
-        //     </div> )
+      
 
         const mappedPhrase = data.heros.map((hero, key) => 
-            <Superhero 
-                name={hero.name} 
-                show={hero.show} 
-                onClick = {() => {
-                    alert(hero.catchphrase)
-                }}
-                imgUrl = {hero.imgUrl}
-                key={key}
-        /> )
+                                        <Superhero 
+                                            name={hero.name} 
+                                            superpower={hero.superpower}
+                                            onClick = {() => {
+                                                alert(hero.catchphrase)
+                                            }}
+                                            imgUrl = {hero.imgUrl}
+                                            key={key}
+                                    /> )
 
             // <div>
             //     <alert>CatchPhrase: {hero.catchphrase}</alert>
@@ -56,8 +43,8 @@ class App extends React.Component {
                 {/* {mappedHeros} */}
                 {/* <alert>CatchPhrase: {hero.catchphrase}</alert> */}
                 {mappedPhrase}
-                {/* <button onClick={this.clickHeroes}> Activate Lasers </button>
-                <form onClick={this.handleClick}>
+                
+                {/* <form onClick={this.handleClick}>
                 <button>Click Me!</button></form> */}
 
             </div>

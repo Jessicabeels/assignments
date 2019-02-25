@@ -17,7 +17,6 @@ const List = (props) => {
         <div style={
             {
             margin: 5, 
-            width: 50,
             padding: 5, 
             fontSize: 40, 
             color: 'white',
@@ -27,7 +26,7 @@ const List = (props) => {
             display: 'flex',
             flexDirection: 'row',
             }}>
-           Destinations: {mappedDestinations}
+           <h1>Destinations:</h1> {mappedDestinations}
         </div>
     )
 }

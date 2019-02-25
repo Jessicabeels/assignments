@@ -29,21 +29,25 @@
         }, 
         {
             "name": "Wonder Woman",
+            "superpower": "strength, flight",
             "catchphrase": "That's wonderful",
             "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/f/f5/Wonder_Woman.png/revision/latest?cb=20180707195354"
         },
         {
             "name": "Green Lantern",
+            "superpower": "green ring",
             "catchphrase": "My story line is interesting in terms of my romantic connection to hawkgirl",
             "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/d/dd/John_Stewart_JLU.png/revision/latest?cb=20160803112748"
         },
         {
             "name":"Hawkgirl",
+            "superpower": "bird stuff",
             "catchphrase":"Bird stuff",
             "imgUrl": "https://vignette.wikia.nocookie.net/dchallofjustice/images/b/b7/Sc-hawkgirl.jpg/revision/latest?cb=20100602113721"
         },
         {
             "name":"Martin Manhunter",
+            "superpower": "alien stuff",
             "catchphrase":"Mars Stuff",
             "imgUrl": "https://revengeofthefans.com/wp-content/uploads/2018/09/20172F112F212Fba2F48b655ef5e0c4a968ffa24b950bc4675.e97d0.jpg" 
         }

@@ -7,7 +7,8 @@ const Superhero = (props) => {
        
     <div className= "hero" onClick = {props.onClick}>
         <h2>{props.name}</h2>
-        <img className = "img" src ={props.imgUrl} alt="location"></img>
+        <h4> superpower: {props.superpower}</h4>
+        <img className = "img" src ={props.imgUrl} alt="hero"></img>
     </div>
         
     )
@@ -15,9 +16,8 @@ const Superhero = (props) => {
 
 Superhero.propTypes = {
     name: PropTypes.string,
-    show: PropTypes.string,
-    catchPhrase: PropTypes.string,
-    imageName: PropTypes.string
+    catchphrase: PropTypes.string,
+    imgUrl: PropTypes.string
 }
 
 export default Superhero
