@@ -9,18 +9,23 @@ const List = (props) => {
     const mappedDestinations = props.vacations.map((spot, i) => <Spot 
                                                     place={spot.place}
                                                     price={spot.price} 
-                                                    timeToGo={spot.timeToGo} 
+                                                    timeToGo={spot.timeToGo}
+                                                    imgUrl = {spot.imgUrl} 
                                                     key={i}/>)
 
     return (
         <div style={
-            {border: '1px solid pink',
+            {
             margin: 5, 
+            width: 50,
             padding: 5, 
             fontSize: 40, 
             color: 'white',
             textAlign: 'center',
-            backgroundColor: 'black'
+            backgroundColor: 'black',
+            flexWrap: 'wrap',
+            display: 'flex',
+            flexDirection: 'row',
             }}>
            Destinations: {mappedDestinations}
         </div>
