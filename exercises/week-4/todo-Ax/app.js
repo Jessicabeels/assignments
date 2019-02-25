@@ -36,7 +36,7 @@ function listTodos(todosArr) {
         title.textContent = todosArr[i].title
         pic.setAttribute("src", todosArr[i].imgUrl)
         pic.setAttribute("class", "api-img" )
-        price.textContent = todosArr[i].price
+        price.textContent = "$" + todosArr[i].price
         description.textContent=todosArr[i].description
 
         //second edits

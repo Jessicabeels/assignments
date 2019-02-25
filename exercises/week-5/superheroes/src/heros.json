@@ -1,0 +1,53 @@
+{
+     "heros":
+     [ 
+        {
+            "name": "Batman",
+            "superpower": "being badass",
+            "sidekicks": [
+            "Robin", "Alfred"],
+            "vehicle": "Batmobile", 
+            "catchphrase": "Oh Bats",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/d/d1/Batman.png/revision/latest?cb=20150125193428"
+        }, 
+        {
+            "name": "Flash",
+            "superpower": "speed",
+            "sidekicks": "none",
+            "vehicle": "himself",
+            "catchphrase": "That's not the only thing that comes fast",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/7/74/Flash.png/revision/latest?cb=20180707194546"
+
+        }, 
+        {
+            "name": "Superman",
+            "superpower": "Super everything",
+            "sidekicks": "none",
+            "vehicle": "himself",
+            "catchphrase": "That's super duper",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/3/39/SupermanJLU.png/revision/latest?cb=20130305134005"
+        }, 
+        {
+            "name": "Wonder Woman",
+            "catchphrase": "That's wonderful",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/f/f5/Wonder_Woman.png/revision/latest?cb=20180707195354"
+        },
+        {
+            "name": "Green Lantern",
+            "catchphrase": "My story line is interesting in terms of my romantic connection to hawkgirl",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dcanimated/images/d/dd/John_Stewart_JLU.png/revision/latest?cb=20160803112748"
+        },
+        {
+            "name":"Hawkgirl",
+            "catchphrase":"Bird stuff",
+            "imgUrl": "https://vignette.wikia.nocookie.net/dchallofjustice/images/b/b7/Sc-hawkgirl.jpg/revision/latest?cb=20100602113721"
+        },
+        {
+            "name":"Martin Manhunter",
+            "catchphrase":"Mars Stuff",
+            "imgUrl": "https://revengeofthefans.com/wp-content/uploads/2018/09/20172F112F212Fba2F48b655ef5e0c4a968ffa24b950bc4675.e97d0.jpg" 
+        }
+
+    ]
+
+}

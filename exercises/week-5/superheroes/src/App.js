@@ -1,5 +1,4 @@
 import React from 'react'
-// import { ReactComponent } from '*.svg';
 import data from './heros.json'
 import Superhero from './Superhero.js'
 
@@ -28,19 +27,23 @@ class App extends React.Component {
 
 
     render(){
-        const mappedHeros = data.heros.map((hero,i) => 
-            <div> 
-                <div style={{backgroundImage: `url(${hero.imgUrl})`, backgroundSize: "contain", height: 300, width: 400}}>
-                    <h1 style={{color: "white"}}>Name: {hero.name}</h1>
-                </div>
+        // const mappedHeros = data.heros.map((hero,i) => 
+        //     <div> 
+        //         <div style={{backgroundImage: `url(${hero.imgUrl})`, backgroundSize: "contain", height: 300, width: 400}}>
+        //             <h1 style={{color: "white"}}>Name: {hero.name}</h1>
+        //         </div>
         
-            </div> )
+        //     </div> )
 
-        const mappedPhrase = data.heros.map((hero, i) => 
+        const mappedPhrase = data.heros.map((hero, key) => 
             <Superhero 
+                name={hero.name} 
+                show={hero.show} 
                 onClick = {() => {
                     alert(hero.catchphrase)
                 }}
+                imgUrl = {hero.imgUrl}
+                key={key}
         /> )
 
             // <div>
@@ -50,12 +53,12 @@ class App extends React.Component {
 
         return (
             <div className="superheroes-container">
-                {mappedHeros}
+                {/* {mappedHeros} */}
                 {/* <alert>CatchPhrase: {hero.catchphrase}</alert> */}
                 {mappedPhrase}
-                <button onClick={this.clickHeroes}> Activate Lasers </button>
+                {/* <button onClick={this.clickHeroes}> Activate Lasers </button>
                 <form onClick={this.handleClick}>
-                <button>Click Me!</button></form>
+                <button>Click Me!</button></form> */}
 
             </div>
         )
