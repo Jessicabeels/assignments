@@ -1,0 +1,142 @@
+* {
+    margin: 0
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 100%; */
+}
+
+
+.header {
+    background-image: url("https://images.unsplash.com/photo-1536553176585-67a46418b7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1182&q=80");
+    height: 380px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 100vw; */
+    /* width: 500px; */
+}
+
+
+.title {
+    /* text-align: center; */
+    margin: 30px;
+    font-family: 'Acme', sans-serif;
+    
+}
+
+.name-form {
+   background-color: rgb(255, 17, 0);
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/1280px-Hello_my_name_is_sticker.svg.png");
+   background-position: cover;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   /* width: 610px; */
+   border-radius: 10%;
+   width: 590px;
+   /* border: 1px solid black; */
+   margin: 5% 24%;
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+
+.badge-print {
+    /* margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    height: 50px;
+    width: 300px;
+    
+    grid-template-columns:  1fr 1fr;
+    grid-gap: 20px; */
+   /* background-color: rgb(255, 17, 0);
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/1280px-Hello_my_name_is_sticker.svg.png");
+   background-position: cover;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   align-items: center;
+  
+   text-align: center;
+   border-radius: 10%;
+   width: 300px;
+   height: 220px;
+   margin: 10%;
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    
+
+}
+
+.badge {
+    padding: 130px 50px;
+    background-color: rgb(255, 17, 0);
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/1280px-Hello_my_name_is_sticker.svg.png");
+   background-position: cover;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   align-items: center;
+   text-align: center;
+   border-radius: 10%;
+   width: 300px;
+   height: 40px;
+   margin-bottom: 5px;
+   margin: 3%;
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+.big-input {
+    
+    width: 70%;
+    height: 100px;
+    
+
+}
+
+input {
+    border: 1px solid #eee;
+    border-left: 3px solid gainsboro;
+    border-radius: 15px;
+    margin: 5px 10px 5px;
+    margin-bottom: 25px;
+    background-color: whitesmoke;
+    
+}
+
+.name {
+    margin-top: 200px;
+}
+
+button {
+  background-color: rgb(76, 130, 175); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.contain {
+    width: 100vw;
+    
+}

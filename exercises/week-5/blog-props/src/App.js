@@ -33,16 +33,16 @@ class App extends React.Component {
     }
 
 
-    render(){
-        return (
-            // <div style={{backgroundColor: this.state.color, height: 200, width: 200}}className="box" onClick={this.handleClick}></div>
-            <Box color = {this.state.color1} handleChangeColor={this.handleChangeColor} count={} />
-            <Box color = {this.state.color2} handleChangeColor={this.handleChangeColor} count={} />
-            <Box color = {this.state.color3} handleChangeColor={this.handleChangeColor} count={} />
+    // render(){
+    //     return (
+    //         // <div style={{backgroundColor: this.state.color, height: 200, width: 200}}className="box" onClick={this.handleClick}></div>
+    //         <Box color = {this.state.color1} handleChangeColor={this.handleChangeColor} count={} />
+    //         <Box color = {this.state.color2} handleChangeColor={this.handleChangeColor} count={} />
+    //         <Box color = {this.state.color3} handleChangeColor={this.handleChangeColor} count={} />
             
-        )
+    //     )
   
-    }
+    // }
 }
 
 
