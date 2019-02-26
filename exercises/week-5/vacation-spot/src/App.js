@@ -30,11 +30,24 @@ const App = () => {
           price: 400,
           timeToGo: "Spring",
           imgUrl: "https://www.gohawaii.com/sites/default/files/styles/narrow_carousel_large/public/content-carousel-images/Napali_0.jpg?itok=CZaVBQdQ"
+        },
+        {
+          place: "Los Angeles", 
+          price: 800,
+          timeToGo: "Summer",
+          imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenPo7mVei13KCpd3gbFFfKoJ4uWTbMUKKSdBlgYWleT7n1iJukA"
         }
       ]
 
       return (
           <div>
+            <h1 style={
+            {
+            margin: 50, 
+            padding: 5, 
+            fontSize: 40,
+            textAlign: "center", 
+            color: 'white'}}>Destinations</h1>
               <List vacations={vacationSpots}/>
           </div>
       )

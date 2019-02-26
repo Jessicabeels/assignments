@@ -16,17 +16,20 @@ const List = (props) => {
     return (
         <div style={
             {
-            margin: 5, 
+            margin: 30, 
             padding: 5, 
             fontSize: 40, 
             color: 'white',
             textAlign: 'center',
+            alignItems: 'center',
             backgroundColor: 'black',
             flexWrap: 'wrap',
             display: 'flex',
             flexDirection: 'row',
             }}>
-           <h1>Destinations:</h1> {mappedDestinations}
+            <div></div>
+            {mappedDestinations}
+           
         </div>
     )
 }

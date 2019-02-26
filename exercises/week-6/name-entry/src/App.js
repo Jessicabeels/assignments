@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import EntryForm from './EntryForm.js';
+import EntryForm from './EntryForm.js'
+import List from './List.js'
+
 
 class App extends Component {
     constructor(){
@@ -42,8 +44,8 @@ class App extends Component {
 
     render(){
 
-        const mappedName = this.state.names.map((name, key) => <h1>{name}</h1>)
-        const mappedAge = this.state.ages.map((age, key) => <h1>{age}</h1>)
+        // const mappedName = this.state.names.map((name, key) => <h1>{name}</h1>)
+        // const mappedAge = this.state.ages.map((age, key) => <h1>{age}</h1>)
 
         return (
             <div>
@@ -54,13 +56,16 @@ class App extends Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     nameInput={this.state.nameInput}
-                    ageInput={this.state.ageInput}
+                    // ageInput={this.state.ageInput}
                     />
 
                 <div>
                     {/* This is where you would map out your state names Array */}
-                    {mappedName}
-                    {mappedAge}
+                    {/* {mappedName}
+                    {mappedAge} */}
+                    <List names={this.state.names}
+                            ages={this.state.ages}
+                            />
                 </div>
             </div>
         )
