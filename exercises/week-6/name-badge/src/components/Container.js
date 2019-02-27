@@ -3,6 +3,7 @@ import Badge from './Badge.js'
 
 const Container = props => {
     const mappedBadge = props.badges.map((person, key) => 
+    //(...badges)
                                         <Badge 
                                                 key = {key}
                                                 firstName ={person.firstName}
@@ -12,6 +13,7 @@ const Container = props => {
                                                 favFood={person.favFood}
                                                 birthplace ={person.birthplace}
                                                 userInfo = {person.userInfo}/>)
+                                                
 
     return (
         

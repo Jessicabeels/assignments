@@ -50,29 +50,7 @@ body {
 
 
 .badge-print {
-    /* margin: 10px;
-    border: 1px solid black;
-    padding: 20px;
-    height: 50px;
-    width: 300px;
     
-    grid-template-columns:  1fr 1fr;
-    grid-gap: 20px; */
-   /* background-color: rgb(255, 17, 0);
-   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/1280px-Hello_my_name_is_sticker.svg.png");
-   background-position: cover;
-   background-size: 100%;
-   background-repeat: no-repeat;
-   align-items: center;
-  
-   text-align: center;
-   border-radius: 10%;
-   width: 300px;
-   height: 220px;
-   margin: 10%;
-   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -83,8 +61,8 @@ body {
 }
 
 .badge {
-    padding: 130px 50px;
-    background-color: rgb(255, 17, 0);
+   padding: 130px 50px;
+   background-color: rgb(255, 17, 0);
    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/1280px-Hello_my_name_is_sticker.svg.png");
    background-position: cover;
    background-size: 100%;
@@ -97,27 +75,27 @@ body {
    margin-bottom: 5px;
    margin: 3%;
    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 
 
 .big-input {
     
-    width: 70%;
-    height: 100px;
+    width: 50%;
+    height: 85px;
     
 
 }
 
-input {
+input, textarea {
     border: 1px solid #eee;
     border-left: 3px solid gainsboro;
     border-radius: 15px;
-    margin: 5px 10px 5px;
+    margin: 2px 10px 5px;
     margin-bottom: 25px;
-    background-color: whitesmoke;
+    background-color: blanchedalmond;
     
 }
 
@@ -126,13 +104,14 @@ input {
 }
 
 button {
-  background-color: rgb(76, 130, 175); 
+  background-color:  rgb(255, 17, 0);
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  margin-left: 300px;
+  display: fixed;
   font-size: 16px;
 }
 

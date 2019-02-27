@@ -1,0 +1,25 @@
+import React, {Component} from 'react'
+
+clas App extends Component {
+    constructor(){
+        super()
+    }
+}
+
+
+componentDidMount(){
+    //axios request
+
+}
+
+
+render() {
+    return (
+        <div>
+            Lifecycle methods!
+        </div>
+    )
+}
+
+
+export default App
