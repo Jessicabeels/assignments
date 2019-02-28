@@ -1,26 +1,29 @@
 import React from 'react'
-import Body from './Body.js'
-import Footer from './Footer.js'
-import Header from './Header.js'
-import NewBody from './NewBody.js';
+import Nav from './components/Nav.js'
+import Home from './components/Home.js'
+import About from './components/About.js'
+import Contact from './components/Contact.js'
+import Services from './components/Services.js'
+import { Switch, Route, withRouter } from 'react-router-dom'
+import './style.css'
 
-import {Switch, Route} from 'react-router-dom'
+const App = (props) => {
+    const user = {
+        username: "joeshmoe",
+        isAuthenticated: true
+    }
 
-const App = () => {
     return (
         <div>
-            <Header /> 
+            <Nav />
             <Switch>
-                <Route exact path='/' component={Body} />
-                <Route path='/newbody' component={NewBody} />
+                <Route exact path="/"   component={ Home } />
+                <Route path="/about"    component={ About } />
+                <Route path="/contact"  component={ Contact } />
+                <Route path="/services" render={rProps =>  <Services {...rProps} user={user}/> } />
             </Switch>
-            <Body /> 
-            <NewBody /> 
-            <Footer /> 
-            
         </div>
     )
 }
 
-
-export default App
+export default withRouter(App)

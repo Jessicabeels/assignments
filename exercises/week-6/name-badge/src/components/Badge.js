@@ -1,15 +1,16 @@
 import React from 'react'
 
 const Badge = (props) => {
+    const {firstName, lastName, phone, birthplace, userInfo, email, favFood} = props
     return (
             <div className="badge">
                 
-                                <h1>{props.firstName} {props.lastName}</h1>
-                                <h5>Email: {props.email}</h5>
-                                <h5>Phone: {props.phone}</h5>
-                                <h5>Favorite Food: {props.favFood}</h5>
-                                <h5>Birthplace: {props.birthplace}</h5>
-                                <h5>{props.userInfo}</h5>
+                                <h1>{firstName} {lastName}</h1>
+                                <h5>Email: {email}</h5>
+                                <h5>Phone: {phone}</h5>
+                                <h5>Favorite Food: {favFood}</h5>
+                                <h5>Birthplace: {birthplace}</h5>
+                                <h5>{userInfo}</h5>
             </div>
         )
     }
