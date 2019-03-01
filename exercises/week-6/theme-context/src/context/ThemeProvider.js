@@ -1,8 +1,9 @@
 //to change the theme value we have to make a class component that maintains a theme state
 import React, {Component} from 'react'
-import {Provider} from './index'
+// import {Provider} from '../index'
+const ThemeContext = React.createContext()
 
-class ThemeProvider extends React.Component{
+class ThemeProvider extends Component{
     constructor(){
         super()
         this.state ={
@@ -10,30 +11,32 @@ class ThemeProvider extends React.Component{
         }
         this.toggleTheme = this.toggleTheme.bind(this)
     }
-    toggleTheme(){
+    
+    toggleTheme= () => {
         this.setState(prevState => ({
             theme: prevState.theme === "dark" ? "light" : "dark"
         }))
     }
     render(){
-        const props={
-            toggleTheme: this.toggleTheme,
-            ...this.state
-        }
         return (
             //return the theme provider and its children
-            <Provider value={props}>
+            <ThemeContext.Provider 
+                value={{
+                    theme: this.state.theme,
+                    toggleTheme: this.toggleTheme
+                }}>
                 {this.props.children}
-            </Provider>
+            </ThemeContext.Provider>
         )
     }
 }
 
-export default ThemeProvider
 
-export const withTheme = C => props => (
-    <Consumer>
+export const lightTheme = C => props => (
+    <ThemeContext.Consumer>
         {value => <C {...value}{...props}/>}
-    </Consumer>
+    </ThemeContext.Consumer>
 )
 //this is abstracting theConsumer away to a HOC called withTheme
+
+export default ThemeProvider
