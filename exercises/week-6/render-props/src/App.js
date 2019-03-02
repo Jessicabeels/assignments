@@ -33,4 +33,4 @@ const App = (props) => {
     sibmit={inputs => props.addToDo(inputs)}
 />
 
-//render props allows us to writw logic 1x and reuse it
+//render props allows us to write logic 1x and reuse it

@@ -210,16 +210,79 @@
 // 	}
 // }
 
-var matrix= [
-	[0,0,0],
-	[0,0,0],
-	[0,0,0]
-]
+// var matrix= [
+// 	[0,0,0],
+// 	[0,0,0],
+// 	[0,0,0]
+// ]
 
 
-for (var i = 0; i < matrix.length; i++) {
-	for (var j = 0; j < matrix.length; i++) {
-		console.log(matrix)
-	}
+// for (var i = 0; i < matrix.length; i++) {
+// 	for (var j = 0; j < matrix.length; i++) {
+// 		console.log(matrix)
+// 	}
+
+// }
+
+
+// var arr = [3, 5, 7, 9];
+
+// for(var i=0; i<arr.length; i++) {
+// 	var lic = arr.length
+// 	return arr[i] = arr[i] * lic;
+// }
+// console.log(arr);
+
+
+var arr = [3, 5, 7, 9];
+
+var sums = arr.map(function(element) {
+	return element*2;
+});
+console.log(sums);
+
+function MultiplyByLength(arr) {
+	var sums = arr.map(function(element) {
+		var nums = element*2;
+		return sums * nums
+	})
+	
+	
+}
+
+console.log(MultiplyByLength(arr))
+
+
+function MultiplyByLength(arr) {
+	return arr.map(x => x * arr.length);
+  }
+
+  console.log(MultiplyByLength(arr))
+
+
+function AlphabetSoup(str) {
+	var res = str.split("")
+	res.sort()
+	var foo  = res.join('')
+	return foo
+}
+
+console.log(AlphabetSoup("javascript"))
+
+
+arr1 = [1,2,3,4]
+function firstLast(arr) {
+	return [arr[0], arr[arr.length - 1]]
 
 }
+
+console.log(firstLast(arr1))
+
+
+
+function nameShuffle(str) {
+	var res = str.split(' ')
+	return res
+}
+
+console.log(nameShuffle('Bernie Sanders'))
