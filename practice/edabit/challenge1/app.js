@@ -281,8 +281,110 @@ console.log(firstLast(arr1))
 
 
 function nameShuffle(str) {
-	var res = str.split(' ')
+	var res = str.split(' ').reverse()
 	return res
 }
 
 console.log(nameShuffle('Bernie Sanders'))
+
+//Create a function that takes an array of strings.
+//Return all words in the array that are exactly
+//four letters.
+
+let fourArr = ['jazz', 'quiz', 'jump']
+function isFourLetters(arr) {
+	
+	var res = arr.filter(word => word.length === 4)
+	return res
+}
+
+console.log(isFourLetters(fourArr))
+
+
+// let arrEvens = [1,2,3,4,5,6,7,8]
+// function noOdds(arr) {
+// 	let evens = []
+// 	for( var i =0; i < arr.length; i++){
+// 		if ( arr[i] % 2 === 0){
+// 			evens.push(a[i])
+			
+// 		}
+// 		return evens
+// 	}
+	
+	
+// }
+
+// console.log(noOdds(arrEvens))
+
+// let arrEvens = [1,2,3,4,5,6,7,8]
+// function noOdds(arr) {
+// 	b = [];
+//  	for (var i = 0; i < arr.length; ++i) { 
+// 		if ((arr[i] % 2) ! = 1)
+// {
+
+// }	}
+	
+// }
+
+// console.log(noOdds(arrEvens))
+
+
+// "b" will now hold all the even values of "a"
+
+var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
+var evens = [];
+var odds = [];
+
+var evenNumbers = function(arr) {
+	let evens = []
+    for (var i = 0; i < arr.length; i++) {
+        if ((arr[i] % 2) != 1) {
+            evens.push(arr[i]);
+				// console.log(evens);
+        }
+        
+    }
+	return evens
+};
+
+console.log(evenNumbers(nums));
+// console.log(evens);
+// console.log(odds);
+
+// Write a short program that prints each number from 1 to 100 on a new line. 
+
+// For each multiple of 3, print "Fizz" instead of the number. 
+
+// For each multiple of 5, print "Buzz" instead of the number. 
+
+// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+
+const FizzBuzz = () => {
+	for (let i = 0; i < 100; i++){
+		if ( i % 5 === 0  &&  i % 3 === 0){
+			console.log("fizzbuzz")
+		} else if ( i % 5 === 0){
+			console.log("buzz")
+		} else if ( i % 3 === 0){
+			console.log("Fizz")
+		} else ( console.log(i))
+	}
+}
+
+FizzBuzz()
+
+const FizzBuzzed = () => {
+	for (let i = 0; i < 100; i++){
+		if (i % 3 === 0 && i % 5 === 0){
+			console.log("fizzbuzz")
+		} else if (i % 3 === 0) {
+			console.log("fizz")
+		} else if ( i % 5 === 0){ 
+			console.log('buzz')
+		} else (console.log(i))
+	}
+}
+
+FizzBuzzed()

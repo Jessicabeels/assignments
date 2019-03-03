@@ -17,8 +17,8 @@ const App = props => {
             <h1>Tweeter</h1>
             <h4 className="username"> Username @handle</h4>
             <span className="username-chicken"></span>
-                <p> Feed of Mildly irritating things, and mildly satisfying </p>
-                     yooooooooooooooo
+                <p> Post mildly irritating things, and mildly satisfying things </p>
+                    
                     
 
             </div>

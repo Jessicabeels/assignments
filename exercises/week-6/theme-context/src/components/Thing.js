@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import AddThingForm from './AddThingForm.js'
 
 
 //we're going to give each todo its own state so that each todo can operate separately via the toggler,
@@ -41,7 +42,7 @@ handleSubmit = e => {
 
 
 render(){
-    const { title, description, imgUrl, price, handleDelete, _id } = this.props
+    const { title, description, imgUrl, handleDelete, _id } = this.props
     return (
         <div>
             { ! this.state.isToggled
