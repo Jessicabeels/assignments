@@ -388,3 +388,11 @@ const FizzBuzzed = () => {
 }
 
 FizzBuzzed()
+
+function minMax(arr) {
+	nums = []
+		let mins = Math.min(...arr)		
+		let maxs = Math.max(...arr)
+		return nums.concat(mins + maxs)
+}
+minMax()

@@ -3,6 +3,7 @@ import ThingList from './components/ThingList.js'
 import AddThingForm from './components/AddThingForm.js'
 import { withThings } from './context/ThingProvider.js'
 
+
 class App extends Component {
     constructor() {
         super()
@@ -37,7 +38,7 @@ class App extends Component {
     render(){
         return (
             <div className="app-container">
-                <h3>(Mildly irriatiting Things list)</h3>
+                <h1>Mildly infuriating Things list</h1>
                 <AddThingForm 
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit} 

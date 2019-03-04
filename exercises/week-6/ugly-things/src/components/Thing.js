@@ -47,13 +47,13 @@ class Thing extends Component {
         return (
             <div>
                 { !this.state.isToggled 
-                    ?   <div className="todo-div" style={{ backgroundImage: `url(${imgUrl})`}}>
+                    ?   <div className="thing-div" style={{ backgroundImage: `url(${imgUrl})`}}>
                             <h1>{title}</h1>
                             <h3>{description}</h3>
                             <button onClick={() => handleDelete(_id)}>Delete</button>
                             <button onClick={this.toggler}>Update Edit</button>
                         </div>
-                    :   <div className="edit-todo-div">
+                    :   <div className="edit-thing-div">
                             <AddThingForm 
                                 {...this.state}
                                 btnText="Edit"

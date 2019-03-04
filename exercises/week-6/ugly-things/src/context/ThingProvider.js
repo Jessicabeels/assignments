@@ -59,11 +59,11 @@ class ThingProvider extends Component {
         axios.put(`${"https://api.vschool.io/jessica/todo"}/${_id}`, updates)
             .then(response => {
                 // Get the updated Todo
-                const updatedTodo = response.data
+                const updatedThing = response.data
                 this.setState(prevState => {
                     return {
                         // Loop through previous things and replace the outdated one with the updated one
-                        things: prevState.things.map(todo => todo._id === _id ? updatedTodo : todo)
+                        things: prevState.things.map(thing => thing._id === _id ? updatedThing : thing)
                     }
                 })
             })
