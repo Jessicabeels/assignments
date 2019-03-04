@@ -1,3 +1,20 @@
+* {
+    margin: 0;
+}
+
+/* .app-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-areas:
+    "header  header  header"
+    "sidebar content content"
+    "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
+} */
+
+
 .thing-div {
     width: 30%;
     height: 220px;
@@ -6,4 +23,106 @@
 
 .thing-div > button {
     margin-bottom: 20px;
+}
+
+.nav {
+  width: 100vw;
+  height: 8vh;
+  background-color: dodgerblue;
+  display: flex;  
+  justify-content: space-around;
+  font-size: 20px;
+  position: sticky;
+}
+
+a:link {
+    color:purple;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: black;
+}
+
+
+.header {
+    padding: 50px; 
+    /* width: 20%; */
+    height: 13vh;
+    background-image: url("https://images.unsplash.com/photo-1551336531-183c72560806?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
+}
+
+
+.user {
+    background-color: white;
+    padding: 10px;
+    width: 20%;
+    height: 15vh;
+
+}
+
+.profile {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/lil-silhouettes/2176/person7-512.png") contain;
+    border-radius: 30px;
+    width: 20%;
+    height: 10vh;
+}
+
+.form {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10%;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+
+.thing-div {
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border: white 20px solid;
+    color: white;
+    padding: 10px;
+    -webkit-text-stroke: rgb(111, 111, 111) .5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.transbox {
+  margin: 30px;
+  background-color: red;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+
+.twit {
+    border-radius: 40px;
+    width: 10vw;
+    background-color: aliceblue;
+    text-align: right;
+    /* margin-top: 8px; */
+    
 }

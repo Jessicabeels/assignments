@@ -11,7 +11,7 @@ const ThingList = (props) => {
                                 />)
 
     return (
-        <div>
+        <div className="list">
             { mappedThings }
         </div>
     )

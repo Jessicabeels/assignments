@@ -22,6 +22,13 @@ class Thing extends Component {
         }))
     }
 
+    // toggler = () => {
+    //     this.setState(prevState => ({
+    //         isToggled: !prevState.isToggled
+    //         if 
+    //     }))
+    // }
+
     handleChange = e => {
         const { name, value } = e.target
         this.setState({ [name]: value })

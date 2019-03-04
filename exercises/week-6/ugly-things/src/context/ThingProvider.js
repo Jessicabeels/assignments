@@ -9,9 +9,11 @@ class ThingProvider extends Component {
         this.state = {
             things: []
         }
-        this.url = "https://api.vschool.io/jessica/todo"
+        this.url= "https://api.vschool.io/jessica/todo"
         //this.url isnt working for me
     }
+
+    
 
     getThings = () => {
         axios.get("https://api.vschool.io/jessica/todo").then(response => {
@@ -36,7 +38,7 @@ class ThingProvider extends Component {
                     things: [response.data, ...prevState.things]
                 }
             })
-            // things: maintain old things, and add in new todo from DB
+            // things: maintain old things, and add in new thing from DB
             // input Values: Reset back to empty strings
         }).catch(error => console.log(error))
     }

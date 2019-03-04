@@ -3,7 +3,7 @@ import React from 'react'
 const AddThingForm = (props) => {
     const { title, description, imgUrl, handleChange, handleSubmit, btnText } = props
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
             <input 
                 type="text" 
                 name="title" 
