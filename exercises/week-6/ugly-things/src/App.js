@@ -3,6 +3,7 @@ import ThingList from './components/ThingList.js'
 import AddThingForm from './components/AddThingForm.js'
 import { withThings } from './context/ThingProvider.js'
 import Nav from './Nav.js'
+import './style.css'
 
 
 class App extends Component {
@@ -41,23 +42,34 @@ class App extends Component {
         return (
             <div className="app-container">
                 <Nav />
-                <h1 className="header">Mildly infuriating Things list</h1>
-                <div className="user">
-                    <div className="profile">
-                    </div>
-                    <h5> @mildyirritating</h5>
-                </div>
-                <AddThingForm className="form"
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit} 
-                    title={this.state.title}
-                    description={this.state.description}
-                    imgUrl={this.state.imgUrl}
-                    btnText="Twit"/>
-                <ThingList className="transbox"
-                    things={this.props.things}
-                    handleDelete={this.props.handleDelete}
-                    handleEdit={this.props.handleEdit}/>
+                
+                
+                
+                    <header class="header">
+                        
+                    </header>
+                    
+                    <aside class="sidebar">
+                        <div className="user">
+                            <h3 className="pic">Mildly Irritating <h6>@mildyirritating</h6></h3>
+                        </div>
+                    </aside>
+                    <article class="content">
+                    {/* <button onClick className="swap">Satisfy Me </button>  */}
+                    <h1>A Tweeter exclusively for Mildly Irritating (& Mildly Satisfying) things</h1>
+                        <AddThingForm className="form"
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit} 
+                        title={this.state.title}
+                        description={this.state.description}
+                        imgUrl={this.state.imgUrl}
+                        btnText="Twit"/>
+                    <ThingList className="transbox"
+                        things={this.props.things}
+                        handleDelete={this.props.handleDelete}
+                        handleEdit={this.props.handleEdit}/>
+                    </article>
+                    <footer class="footer"></footer>
             </div>
         )
     }
