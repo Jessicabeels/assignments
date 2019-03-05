@@ -225,6 +225,9 @@
 // }
 
 
+
+
+
 // var arr = [3, 5, 7, 9];
 
 // for(var i=0; i<arr.length; i++) {
@@ -389,10 +392,68 @@ const FizzBuzzed = () => {
 
 FizzBuzzed()
 
-function minMax(arr) {
-	nums = []
-		let mins = Math.min(...arr)		
-		let maxs = Math.max(...arr)
-		return nums.concat(mins + maxs)
+// function minMax(arr) {
+// 	nums = []
+// 		let mins = Math.min(...arr)		
+// 		let maxs = Math.max(...arr)
+// 		return nums.concat(mins + maxs)
+// }
+// minMax()
+
+
+function filterArray(arr) {
+	let newArr = []
+	for (let i =0; i < arr.length; i++){
+		for (let j = 0; i < arr.length; j++){
+		if (arr[i] >= 0){
+			newArr.push(arr[i])
+		}
+		return arr
+	}
+	}
 }
-minMax()
+
+console.log(filterArray[1, 34, 'yo', 58])
+
+
+function sum(num) {
+    let res = 0;
+    for (let i=0; i < num.length; i--) {
+        res += num[i];
+    }
+    return res;
+}
+ 
+// let num = 600
+
+console.log(sum(600, 70))        // 5
+// console.log(sum(-10, 1));       // -9
+// console.log(sum(1, 1, 1, 1));   // 4
+// console.log(sum());             // 0
+
+
+
+// const reducer = (accumlator,currentValue) => accumlator + currentValue
+
+// const sumRec = (num) => {
+// 	let res = num.split('')
+// 	return res
+// }
+
+
+// let num = [1,2,3,4]
+// console.log(sumRec(num))
+
+// const array1 = [1, 2, 3, 4];
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// // 1 + 2 + 3 + 4
+// console.log(array1.reduce(reducer));
+// // expected output: 10
+
+// // 5 + 1 + 2 + 3 + 4
+// console.log(array1.reduce(reducer, 5));
+// // expected output: 15
+
+var n =  123456789;
+var digits = (""+n).split("");
