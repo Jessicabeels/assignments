@@ -25,9 +25,9 @@ class PubProvider extends Component {
     }
 
     addPub = (inputs) => {
-        const { title, description, authors, date, identifiers, subjects, language, publisher } = inputs
+        const { title, identifiers, subjects, language, publisher } = inputs
         //create Obj
-        const newPub= { title, description, authors, date, identifiers, subjects, language, publisher} 
+        const newPub= { title, identifiers, subjects, language, publisher} 
 
         axios.post(`https://core.ac.uk/api-v2/journals/search/science?page=1&pageSize=80&apiKey=${keys}`, newPub).then(response => {
             //update the state

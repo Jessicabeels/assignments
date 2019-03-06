@@ -14,7 +14,7 @@ const App = (props) => {
     }
 
     return (
-        <div>
+        <div>Hi
             <Nav />
             <Switch>
                 <Route exact path="/"   component={ Home } />
