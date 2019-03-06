@@ -84,19 +84,23 @@ Font-Size: 16px; */
     display: flex;
     justify-content: space-around;
     padding: 15px 15px 0px 0px;
-    color: rgb(190, 180, 180)
+    color: rgb(190, 180, 180);
+    flex-direction: row;
+    display: flex;
+    font-size: 35px;
 }
 
 .title {
     font-family: 'Roboto Condensed', Sans-Serif;
-    font-size: 55px;
+    font-size: 75px;
+    letter-spacing: 4px;
 }
 
 a:link {
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 35px;
+    
    
 }
 a:hover {
@@ -106,16 +110,31 @@ a:hover {
 
 .logo {
     background-image: url('./assets/logo.png');
-    background-size: cover;
+    background-size: contain;
     /* border: black 1px solid; */
-    width: 90px;
-    height: 120px;
+    margin-top: 30px;
+    width: 50px;
+    height: 60px;
 }
 
 
 .logo-container {
-    width: 50px;
+    width: 1vw;
 }
+
+.search {
+    margin-top: 50px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: #D8DBE2;
+    font-family: 'Cabin', Sans-Serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+
 /* ///////////////////////NAV////////////////////////////// */
 
 /* ////////////////////////content/////////////////////////////// */
@@ -127,10 +146,13 @@ a:hover {
     -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
     -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.51);
+    text-transform: capitalize;
+    font-family: 'Cabin', Sans-Serif;
 }
 
 .pub-container > h1 {
     font-size: 20px;
+    font-family:'Roboto Condensed', Sans-Serif;
 }
 
 /* ////////////////////////content/////////////////////////////// */
@@ -141,6 +163,7 @@ a:hover {
 
 .sidebar {
     padding: 15px;
+    font-family: 'Cabin', Sans-Serif;
 }
 
 .prof {
@@ -244,3 +267,90 @@ a:hover {
 .more > .img4 {
     background-image: url('https://images.unsplash.com/photo-1551419762-4a3d998f6292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
 }
+
+/* ////////////////////////ABOUT /////////////////////////////// */
+
+
+
+
+.about {
+    
+margin: 20px;
+    
+}
+
+
+/* .center-container {
+    margin: auto;
+} */
+
+
+.grid-container{
+
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* background-color: blueviolet; */
+    margin: 90px 5px 15px 15px;
+}
+
+.grid-container> .box {
+    /* background-color: red; */
+    border-radius: 5px;
+    /* padding: 28px; */
+    height: 300px;
+    color:black;
+    margin-top: 40px;
+    background-position: center;
+    background-size: cover;
+    height: 330px;
+
+    
+}
+
+.boxA:hover {
+    transform: scale(1.5); 
+}
+
+.grid-container > .boxA {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+    transition: transform .2s; 
+    height: 330px;
+}
+
+.grid-container > .boxB {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-container > .boxC {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-container > .boxD {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+    height: 330px;
+}
+
+.grid-container > .boxE {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-container > .boxF {
+    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* ////////////////////////ABOUT /////////////////////////////// */

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Search from './Search'
 
 
 
@@ -10,6 +11,7 @@ const Nav = () => {
             <div className="logo-container">
                 <div className="logo"></div>
             </div>
+            <Search />
             <Link to="/"></Link>
             <Link to="/about">About</Link>
             <Link to="/saved">Saved</Link>
