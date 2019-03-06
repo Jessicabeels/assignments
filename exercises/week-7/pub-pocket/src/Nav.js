@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Nav = (props) => {
+const Nav = () => {
     return (
         <div className="nav">
             <Link className = "title" to="/">Pub Pocket</Link>
