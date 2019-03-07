@@ -1,14 +1,13 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import {  Route } from 'react-router-dom'
+
 const Pub = (props) => {
 
 
     const { title, identifiers, subjects, language, publisher } = props
 
     //separate out the URL
-    let foo = "hi" + identifiers[identifiers.length -1]
-    let faa = foo.slice(6,foo.length)
+    let myurl = "hi" + identifiers[identifiers.length -1]
+    let thisUrl = myurl.slice(6,myurl.length)
 
 
     let subSubs = subjects.slice(', ').join(', ')
@@ -19,8 +18,8 @@ const Pub = (props) => {
 
         //remove weird empty letter from list
     subSubs = subSubs.substring(0, subSubs.lastIndexOf(", "));
-    console.log(typeof subSubs)
-    console.log(subSubs)
+    // console.log(typeof subSubs)
+    // console.log(subSubs)
 
     // let subSubs = subjects.slice(', ')
     // // console.log( subSubs)
@@ -49,10 +48,11 @@ const Pub = (props) => {
     return (
         <div className="pub-container">
             <h1>{title}</h1>
-            {/* <Link to={faa}>Learn more</Link> */}
-            <a target="_new" href={faa}>Learn More</a>
+            <p>Publisher: { publisher }</p>
+            {/* <Link to={thisUrl}>Learn more</Link> */}
+            <a target="_new" href={thisUrl}>Learn More</a>
 
-
+            
 
             <p> {"  " + subSubs + "  "}</p>
             <p>{issn}</p>
@@ -60,7 +60,7 @@ const Pub = (props) => {
             
             {/* <p>Subjects: { subjects }</p> */}
             <p>Language: { language }</p>
-            <p>Publisher: { publisher }</p>
+            
         </div>
     )
 }

@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Search from './Search'
+import Searchbar from './Searchbar'
 
-
-
-const Nav = () => {
+const Nav = (props) => {
+    const { navToggle, toggler } = props
     return (
-        <div className="nav">
+        <div onClick = {toggler} className={`nav nav=${navToggle ? "open" : "closed"}`}>
+        {/* <div className="nav"> */}
             <Link className = "title" to="/">Pub Pocket</Link>
             <div className="logo-container">
                 <div className="logo"></div>
             </div>
-            <Search />
+            <Searchbar />
             <Link to="/"></Link>
             <Link to="/about">About</Link>
             <Link to="/saved">Saved</Link>

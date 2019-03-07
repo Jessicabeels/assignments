@@ -9,49 +9,79 @@ class PubProvider extends Component {
     constructor(){
         super()
         this.state = {
-            pubs: []
+            pubs: [],
+            searches:[]
+            
         }
     }
 
-
+////////////////////////////////////////////Get basic feed ///////////////////////////////
     getPubs = () => {
         axios.get(`https://core.ac.uk/api-v2/journals/search/science?page=1&pageSize=80&apiKey=${keys}`).then(response => {
-            console.log(response)
+            // console.log(response)
             this.setState({
                 pubs: response.data.data
             })
         })
         .catch(error => console.log(error))
     }
+////////////////////////////////////////////Get basic feed ///////////////////////////////
 
-    addPub = (inputs) => {
-        const { title, identifiers, subjects, language, publisher } = inputs
-        //create Obj
-        const newPub= { title, identifiers, subjects, language, publisher} 
+/////////aysnc attempt ////////////
 
-        axios.post(`https://core.ac.uk/api-v2/journals/search/science?page=1&pageSize=80&apiKey=${keys}`, newPub).then(response => {
-            //update the state
-            this.setState(prevState => {
-                return {
-                    things: [response.data, ...prevState.pubs]
-                }
+// getPubs = async = () => {
+//     try {
+//         const response     = await axios.get(`https://core.ac.uk/api-v2/articles/search/${this.state.userInput}?page=1&pageSize=10&metadata=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${keys})`)
+//         const { searches } = response.data
+//         const searchArr    = await axios.get(searches)
+
+
+//         this.setState({
+//             searches: searchArr.data.
+//         })
+
+
+
+
+
+//     }
+// }
+
+
+
+
+
+
+
+    ////////////////Search //////////////
+
+    getSearch = (userInput) => {
+        axios.get(`https://core.ac.uk/api-v2/articles/search/${userInput}?page=1&pageSize=10&metadata=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${keys}`).then(response => {
+        //CORS?????    
+
+            // console.log(response.data)
+            
+            this.setState({
+                searches: response.data.data
             })
-        }).catch(error => console.log(error))
+        })
+        .catch(error => console.log(error))
     }
 
+   
+     ////////////////Search //////////////
 
-    //POST for search
-    
-
-    //HandleSubmit ? 
 
     render(){
         return (
             <PubContext.Provider
                 value={{
                     pubs: this.state.pubs,
+                    searches: this.state.searches,
                     getPubs: this.getPubs,
-                    addPub: this.addPub
+                    getSearch: this.getSearch,
+                    handleSubmit: this.handleSubmit,
+                    handleChange: this.handleChange
                 }}>
                 { this.props.children }
                 </PubContext.Provider>
