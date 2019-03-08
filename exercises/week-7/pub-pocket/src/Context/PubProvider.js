@@ -17,7 +17,7 @@ class PubProvider extends Component {
 
 ////////////////////////////////////////////Get basic feed ///////////////////////////////
     getPubs = () => {
-        axios.get(`https://core.ac.uk/api-v2/journals/search/science?page=1&pageSize=80&apiKey=${keys}`).then(response => {
+        axios.get(`https://core.ac.uk/api-v2/journals/search/science?page=1&pageSize=30&apiKey=${keys}`).then(response => {
             // console.log(response)
             this.setState({
                 pubs: response.data.data
@@ -26,31 +26,6 @@ class PubProvider extends Component {
         .catch(error => console.log(error))
     }
 ////////////////////////////////////////////Get basic feed ///////////////////////////////
-
-/////////aysnc attempt ////////////
-
-// getPubs = async = () => {
-//     try {
-//         const response     = await axios.get(`https://core.ac.uk/api-v2/articles/search/${this.state.userInput}?page=1&pageSize=10&metadata=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${keys})`)
-//         const { searches } = response.data
-//         const searchArr    = await axios.get(searches)
-
-
-//         this.setState({
-//             searches: searchArr.data.
-//         })
-
-
-
-
-
-//     }
-// }
-
-
-
-
-
 
 
     ////////////////Search //////////////

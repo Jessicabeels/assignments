@@ -68,9 +68,5 @@ export default () => (
       
       </p>
     </div>
-    <div>
-      <img src="http://lorempixel.com/output/cats-q-c-640-480-14.jpg" />
-      <p className="legend">Legend 14</p>
-    </div>
   </Carousel>
 );

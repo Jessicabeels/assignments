@@ -23,7 +23,7 @@ class Searchbar extends Component {
         this.props.getSearch(this.state.userInput)
         this.setState({
             userInput: e.target.value,
-            
+            userInput: ''
         })
 
     }
@@ -31,7 +31,7 @@ class Searchbar extends Component {
 
 render(){
     return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="search-form">
             <input className = "search"
             type="text"
             name="userInput"
