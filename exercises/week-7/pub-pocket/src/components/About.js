@@ -1,4 +1,5 @@
 import React from 'react'
+import PubList from './PubList';
 
 const About = () => {
     return (
@@ -10,6 +11,7 @@ const About = () => {
                     <div class="boxD ">D</div>
                     <div class="boxE ">E</div>
                     <div class="boxF ">F</div>
+                    <PubList />
                 </div>        
         </div>
     )

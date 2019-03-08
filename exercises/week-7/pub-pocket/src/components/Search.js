@@ -21,7 +21,6 @@ return (
     
         <h1>{title}</h1>
         <h4>Authors: {authors}</h4>
-        <p>Download Url: {downloadUrl}</p>
         <a target="_new" href={downloadUrl}>Learn more</a>
         <p>Publisher: {publisher}</p>
         <p>Topics: {topics}</p>

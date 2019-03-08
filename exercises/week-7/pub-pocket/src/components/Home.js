@@ -1,5 +1,7 @@
 import React from 'react'
 import PubList from './PubList'
+import SearchList from './SearchList';
+import Searchbar from '../Searchbar';
 
 const Home = () => {
     return (
@@ -17,14 +19,19 @@ const Home = () => {
             
         </div>
         <div className="more">
-            <div className="img img1"> </div>
+            {/* <div className="img img1"> </div>
             <div className="img img2"> </div>
             <div className="img img3"> </div>
-            <div className="img img4"> </div>
+            <div className="img img4"> </div> */}
+            <Searchbar />
+            <SearchList />
         </div>
+
+
         </div>
-        <div className="box content">
-        <PubList />
+        <div className="content">
+            <div className="rotator"></div>    
+            <SearchList />
         </div>
         <div className="box footer">Footer</div>
     </div>
