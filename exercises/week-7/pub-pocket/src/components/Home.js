@@ -2,6 +2,9 @@ import React from 'react'
 import PubList from './PubList'
 import SearchList from './SearchList';
 import Searchbar from '../Searchbar';
+// import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from './myCarousel.js'
 
 const Home = () => {
     return (
@@ -19,10 +22,10 @@ const Home = () => {
             
         </div>
         <div className="more">
-            {/* <div className="img img1"> </div>
-            <div className="img img2"> </div>
+            {/* <div className="img img1"> </div> */}
+            {/* <div className="img img2"> </div> */}
             <div className="img img3"> </div>
-            <div className="img img4"> </div> */}
+            {/* <div className="img img4"> </div> */}
             <Searchbar />
             <SearchList />
         </div>
@@ -30,8 +33,12 @@ const Home = () => {
 
         </div>
         <div className="content">
-            <div className="rotator"></div>    
-            <SearchList />
+            {/* <div className="rotator"> </div>   */}
+            <div className="carousel">
+            
+                <Carousel /> 
+            </div>
+            <PubList />
         </div>
         <div className="box footer">Footer</div>
     </div>
