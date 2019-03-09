@@ -14,7 +14,7 @@ Font-Size: 16px; */
 
 
 .header {
-    border: .5px rgb(121, 114, 114) solid;
+    /* border: .5px rgb(121, 114, 114) solid; */
     grid-area: header;
     -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
     -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
@@ -40,6 +40,7 @@ Font-Size: 16px; */
     -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.51);
     padding: 15px;
+    background-color: rgb(250, 247, 247);
     
 }
 
@@ -54,8 +55,8 @@ Font-Size: 16px; */
 .body {
     margin: 20px;
     display: grid;
-    grid-gap: 20px 5px;
-    grid-template-columns: 400px 1fr;
+    grid-gap: 20px 10px;
+    grid-template-columns: 275px 1fr;
     /* grid-template-columns: 1fr 2fr; */
     grid-template-areas: 
     "header header header"
@@ -65,16 +66,15 @@ Font-Size: 16px; */
 
 @media (max-width:800px ){
     .body {
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 150px 2fr;
     grid-template-areas: 
     "header header header"
     "sidebar content content"
     "footer footer footer";
     }
 
-    .logo {
 
-    }
+
     
 }
 
@@ -88,6 +88,8 @@ Font-Size: 16px; */
     flex-direction: row;
     display: flex;
     font-size: 35px;
+    color: #1B2F33;
+    /* background-color: #B7CECE; */
   
 }
 
@@ -95,17 +97,24 @@ Font-Size: 16px; */
     font-family: 'Roboto Condensed', Sans-Serif;
     font-size: 75px;
     letter-spacing: 4px;
+    color: #1B2F33;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
+}
+
+.about, .saved, .profile {
+    color: #1B2F33;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
 }
 
 a:link {
     text-decoration: none;
     display: flex;
     align-items: center;
-    
+   
    
 }
 a:hover {
-    color: rgb(39, 89, 199);
+    color:#437C90;
 }
 
 
@@ -133,13 +142,15 @@ a:hover {
 }
 .search {
     margin-top: 35px;
-    width: 250px;
+    width: 200px;
     height: 35px;
     border-radius: 10%;
     background-color: #D8DBE2;
     font-family: 'Cabin', Sans-Serif;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 2px;
+    box-shadow: -1px -1px 1px rgba(245, 237, 237, 0.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
+
 }
 
 .search-button {
@@ -148,19 +159,21 @@ a:hover {
     border-radius:8px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 35px;
-    /* display:flex; */
-    height: 25px;
+    margin-top: 32px;
+    background-color:#FF715B;;
+    height: 28px;
     cursor:pointer;
     margin-bottom: 65px;
-	padding:20px;
-    text-shadow:0px 1px 0px #1570cd;
+    margin-left: -20px;
+	padding:22px;
+    text-shadow:0px 1px 0px #437C90;;
     background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+    box-shadow: 0px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
 }
 
 button:hover {
 
-    background-color:#1e62d0;
+    background-color:#437C90;
     box-shadow:inset 0px 0px 0px 0px #97c4fe;
 }
 
@@ -179,9 +192,36 @@ button:hover {
     font-family: 'Cabin', Sans-Serif;
 }
 
+.pub-container:hover {
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(6, 5, 5, 0.71);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(10, 9, 9, 0.71);
+    box-shadow: 1px 1px 1px 1px rgba(12, 8, 8, 0.51);
+}
+
 .pub-container > h1 {
     font-size: 20px;
     font-family:'Roboto Condensed', Sans-Serif;
+    color: #437C90;
+}
+
+.pub-container > a:link {
+    color: #FF715B;
+}
+
+.category {
+    width: 13px;
+    height: 13px;
+}
+
+.category-img {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OOjs_UI_icon_academic.svg/240px-OOjs_UI_icon_academic.svg.png');
+    width: 100%;
+    height: 100%;
+    background-image: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: black solid 1px;
+
 }
 
 .rotator {
@@ -230,6 +270,7 @@ button:hover {
     /* flex-direction: row; */
     /* text-align: center; */
     
+    
 }
 
 .prof > h3 {
@@ -243,11 +284,13 @@ button:hover {
     margin-left: 10px;
     margin-top: 10px;
     position: relative;
+    
 }
 
 .user {
     display: fixed;
     padding: 15px;
+   
 
 }
 
@@ -255,6 +298,7 @@ button:hover {
     /* border: 1px rgb(190, 180, 180) solid; */
     width: 100%;
     /* position: relative;  */
+    /* background-color: #B7CECE; */
 
 }
 
@@ -350,6 +394,15 @@ div.transbox {
     margin: 90px 5px 15px 15px;
 }
 
+@media(min-width: 800) {
+    .grid{
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+}
+
+
 .grid-container> .box {
     /* background-color: red; */
     border-radius: 5px;
@@ -365,7 +418,8 @@ div.transbox {
 }
 
 .boxA:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
+     
 }
 
 .grid-container > .boxA {
@@ -437,18 +491,33 @@ div.transbox {
 
 /* //////////////////////////////////////transitions */
 
+
+@media (min-width: 1200px){
+    .rotate {
+        position: absolute;
+        opacity: 0;
+        margin: 10px;
+        margin-top: 30px;
+        border-radius: 4px;
+        z-index: 0; /* the button is directly behind the overlay */
+        
+    }
+}
+
 @media (max-width: 1200px) {
 
 .nav {
     display: flex;
     flex-direction: column;
-    /* width: 100px; */
-    background-color: rgba(0, 0, 0, 0.85);
+    width: 285px;
+    /* background-color: rgba(0, 0, 0, 0.85); */
+    background-color: rgb(0, 0, 0);
     height: 100vh;
+    margin-top: -60px;
     align-items: center;
     position: absolute;
     left: 0;
-    transition: left 300ms linear ;
+    transition: left 800ms linear ;
     z-index: 3; /* nav is the top layer */
 }
 
@@ -479,35 +548,19 @@ div.transbox {
     background-color: #5559;
     width: 100%;
     margin-left: 0px;
+    
 }
 
-
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    /* background-color: rgba(0, 0, 0, .8); */
-    position: absolute;
-    transition: left 300ms linear;
-    z-index: 2; /* Overlay is the layer directly behind nav */
-}
-
-
-.overlay-open {
-    left: 0;
-}
-
-.overlay-closed {
-    left: -100vw;
-}
 
 .rotate {
     position: absolute;
-    right: 0;
+    left: 0;
     padding: 10px;
     margin: 10px;
+    margin-top: 30px;
     border: 1px solid black;
     border-radius: 4px;
-    z-index: 1; /* the button is directly behind the overlay */
+    z-index: 10; /* the button is directly behind the overlay */
     transform: rotate(90deg);
     transition: transform 200ms linear, opacity 300ms linear;
 }
@@ -520,40 +573,35 @@ div.transbox {
     transform: rotate(0deg);
 }
 
-
-
-
-
-
 /* Page Fade Transition */
-.page-fade-appear {
+/* .page-fade-appear {
     opacity: 0;
     position: absolute;
-}
+} */
 
-.page-fade-appear.page-fade-appear-active {
+/* .page-fade-appear.page-fade-appear-active {
     opacity: 1;
     transition: opacity 600ms linear;
-}
+} */
 
-.page-fade-enter {
+/* .page-fade-enter {
     opacity: 0;
     position: absolute;
-}
+} */
 
-.page-fade-enter.page-fade-enter-active {
+/* .page-fade-enter.page-fade-enter-active {
     opacity: 1;
     transition: opacity 600ms linear;
-}
-
+} */
+/* 
 .page-fade-exit {
     opacity: 1;
     position: absolute;
-}
+} */
 
-.page-fade-exit.page-fade-exit-active {
+/* .page-fade-exit.page-fade-exit-active {
     opacity: 0;
     transition: opacity 600ms linear;
-}
+} */
 
 }

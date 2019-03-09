@@ -51,8 +51,10 @@ const Pub = (props) => {
             <p>Publisher: { publisher }</p>
             {/* <Link to={thisUrl}>Learn more</Link> */}
             <a target="_new" href={thisUrl}>Learn More</a>
-
-            
+            <div className="category">
+                <div className="category-img"></div>
+            </div>
+           
 
             <p> {"  " + subSubs + "  "}</p>
             <p>{issn}</p>

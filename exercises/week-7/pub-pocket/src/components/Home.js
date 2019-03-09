@@ -24,8 +24,9 @@ const Home = () => {
         <div className="more">
             {/* <div className="img img1"> </div> */}
             {/* <div className="img img2"> </div> */}
-            <div className="img img3"> </div>
+            {/* <div className="img img3"> </div> */}
             {/* <div className="img img4"> </div> */}
+            Search All Open Access Journals
             <Searchbar />
             <SearchList />
         </div>

@@ -36,7 +36,7 @@ render(){
             type="text"
             name="userInput"
             value={this.state.userInput}
-            placeholder = "Search"
+            placeholder = "    Search      "
             onChange  = {this.handleChange}
             />
         <button className="search-button"></button>
