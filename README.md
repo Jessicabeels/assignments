@@ -1,1 +1,1 @@
-# MERN-stack
+# assignments
