@@ -33,34 +33,59 @@ const Pub = (props) => {
     
     // let url=identifiers[3].join().replace("url:", "")
     
-    const imgIconSelector = () => {
-        for (let i = 0; i < subSubs.length; i++ ) {
-            if (subSubs[i] = "education"){
-                return subSubs + "fas"
-        }
+   
+        let currentIcon = "" 
+    // console.log(subSubs.includes("Education"))
+    //     switch (subSubs) {
+    //         case subSubs.includes("Education"):
+    //         console.log('made it')
+    //             currentIcon = "fas fa-graduation-cap"
+    //             break;
         
-            
-        }
+    //         default:
+    //             break;
+    //     }
+
+    const strSubs = subjects.toString()
+
+    if( subjects.includes("Education")) {
+        currentIcon = "fas fa-graduation-cap"
+    } else if (strSubs.match(/Chemistry/gi)){
+        currentIcon = "fas fa-flask"
+    } else if (strSubs.match(/Ecology/gi)){
+        currentIcon = "fas fa-leaf"
+    } else if (strSubs.match(/Library/gi)){
+        currentIcon = "fas fa-book-reader"
+    } else if (strSubs.match(/Law/gi)){
+        currentIcon = "fas fa-gavel"
     }
 
+    // console.log(typeof subSubs)
+    // console.log(subSubs)
+
+
+    //     console.log(currentIcon)
     return (
         <div className="pub-container">
             <h1>{title}</h1>
             <p>Publisher: { publisher }</p>
             {/* <Link to={thisUrl}>Learn more</Link> */}
             <a target="_new" href={thisUrl}>Learn More</a>
-            <i class="fas fa-graduation-cap"></i>
+            {/* <i className ="fas fa-graduation-cap"></i> */}
+            <i className ={currentIcon}></i>
 
 
           
            
 
             <p> {"  " + subSubs + "  "}</p>
+
             <p>{issn}</p>
             {/* <a href={url}>Link</a>  */}
             
             {/* <p>Subjects: { subjects }</p> */}
             <p>Language: { language }</p>
+            <button> Save </button>
             
         </div>
     )

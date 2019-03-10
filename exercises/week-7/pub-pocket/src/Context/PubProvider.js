@@ -10,7 +10,8 @@ class PubProvider extends Component {
         super()
         this.state = {
             pubs: [],
-            searches:[]
+            searches:[],
+            savedPubs: []
             
         }
     }
@@ -27,6 +28,19 @@ class PubProvider extends Component {
     }
 ////////////////////////////////////////////Get basic feed ///////////////////////////////
 
+////////////////////Save stufff
+
+    saveStuff = (title) => {
+        console.log(title)
+        console.log(this.state.searches)
+        const pubToSave = this.state.searches.find(pub => pub.title === title)
+        console.log(pubToSave)
+        this.setState(prevState => ({
+            savedPubs:[...prevState.savedPubs, pubToSave]
+        }) )
+    }
+
+    ///button fire save stuff and as paramenter savestuff needs id of pubs
 
     ////////////////Search //////////////
 
@@ -56,7 +70,9 @@ class PubProvider extends Component {
                     getPubs: this.getPubs,
                     getSearch: this.getSearch,
                     handleSubmit: this.handleSubmit,
-                    handleChange: this.handleChange
+                    handleChange: this.handleChange,
+                    savedPubs: this.savedPubs,
+                    saveStuff: this.saveStuff
                 }}>
                 { this.props.children }
                 </PubContext.Provider>

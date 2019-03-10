@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { withPubs } from '../Context/PubProvider'
 
 const Search = (props) => {
 
@@ -16,6 +16,9 @@ const {title, authors, downloadUrl, publisher, topics, description } = props
 
 
 
+
+// if button clicked then show in saved pub container
+
 return (
     <div className="pub-container">
     
@@ -25,6 +28,7 @@ return (
         <p>Publisher: {publisher}</p>
         <p>Topics: {topics}</p>
         <p>Description: {description}</p>
+        <button onClick={() => props.saveStuff(title)}> Save </button>
         {/* <p>{descript}</p> */}
     </div>
 )
@@ -32,4 +36,4 @@ return (
 
 }
 
-export default Search
+export default withPubs(Search)
