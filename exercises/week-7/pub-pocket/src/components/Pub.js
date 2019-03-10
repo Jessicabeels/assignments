@@ -18,18 +18,8 @@ const Pub = (props) => {
 
         //remove weird empty letter from list
     subSubs = subSubs.substring(0, subSubs.lastIndexOf(", "));
-    // console.log(typeof subSubs)
-    // console.log(subSubs)
-
-    // let subSubs = subjects.slice(', ')
-    // // console.log( subSubs)
-    // // console.log(typeof subSubs) //an object
-    // subSubs = subSubs.toString().split(', ')
-    // subSubs = `${subSubs[0].toUpperCase()}${subSubs.slice(1)}`
-    // console.log( subSubs)
-    // console.log(typeof subSubs) //string
-    // // subSubs = subSubs.join(', ')
     
+     // console.log( "Hi " + typeof subSubs)
 
 
 
@@ -43,7 +33,15 @@ const Pub = (props) => {
     
     // let url=identifiers[3].join().replace("url:", "")
     
-    
+    const imgIconSelector = () => {
+        for (let i = 0; i < subSubs.length; i++ ) {
+            if (subSubs[i] = "education"){
+                return subSubs + "fas"
+        }
+        
+            
+        }
+    }
 
     return (
         <div className="pub-container">
@@ -51,9 +49,10 @@ const Pub = (props) => {
             <p>Publisher: { publisher }</p>
             {/* <Link to={thisUrl}>Learn more</Link> */}
             <a target="_new" href={thisUrl}>Learn More</a>
-            <div className="category">
-                <div className="category-img"></div>
-            </div>
+            <i class="fas fa-graduation-cap"></i>
+
+
+          
            
 
             <p> {"  " + subSubs + "  "}</p>

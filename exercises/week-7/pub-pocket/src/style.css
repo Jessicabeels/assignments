@@ -247,6 +247,11 @@ button:hover {
 }
 
 
+
+.p::before { 
+    background-image: "fas fa-graduation-cap";
+  }
+
 /* ////////////////////////content/////////////////////////////// */
 
 
