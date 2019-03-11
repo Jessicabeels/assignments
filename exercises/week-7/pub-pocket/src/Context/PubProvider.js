@@ -11,7 +11,8 @@ class PubProvider extends Component {
         this.state = {
             pubs: [],
             searches:[],
-            savedPubs: "list"|| []
+            // savedPubs: "list"|| []
+             savedPubs: JSON.parse(localStorage.getItem('list')) ||  []
             
         }
     }
@@ -40,8 +41,15 @@ class PubProvider extends Component {
         this.setState(prevState => ({
             // list,
             savedPubs:[...prevState.savedPubs, pubToSave]
-        }) )
-        localStorage.setItem( "list", this.state.savedPubs)
+        }), () => localStorage.setItem("list", JSON.stringify(this.state.savedPubs)) )
+        
+    }
+
+    loadStuff = () => {
+        this.setState({
+            savedPubs: localStorage.getItem("list")
+        }, () => console.log(this.state.savedPubs))
+        
     }
 
     //loadStufff
@@ -59,7 +67,6 @@ class PubProvider extends Component {
             this.setState({
                 searches: response.data.data
             })
-            localStorage.getItem("list")
         })
         .catch(error => console.log(error))
     }
@@ -79,7 +86,8 @@ class PubProvider extends Component {
                     handleSubmit: this.handleSubmit,
                     handleChange: this.handleChange,
                     savedPubs: this.state.savedPubs,
-                    saveStuff: this.saveStuff
+                    saveStuff: this.saveStuff,
+                    loadStuff: this.loadStuff
                 }}>
                 { this.props.children }
                 </PubContext.Provider>

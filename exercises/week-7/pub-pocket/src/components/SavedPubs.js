@@ -4,24 +4,26 @@ import StuffSaved from './StuffSaved'
 
 const SavedPubs = (props) => {
 
-    
+//    props.loadStuff()
 
-console.log(props.savedPubs)
-   console.log(props.savedPubs)
-   if (!(props.savedPubs)){
+// console.log(props.savedPubs)
+//    console.log(props.savedPubs)
+//    if (!(props.savedPubs)){
 
-    // this.setState ({
-    //     savedPubs: this.state.savedPubs || []
-    // })
+//     // this.setState ({
+//     //     savedPubs: this.state.savedPubs || []
+//     // })
 
- }
+//  }
+
    
-   
-   const mappedSaved = props.savedPubs.map(saved => 
+   console.log(props)
+   const mappedSaved = props.savedPubs.length > 0 ? props.savedPubs.map(saved => 
                                         <StuffSaved 
                                             {...saved}
                                             key={saved._id}
                                         />) 
+                                        : null
 
 
         return (
