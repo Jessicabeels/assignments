@@ -13,9 +13,9 @@ const Home = () => {
         </div>
         <div className="box sidebar">
         <div className="prof">
-            {/* <h3> </h3> */}
+            <h3> </h3>
             <div className="user">
-            <i class="fas fa-user-circle"></i>
+            {/* <i class="fas fa-user-circle"></i> */}
                 <h5>Your Name</h5>
                 <p>@thedogtor</p>
                 <p className="bio">Just a dog with a blog.</p>

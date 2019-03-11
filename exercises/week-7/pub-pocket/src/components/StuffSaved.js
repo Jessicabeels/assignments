@@ -6,6 +6,7 @@ const StuffSaved = (props) => {
 const {title, authors, downloadUrl, publisher, topics, description } = props
 
 
+
 return (
     <div className="saved-container">
         <h1>{title}</h1>

@@ -21,6 +21,7 @@ btn.addEventListener('click', function(){
 
 btnReset.addEventListener('click', function(){
     display.textContent = 0
+    count = 0
     localStorage.setItem("clicks", 0)
 })
 

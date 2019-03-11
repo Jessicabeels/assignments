@@ -11,7 +11,7 @@ class PubProvider extends Component {
         this.state = {
             pubs: [],
             searches:[],
-            savedPubs: []
+            savedPubs: "list"|| []
             
         }
     }
@@ -34,11 +34,17 @@ class PubProvider extends Component {
         console.log(title)
         console.log(this.state.searches)
         const pubToSave = this.state.searches.find(pub => pub.title === title)
+        // const list = [...this.state.list]
+        // list.push(savedPubs)
         console.log(pubToSave)
         this.setState(prevState => ({
+            // list,
             savedPubs:[...prevState.savedPubs, pubToSave]
         }) )
+        localStorage.setItem( "list", this.state.savedPubs)
     }
+
+    //loadStufff
 
     ///button fire save stuff and as paramenter savestuff needs id of pubs
 
@@ -53,6 +59,7 @@ class PubProvider extends Component {
             this.setState({
                 searches: response.data.data
             })
+            localStorage.getItem("list")
         })
         .catch(error => console.log(error))
     }

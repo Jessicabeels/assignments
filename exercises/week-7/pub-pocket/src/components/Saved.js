@@ -31,7 +31,12 @@ const Saved = () => {
         <h1>Your Saved Pubs</h1>
         <SavedPubs />
         <Searchbar />
-        <SearchList />
+        <div className="pub-container">
+        <h2>
+        </h2>
+            <SearchList /> 
+        </div>
+        
         </div>
         <div className="box footer"></div>
     </div>

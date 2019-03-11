@@ -457,3 +457,13 @@ console.log(sum(600, 70))        // 5
 
 var n =  123456789;
 var digits = (""+n).split("");
+
+
+function timeForMilkAndCookies(date) {
+	if((date.getDate() == 24) && (date.getMonth() === 11)){
+		return true
+	} 
+}
+
+
+timeForMilkAndCookies()
