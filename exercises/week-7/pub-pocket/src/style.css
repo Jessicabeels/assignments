@@ -93,7 +93,7 @@ Font-Size: 16px; */
   
 }
 
-.title {
+.nav > .title {
     font-family: 'Roboto Condensed', Sans-Serif;
     font-size: 75px;
     letter-spacing: 4px;
@@ -101,7 +101,7 @@ Font-Size: 16px; */
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
 }
 
-.about, .saved, .profile {
+.nav > .about, .saved, .profile {
     color: #1B2F33;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px ;
 }
@@ -113,7 +113,7 @@ a:link {
    
    
 }
-a:hover {
+ .nav > a:hover {
     color:#437C90;
 }
 
@@ -186,7 +186,7 @@ button:hover {
 
 /* ////////////////////////content/////////////////////////////// */
 
-.pub-container {
+.pub-container, .saved-container {
     border: rgb(190, 180, 180) 1px solid;
     padding: 5px;
     margin: 5px;
@@ -383,10 +383,25 @@ margin: 20px;
     
 }
 
+.about > h3, h5 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    font-weight: lighter;
+}
+
+.transbox > h4 {
+    margin-top: 50px; 
+    font-size: 60px;
+}
+
+
 div.transbox {
     background-color: #1716166f;
     width: 80%;
     height: 200px;
+    color: white;
     display: grid;
     text-align: center;
     margin: 50px;
@@ -397,18 +412,47 @@ div.transbox {
 .grid-container{
 
     width: auto;
+    /* display: flex;
+    flex-direction: row; */
+    margin: 40px;
+    /* flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    /* background-color: blueviolet; */
+    grid-gap: 20px; */
     margin: 90px 5px 15px 15px;
 }
 
-@media(min-width: 800) {
-    .grid{
+@media (min-width: 800) {
+    .grid-container {
         display: flex;
-        flex-direction: column;
-        width: 100%
+        flex-direction: row; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        background-color: red;
+        width: 200px;;
+    }
+
+    div.transbox {
+        background-color: #1716166f;
+        width: 80%;
+        height: 200px;
+        color: white;
+        /* display: grid; */
+        text-align: center;
+        padding: 30px;
+        margin: 50px;
+        /* background-position: center; */
+    }
+
+    .grid-container> .box {
+        background-color: red;
+        border-radius: 5px;
+        /* padding: 28px; */
+        color:black;
+        margin-top: 40px;
+        background-position: center;
+        background-size: cover;
+        height: 330px;
     }
 }
 
@@ -417,14 +461,11 @@ div.transbox {
     /* background-color: red; */
     border-radius: 5px;
     /* padding: 28px; */
-    height: 300px;
     color:black;
     margin-top: 40px;
     background-position: center;
     background-size: cover;
     height: 330px;
-
-    
 }
 
 .boxA:hover {
@@ -433,7 +474,7 @@ div.transbox {
 }
 
 .grid-container > .boxA {
-    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-image: url('https://images.unsplash.com/photo-1528879342222-323df0d65c9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
     transition: transform .2s; 
@@ -451,7 +492,7 @@ div.transbox {
 }
 
 .grid-container > .boxC {
-    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-image: url('https://images.unsplash.com/photo-1534750554350-5d579939db38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
 }
@@ -461,7 +502,7 @@ div.transbox {
 }
 
 .grid-container > .boxD {
-    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-image: url('https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
     height: 330px;
@@ -472,7 +513,7 @@ div.transbox {
 }
 
 .grid-container > .boxE {
-    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
 }
@@ -482,7 +523,7 @@ div.transbox {
 }
 
 .grid-container > .boxF {
-    background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+    background-image: url('https://images.unsplash.com/photo-1542736667-069246bdbc6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
 }
@@ -511,6 +552,21 @@ div.transbox {
         border-radius: 4px;
         z-index: 0; /* the button is directly behind the overlay */
         
+    }
+
+    .grid-container {
+        display: grid;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        width: auto;
+        margin: 40px;
+
+        /* margin-left: 170px; */
+
+
     }
 }
 
@@ -547,6 +603,17 @@ div.transbox {
     padding: 5px 0;
     transition: background-color 100ms linear;
     font-size: 35px;
+    text-shadow: none;
+}
+
+.nav > .title {
+    font-family: 'Roboto Condensed', Sans-Serif;
+    font-size: 75px;
+    margin-top: 90px;
+    margin-left: 40px;
+    letter-spacing: 4px;
+    color: #1B2F33;
+    text-shadow: none;
 }
 
 .nav a:visited,
@@ -559,6 +626,15 @@ div.transbox {
     width: 100%;
     margin-left: 0px;
     
+}
+
+.logo {
+    background-image: url('./assets/logo.png');
+    background-size: contain;
+    /* border: black 1px solid; */
+    margin-top: 21px;
+    width: 0px;
+    height: 0px;
 }
 
 
@@ -582,6 +658,8 @@ div.transbox {
 .rotate-closed {
     transform: rotate(0deg);
 }
+
+
 
 
 }

@@ -6,7 +6,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Saved from './components/Saved'
-// import Profile from './components/Profile'
+import Database from './components/Database'
 import { PageFade } from './transitions'
 import './style.css'
 
@@ -66,7 +66,7 @@ toggler = () => this.setState(prevState => ({ navToggle: !prevState.navToggle}))
                         <Route exact path="/" component={ Home }/>
                         <Route path="/about" component={ About }/>
                         <Route path="/saved" component= { Saved }/>
-                        {/* <Route path="/profile" component= { Profile }/> */}
+                        <Route path="/database" component= { Database }/>
                     </Switch>
                 </PageFade>
                

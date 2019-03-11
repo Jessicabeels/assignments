@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchList from './SearchList'
 import Searchbar from '../Searchbar'
+import SavedPubs from './SavedPubs';
 
 const Saved = () => {
     return (
@@ -28,6 +29,7 @@ const Saved = () => {
         <div className="box content">
         {/* <PubList />  */}
         <h1>Your Saved Pubs</h1>
+        <SavedPubs />
         <Searchbar />
         <SearchList />
         </div>

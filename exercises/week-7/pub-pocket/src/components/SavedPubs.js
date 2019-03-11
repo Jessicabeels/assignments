@@ -1,30 +1,28 @@
 import React from 'react'
 import { withPubs } from '../Context/PubProvider'
+import StuffSaved from './StuffSaved'
 
 const SavedPubs = (props) => {
 
-    const {title, authors, downloadUrl, publisher, topics, description } = props
-}
+   console.log(props)
+   const mappedSaved = props.searches.map(saved => 
+                                        <StuffSaved 
+                                            {...saved}
+                                            key={saved._id}
+                                        />) 
 
 
-
-
-return (
-    <div className = "saved-container">
-
-
-    </div>
+        return (
+            <div className = "saved-container">
+                {mappedSaved}
+            </div>
     
-)
-
-{
-
-
-}
+        )
 
 
 
 
+        }
 
 
 
