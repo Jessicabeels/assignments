@@ -71,7 +71,7 @@ class PubProvider extends Component {
                     getSearch: this.getSearch,
                     handleSubmit: this.handleSubmit,
                     handleChange: this.handleChange,
-                    savedPubs: this.savedPubs,
+                    savedPubs: this.state.savedPubs,
                     saveStuff: this.saveStuff
                 }}>
                 { this.props.children }

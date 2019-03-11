@@ -29,6 +29,7 @@ Font-Size: 16px; */
     -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.51);
     background-color: rgb(250, 247, 247);
+    overflow-wrap: break-word;
 }
 
 
@@ -41,15 +42,14 @@ Font-Size: 16px; */
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.51);
     padding: 15px;
     background-color: rgb(250, 247, 247);
+    overflow-wrap: break-word;
     
 }
 
 .footer {
-    border: 1px black solid;
+   
     grid-area: footer;
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
-    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.71);
-    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.51);
+   
 }
 
 .body {
@@ -62,6 +62,7 @@ Font-Size: 16px; */
     "header header header"
     "sidebar content content"
     "footer footer footer";
+    overflow-wrap: break-word;
 }
 
 @media (max-width:800px ){
@@ -179,9 +180,7 @@ button:hover {
 
 
 
-@media(max-width: 750px) {
 
-}
 /* ///////////////////////NAV////////////////////////////// */
 
 /* ////////////////////////content/////////////////////////////// */
@@ -251,12 +250,11 @@ button:hover {
     margin-bottom: 90px;
 }
 
+.content > h2 {
+    text-align: center;
+    word-spacing: 5px;
 
-
-.p::before { 
-    background-image: "fas fa-graduation-cap";
-  }
-
+}
 /* ////////////////////////content/////////////////////////////// */
 
 
@@ -300,8 +298,10 @@ button:hover {
 .user {
     display: fixed;
     padding: 15px;
-   
+}
 
+.fa > .fa-user-circle {
+    width: 40px;
 }
 
 .more {
@@ -309,7 +309,6 @@ button:hover {
     width: 100%;
     /* position: relative;  */
     /* background-color: #B7CECE; */
-
 }
 
 .more > .img {
@@ -344,11 +343,27 @@ button:hover {
     background-size: cover;
     background-position: center;
     width: 14vw;
-    height: 40%;
+    height: 40px;
     border-radius: 80%;
     margin-left: 10px;
     margin-top: 10px;
     position: relative;
+    }
+
+    .search {
+        width: 100px;
+        margin-top: 80px;
+        font-size: 15px;
+    }
+
+    .search-button {
+        margin-top: 77px;
+    }
+
+    .prof {
+        opacity: 0;
+        width: 0;
+        height: 0;
     }
 
 
@@ -429,7 +444,7 @@ div.transbox {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
         background-color: red;
-        width: 200px;;
+        width: 330px;;
     }
 
     div.transbox {
@@ -454,6 +469,8 @@ div.transbox {
         background-size: cover;
         height: 330px;
     }
+
+
 }
 
 
@@ -485,6 +502,7 @@ div.transbox {
     background-image: url('https://images.unsplash.com/photo-1452457750107-cd084dce177d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
+    height: 330px;
 }
 
 .boxB:hover {
@@ -495,6 +513,7 @@ div.transbox {
     background-image: url('https://images.unsplash.com/photo-1534750554350-5d579939db38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
+    height: 330px;
 }
 
 .boxC:hover {
@@ -516,6 +535,7 @@ div.transbox {
     background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
+    height: 330px;
 }
 
 .boxE:hover {
@@ -526,6 +546,7 @@ div.transbox {
     background-image: url('https://images.unsplash.com/photo-1542736667-069246bdbc6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
     background-position: center;
     background-size: cover;
+    height: 330px;
 }
 
 .boxF:hover {

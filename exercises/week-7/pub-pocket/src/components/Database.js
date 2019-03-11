@@ -1,10 +1,8 @@
 import React from 'react'
-import PubList from './PubList'
 import SearchList from './SearchList';
 import Searchbar from '../Searchbar';
-// import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Carousel from './myCarousel.js'
+
+
 
 
 
@@ -25,9 +23,9 @@ const Database = () => {
             </div>
             <div className="more">
                 {/* <div className="img img1"> </div> */}
-                {/* <div className="img img2"> </div> */}
-                {/* <div className="img img3"> </div> */}
-                {/* <div className="img img4"> </div> */}
+                <div className="img img2"> </div>
+                <div className="img img3"> </div>
+                <div className="img img4"> </div>
                 
               
             </div>
@@ -36,11 +34,11 @@ const Database = () => {
             </div>
             <div className="content">
                 
-                Search All Open Access Journals
+                <h2>Search All Open Access Journals</h2>
                 <Searchbar />
                 <SearchList />
             </div>
-            <div className="box footer">Footer</div>
+            <div className="box footer"></div>
         </div>
         )
     }

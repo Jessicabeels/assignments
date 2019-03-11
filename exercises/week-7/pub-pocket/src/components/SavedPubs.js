@@ -5,7 +5,7 @@ import StuffSaved from './StuffSaved'
 const SavedPubs = (props) => {
 
    console.log(props)
-   const mappedSaved = props.searches.map(saved => 
+   const mappedSaved = props.savedPubs.map(saved => 
                                         <StuffSaved 
                                             {...saved}
                                             key={saved._id}

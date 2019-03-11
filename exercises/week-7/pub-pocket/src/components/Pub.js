@@ -34,30 +34,33 @@ const Pub = (props) => {
     // let url=identifiers[3].join().replace("url:", "")
     
    
-        let currentIcon = "" 
-    // console.log(subSubs.includes("Education"))
-    //     switch (subSubs) {
-    //         case subSubs.includes("Education"):
-    //         console.log('made it')
-    //             currentIcon = "fas fa-graduation-cap"
-    //             break;
-        
-    //         default:
-    //             break;
-    //     }
+    let currentIcon = "" 
+   
 
     const strSubs = subjects.toString()
 
     if( subjects.includes("Education")) {
         currentIcon = "fas fa-graduation-cap"
-    } else if (strSubs.match(/Chemistry/gi)){
+    } else if (strSubs.match(/Chem/gi)){
         currentIcon = "fas fa-flask"
-    } else if (strSubs.match(/Ecology/gi)){
+    } else if (strSubs.match(/Ecolo/gi)){
         currentIcon = "fas fa-leaf"
     } else if (strSubs.match(/Library/gi)){
         currentIcon = "fas fa-book-reader"
     } else if (strSubs.match(/Law/gi)){
         currentIcon = "fas fa-gavel"
+    } else if (strSubs.match(/Bio/gi)){
+        currentIcon = "fab fa-pagelines"
+    } else if (strSubs.match(/Math/gi)){
+        currentIcon = "fas fa-sort-numeric-up"
+    } else if (strSubs.match(/Medicine/gi)){
+        currentIcon = "fas fa-hospital"
+    } else if (strSubs.match(/Physics/gi)){
+        currentIcon = "fas fa-atom"
+    } else if (strSubs.match(/web/gi)){
+        currentIcon = "fas fa-laptop"
+    } else if (strSubs.match(/ortho/gi)){
+        currentIcon = "fas fa-bone"
     }
 
     // console.log(typeof subSubs)

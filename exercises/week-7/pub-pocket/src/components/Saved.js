@@ -33,7 +33,7 @@ const Saved = () => {
         <Searchbar />
         <SearchList />
         </div>
-        <div className="box footer">Footer</div>
+        <div className="box footer"></div>
     </div>
 
     )
