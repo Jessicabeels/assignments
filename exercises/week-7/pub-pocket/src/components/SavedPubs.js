@@ -4,17 +4,6 @@ import StuffSaved from './StuffSaved'
 
 const SavedPubs = (props) => {
 
-//    props.loadStuff()
-
-// console.log(props.savedPubs)
-//    console.log(props.savedPubs)
-//    if (!(props.savedPubs)){
-
-//     // this.setState ({
-//     //     savedPubs: this.state.savedPubs || []
-//     // })
-
-//  }
 
    
    console.log(props)

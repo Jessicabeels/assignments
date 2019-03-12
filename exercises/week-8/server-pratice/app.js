@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const uuid = require('uuid/v4')
 
-
+//Fake database
 const people = [
     {
         name: "Rick", 
@@ -21,16 +21,21 @@ const people = [
     }
 ]
 
-app.get("/people/:id", (req, res) => {
+//middleware
+app.use(express.json())
+
+
+
+app.get("/people/:_id", (req, res) => {
     const ID = req.params._id
     const foundPerson = people.find(person => person._id === ID)
     res.send(foundPerson)
 })
 
-app.post('people', (req, res) => {
+app.post('/people', (req, res) => {
     //add id to request body
     //add it to fake database
-    req.body._id = uuid()
+    res.send(people)
 })
 
 
