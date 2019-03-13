@@ -1,57 +1,43 @@
 const express = require('express')
 //require express
-
 const app = express()
-const uuid = require('uuid/v4')
+//create server object
 
 
 
 
-let bounties = [
 
+//need middleware before you can req.body 
+app.use(express.json( ))
 
-    {
-        firstName: "Anikan",
-        lastName: "Skywalker", 
-        living: false,
-        bountyAmount: 78,
-        type: 'Sith',
-        _id: uuid()
+//Routes
+app.use("/bounties", require('./routes/bounties.js'))
 
-    }, 
-    {
-        firstName: 'Jar Jar',
-        lastName: 'Binks',
-        living: true,
-        bountyAmount: 5000,
-        type: 'Sith',
-        id: uuid()
-    },
-    {
-        firstName: 'That one ewok who dies',
-        lastName: 'Bob',
-        living: false,
-        bountyAmout: 30000,
-        type: 'Sith',
-        id: uuid()
-    }
-]
+// //Get
+// app.get('/', (req, res) => {
+//     res.send(bounties)
+// })
 
+// //get one 
+// app.get('/bounties', (req, res) => {
+//     const foundBounty = bounties.find(bounty => bounty._id === req.params._id)
+//     res.send(foundBounty)
+// })
 
-//Get
-app.get('/', (req, res) => {
-    res.send(bounties)
-})
+// //Post
+// app.post('/bounties', (req, res) => {
+//     req.body._id = uuid()
+//     bounties.push(req.body)
+//     res.send(req.body)
+// })
 
-Post
-app.post('/', (req, res) => {
-    const newBounty = req.body
-    newBounty._id = uuid()
-    bounties.push(newBounty)
-    res.send(newBounty)
-})
+// //Delete
+// app.delete('/bounties/:_id'), (req, res) => {
+//     const updatedBounties = bounties.filter(bounty =>  bounty._id !== req.params._id)
+//     bounties = updatedBounties
+//     res.send(bounties)
 
-//Delete
+// }
 
 //Put
 
@@ -59,3 +45,16 @@ app.post('/', (req, res) => {
 app.listen(7000, () => {
     console.log("server is running ")
 })
+
+
+//Part 1
+
+//1. GETs a list of all bounties //DONE
+    //localhost:7000
+
+//2. POSTs new bounties //DONE
+    //localhost:7000/bounties/
+
+//3. DELETEs a bounty
+
+//4. PUTs (updates) a bounty
