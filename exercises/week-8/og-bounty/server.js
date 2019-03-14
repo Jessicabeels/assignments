@@ -42,7 +42,7 @@ app.use("/bounties", require('./routes/bounties.js'))
 //Put
 
 
-app.listen(7000, () => {
+app.listen(7001, () => {
     console.log("server is running ")
 })
 

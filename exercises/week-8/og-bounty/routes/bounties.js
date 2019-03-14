@@ -51,7 +51,7 @@ bountyRouter.get('/', (req, res) => {
 
 //Post //DONE
 //localhost:7000/bounties/bounties
-bountyRouter.post('/bounties', (req, res) => {
+bountyRouter.post('/', (req, res) => {
     req.body._id = uuid()
     bounties.push(req.body)
     res.send(req.body)
