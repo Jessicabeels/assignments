@@ -61,7 +61,7 @@ class App extends Component {
    handleDelete = (_id) => {
        axios.delete(`/bounties/${_id}`.then(response => {
            this.setState(prevState => ({
-               bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
+               bounties: prevState.bounties.filter(wizard => wizard._id !== _id)
            }))
        }))
    }
@@ -117,7 +117,23 @@ class App extends Component {
                     <button> Submit </button>
 
                 </form>
-                { this.state.bounties.map(bounty => <Bounty handleDelete={this.handleDelete} key={bounty._id} {...bounties} />)}
+                { this.state.bounties.map(bounty => 
+                <div className="container">
+                    <h1>
+                        {bounty.firstName} {bounty.lastName}
+                    </h1>
+                    <div class="fade"></div>
+                    <section class="star-wars">
+                    <div class="crawl">
+                        <div class="title">
+                            <h1>is Alive? {bounty.living.toString()} </h1>
+                        </div>
+                        
+                        <p className="specs">Bounty Amount: {bounty.bountyAmount} TYPE: {bounty.type.toString()} </p>
+                        <Bounty handleDelete={this.handleDelete}/>
+                    </div>
+                    </section>
+                </div>)}
             </div>
         )
     
