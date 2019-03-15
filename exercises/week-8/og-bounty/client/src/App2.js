@@ -129,7 +129,7 @@ class App extends Component {
                             <h1>is Alive? {bounty.living.toString()} </h1>
                         </div>
                         
-                        <p className="specs">Bounty Amount: {bounty.bountyAmount} TYPE: {bounty.type.toString()} </p>
+                        <p className="specs">Bounty: {bounty.bountyAmount} TYPE: {bounty.type.toString()} </p>
                         <Bounty handleDelete={this.handleDelete}/>
                     </div>
                     </section>
