@@ -455,15 +455,58 @@ console.log(sum(600, 70))        // 5
 // console.log(array1.reduce(reducer, 5));
 // // expected output: 15
 
-var n =  123456789;
-var digits = (""+n).split("");
+// var n =  123456789;
+// var digits = (""+n).split("");
 
 
-function timeForMilkAndCookies(date) {
-	if((date.getDate() == 24) && (date.getMonth() === 11)){
+// function timeForMilkAndCookies(date) {
+// 	if((date.getDate() == 24) && (date.getMonth() === 11)){
+// 		return true
+// 	} 
+// }
+
+
+// timeForMilkAndCookies()
+
+
+//Create a function that determines whether or not it's possible to
+//split a pie fairly given these three parameters:
+
+//Total number of slices.
+//Number of recipients.
+//How many slices each person gets.
+
+
+
+
+function equalSlices(total, people, each) {
+	if (total % people === 0 ){
 		return true
-	} 
+	} else {
+		return false
+	}
 }
 
+console.log(equalSlices(10,5))
 
-timeForMilkAndCookies()
+//Write a short program that prints each number from 1 to 100 on a new line. 
+//For each multiple of 3, print "Fizz" instead of the number. 
+//For each multiple of 5, print "Buzz" instead of the number. 
+//For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+
+
+const fizzybuzz = () => {
+	for (let i = 0; i < 100; i ++) {
+		if (i % 5 === 0 && i % 3 === 0){
+			console.log('fizzbuzz')
+		} else if (i % 5 === 0){
+			console.log("fizz")
+		} else if (i % 3 === 0){
+			console.log("buzz")
+		} else {
+			console.log(i)
+		}
+	}
+}
+
+console.log(fizzybuzz())

@@ -4,8 +4,9 @@ const Bounty = (props) => {
     const { firstName, lastName, living, bountyAmount, type, handleDelete, _id } = props
     return (
         <div className="delete-container">
-            <h1>{bounty.firstName} {bounty.lastName}</h1>
-            <h1>is Alive? {bounty.living.toString()} </h1>
+            <h1>{firstName} {lastName}</h1>
+            <h2>is Alive? {living.toString()} </h2>
+            <h2>Bounty Amount {bountyAmount}</h2>
             <button onClick={() => handleDelete(_id)}> Delete</button>
         </div>
     )
