@@ -31,6 +31,12 @@ let bounties = [
 ]
 
 
+bountyRouter.get("/search", (req,res) => {
+    console.log(req.query)
+})
+//doesn't work
+
+
 //Get //DONE
     //localhost:7000/bounties
 bountyRouter.route('/')

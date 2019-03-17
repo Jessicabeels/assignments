@@ -11,7 +11,7 @@ const app = express()
 app.use(express.json( ))
 
 //Routes
-app.use("/bounties", require('./routes/bounties.js'))
+app.use("/bounties", require('./routes/bountyRoutes.js'))
 
 // //Get
 // app.get('/', (req, res) => {

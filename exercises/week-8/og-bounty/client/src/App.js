@@ -61,7 +61,7 @@ class App extends Component {
    handleDelete = (_id) => {
        axios.delete(`/bounties/${_id}`.then(response => {
            this.setState(prevState => ({
-               bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
+               bounties: prevState.bounties.filter(wizard => wizard._id !== _id)
            }))
        }))
    }
@@ -75,15 +75,65 @@ class App extends Component {
                 <h1 className="header">Star Wars Bounty Hunting</h1>
             
                 <div className="background"></div>
-                <BountyForm
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    {...this.state}
-                />
-                
 
 
-                { this.state.bounties.map(bounty => <Bounty handleDelete={this.handleDelete} key={bounty._id} {...bounties} />)}
+                <form onSubmit={this.handleSubmit}>
+                    First Name:
+                      <input
+                         type="text"
+                         name="firstName"
+                         value={this.state.firstName}
+                         onChange={this.handleChange}  />
+                    Last Name: <input
+                         type="text"
+                         name="lastName"
+                         value={this.state.lastName}
+                         onChange={this.handleChange}/>
+                    <input
+                         type="radio"
+                         name="living" 
+                         value={this.state.living} 
+                         onChange={this.handleChange}/> Alive
+                    <input
+                         type="radio"
+                         name="living" 
+                         value={this.state.living}
+                         onChange={this.handleChange}/> Dead
+                    Bounty Amount <input
+                         type="text"
+                         name="bountyAmount"
+                         value={this.state.bountyAmount}
+                         onChange={this.handleChange}/>
+                    Jedi <input type="radio"
+                         name="type" 
+                         value={this.state.type} 
+                         onChange={this.onChange}/>
+                    Sith <input
+                         type="radio"
+                         name="type" 
+                         value={this.state.type} 
+                         onChange={this.onChange}/>
+
+                    <button> Submit </button>
+
+                </form>
+                { this.state.bounties.map(bounty => 
+                <div className="container">
+                    <h1>
+                        {bounty.firstName} {bounty.lastName}
+                    </h1>
+                    <div class="fade"></div>
+                    <section class="star-wars">
+                    <div class="crawl">
+                        <div class="title">
+                            <h1>is Alive? {bounty.living.toString()} </h1>
+                        </div>
+                        
+                        <p className="specs">Bounty: {bounty.bountyAmount} TYPE: {bounty.type.toString()} </p>
+                        <Bounty handleDelete={this.handleDelete}/>
+                    </div>
+                    </section>
+                </div>)}
             </div>
         )
     

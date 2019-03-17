@@ -1,19 +1,14 @@
-import { React, Component } from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 
-const BountyContect = React.createContext()
+const BountyContext = React.createContext()
 
 class BountyProvider extends Component {
         constructor(){
         super()
         this.state = {
-            bounties: [],
-            firstName: '',
-            lastName: '',
-            living: '',
-            bountyAmount: '',
-            type: ''
-
+            bounties: []
+           
         }
     }
 
@@ -32,7 +27,7 @@ class BountyProvider extends Component {
 
 //POST
     postBounties = newBounty => {
-        axios.post("/bounties").then(response => {
+        axios.post("/bounties", newBounty).then(response => {
             this.setState(prevState => ({
                 bounties: [...prevState.bounties, response.data]
             }))
@@ -43,30 +38,40 @@ class BountyProvider extends Component {
 
 //with post, creating a newBounty that will be posted, go through /bounties route, 
 
-deleteBounties = _id => {
-    axios.delete(`/bounties/${_id}`).then(response => {
-        alert(response.data)
-        this.setState(prevState => ({
-            bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
-        }))
-    })
-}
+    deleteBounties = _id => {
+        axios.delete(`/bounties/${_id}`).then(response => {
+            alert(response.data)
+            this.setState(prevState => ({
+                bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
+            }))
+        })
+    }
 
-render(){
-    return (
-
-
-        <BountyContext.Provider
+    render();{
+        return (
+            <BountyContext.Provider
             value = {{
                 bounties: this.state.bounties, 
+                getBounties: this.state.bounties,
+                postBounties: this.state.bounties,
+                deleteBounties: this.state.bounties
+            }}>
+
+                { this.props.children }
+            </BountyContext.Provider>
+               
+              
                 
-            }}
+        )
+    }
 
 
-        />
-    )
-}
+export default BountyProvider
 
-
+export const withBounties = C => props => (
+    <BountyProvider.consumer>
+         { value => <C {...props} {...value}/> }
+    </BountyProvider.consumer>
+)
 
 

@@ -510,3 +510,21 @@ const fizzybuzz = () => {
 }
 
 console.log(fizzybuzz())
+
+
+
+function largestSwap(num) {
+	let sum = num.toString().split('')
+	for( i = 0; i < sum.length; i++ ){
+		if (sum[0] > sum[1]) {
+			return true
+		} else if (sum[0] < sum[1]) {
+			return false
+		} else if (sum[0] === sum[1]){
+			return true
+		}
+	}
+}
+
+
+console.log(largestSwap(11))
