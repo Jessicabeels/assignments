@@ -4,13 +4,14 @@ const BountyForm = props => {
         const { handleSubmit, handleChange, firstName, lastName, living, bountyAmount, type } = props
         return (
                 <form onSubmit={this.handleSubmit}>
-                First Name:
+                <h2>First Name:</h2>
                   <input
                      type="text"
                      name="firstName"
                      value={this.state.firstName}
                      onChange={this.handleChange}  />
-                Last Name: <input
+                <h2>Last Name:</h2>
+                <input
                      type="text"
                      name="lastName"
                      value={this.state.lastName}

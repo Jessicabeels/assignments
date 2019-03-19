@@ -528,3 +528,29 @@ function largestSwap(num) {
 
 
 console.log(largestSwap(11))
+
+
+//Create a function that finds all even numbers from 1 to the given number.
+
+function findEvenNums(num) {
+	for (i=1; i< num.length; i++ ){
+		const res = num.filter(i % 2 === 0)
+		return res
+	}
+	return
+}
+
+console.log(findEvenNums(100))
+
+
+//Create a function that takes in an array of numbers and
+//returns the sum of its cubes.
+
+nums =4 
+function sumOfCubes(nums) {
+	return Math.pow(nums, 3)
+
+	
+}
+
+console.log(sumOfCubes())
