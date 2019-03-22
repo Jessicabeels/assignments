@@ -23,13 +23,16 @@ class MessageList extends React.Component {
         console.log(this.props.userMessages.length + "hi")
         for(let i = 0; i < this.props.userMessages.length; i++) {
             console.log('i is' +i)
-            if (this.props.userMessages.length && this.props.userMessages.length > 10){
-                dataArr.push(
-                    <div>
-                        <Message key={this.props.messages[i].id} username={this.props.messages[i].senderId} text={this.props.messages[i].text} /> 
-                        <UserMessage key={this.props.userMessages[i].id} username={this.props.userMessages[i].senderID} text={this.props.userMessages[i].text} />
-                    </div>
+            if (this.props.userMessages.length){
+                if(this.props.userMessages.length > 10 ){
+                    // retun goodby
+                } else {
+                dataArr.push(<div>
+                <Message key={this.props.messages[i].id} username={this.props.messages[i].senderId} text={this.props.messages[i].text} /> 
+                <UserMessage key={this.props.userMessages[i].id} username={this.props.userMessages[i].senderID} text={this.props.userMessages[i].text} />
+                        </div>
                 )
+                }
             } 
            
     }
