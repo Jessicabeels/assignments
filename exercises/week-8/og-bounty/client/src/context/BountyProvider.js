@@ -34,7 +34,7 @@ class BountyProvider extends Component {
         })
     }
 
-}
+
 
 //with post, creating a newBounty that will be posted, go through /bounties route, 
 
@@ -47,14 +47,23 @@ class BountyProvider extends Component {
         })
     }
 
-    render();{
+    updateBounties = (_id, updates) => {
+        axios.put(`/bounties/${_id}`, updates).then(response => {
+            this.setState(prevState => ({
+                bounties: prevState.bounties.map(bounty => bounty._id === _id ? response.data : bounty)
+            }))
+        })
+    }
+
+    render(){
         return (
             <BountyContext.Provider
             value = {{
                 bounties: this.state.bounties, 
-                getBounties: this.state.bounties,
-                postBounties: this.state.bounties,
-                deleteBounties: this.state.bounties
+                getBounties: this.getBounties,
+                postBounties: this.postBounties,
+                updateBounties: this.updateBounties,
+                deleteBounties: this.deleteBounties
             }}>
 
                 { this.props.children }
@@ -65,13 +74,13 @@ class BountyProvider extends Component {
         )
     }
 
-
+}
 export default BountyProvider
 
 export const withBounties = C => props => (
-    <BountyProvider.consumer>
+    <BountyContext.Consumer>
          { value => <C {...props} {...value}/> }
-    </BountyProvider.consumer>
+    </BountyContext.Consumer>
 )
 
 

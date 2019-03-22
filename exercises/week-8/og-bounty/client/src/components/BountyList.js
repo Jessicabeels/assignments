@@ -8,10 +8,14 @@ import Bounty from './Bounty.js'
 //map
 
 const BountyList = (props) => {
+    console.log(props)
     return (
         <div>
             {props.bounties.map(bounty=> <Bounty 
-                                            deleteBounty = {props.deleteBounty}  
+                                            deleteBounties = {props.deleteBounties}  
+                                            updateBounties = {props.updateBounties}
+                                            jedi= {props.jedi}
+                                            sith={props.sith}
                                             key={bounty._id}
                                             {...bounty}                                  
                                                 />) }

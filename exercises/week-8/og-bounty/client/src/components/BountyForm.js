@@ -1,48 +1,51 @@
 import React from 'react'
 
+
 const BountyForm = props => {
         const { handleSubmit, handleChange, firstName, lastName, living, bountyAmount, type } = props
         return (
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={handleSubmit}>
                 <h2>First Name:</h2>
                   <input
                      type="text"
                      name="firstName"
-                     value={this.state.firstName}
-                     onChange={this.handleChange}  />
+                     value={firstName}
+                     onChange={handleChange}  />
                 <h2>Last Name:</h2>
                 <input
                      type="text"
                      name="lastName"
-                     value={this.state.lastName}
-                     onChange={this.handleChange}/>
+                     value={lastName}
+                     onChange={handleChange}/>
                 <input
                      type="radio"
                      name="living" 
-                     value={this.state.living} 
-                     onChange={this.handleChange}/> Alive
+                     value={living} 
+                     onChange={handleChange}/> Alive
                 <input
                      type="radio"
                      name="living" 
-                     value={this.state.living}
-                     onChange={this.handleChange}/> Dead
+                     value={living}
+                     onChange={handleChange}/> Dead
                 Bounty Amount <input
                      type="text"
                      name="bountyAmount"
-                     value={this.state.bountyAmount}
-                     onChange={this.handleChange}/>
-                Jedi <input type="radio"
-                     name="type" 
-                     value={this.state.type} 
-                     onChange={this.onChange}/>
+                     value={bountyAmount}
+                     onChange={handleChange}/>
+                Jedi <input type="checkbox"
+                     name="jedi" 
+                     value={jedi} 
+                     onChange={handleChange}/>
                 Sith <input
-                     type="radio"
-                     name="type" 
-                     value={this.state.type} 
-                     onChange={this.onChange}/>
+                     type="checkbox"
+                     name="sith" 
+                     value={sith} 
+                     onChange={handleChange}/>
 
                 <button> Submit </button>
 
             </form>
         )
 }
+
+export default BountyForm

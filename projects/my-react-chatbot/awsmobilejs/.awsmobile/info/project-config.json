@@ -1,0 +1,6 @@
+{
+	"SourceDir": "/dev/assignments/projects/my-react-chatbot",
+	"DistributionDir": "build",
+	"BuildCommand": "npm run-script build",
+	"StartCommand": "npm run-script start"
+}

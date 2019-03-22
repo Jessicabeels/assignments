@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import './style.css'
-import Bounty from './components/Bounty'
+import AddBountyForm from './components/AddBountyForm'
+// import BountyForm from './components/BountyForm'
+import BountyList from './components/BountyList'
+import { withBounties } from './context/BountyProvider'
 
 
 class App extends Component {
@@ -11,9 +12,10 @@ class App extends Component {
             bounties: [],
             firstName: '',
             lastName: '',
-            living: '',
+            living: true,
             bountyAmount: '',
-            type: ''
+            jedi: false,
+            sith: false
         }
     }
 
@@ -23,9 +25,10 @@ class App extends Component {
 
 
     handleChange = e => {
-            const value = e.target.value === "checkbox"
+            const value = e.target.type === "checkbox"
                     ? e.target.checked
                     : e.target.value
+                    console.log(e.target.name)
         this.setState({
             [e.target.name]: value
         })
@@ -33,43 +36,46 @@ class App extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        console.log(this.state.jedi)
+        console.log(this.state.sith)
+        // let type = ""
+        // if (this.state.jedi === true){
+        //     type = "Jedi"
+        // } 
+
+        // if (this.state.sith === true) {
+        //     type = "Sith"
+        // }
         const newBounty = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             living: this.state.living,
             bountyAmount: this.state.bountyAmount,
-            type: this.state.type
+            jedi: this.state.jedi,
+            sith: this.state.sith
 
         }
-        this.props.addBounty(newBounty)
+        this.props.postBounties(newBounty)
         this.setState({firstName: "", lastName: "", bountyAmount: "", living: false, type: ""})
-
-//         axios.post("/bounties", newBounty).then(res => {
-//             this.setState(prevState => ({
-//                 bounties: [...prevState.bounties, res.data],
-//                 firstName: '',
-//                 lastName: '',
-//                 living: '',
-//                 bountyAmount: '',
-//                 type: ''
-//             }))
-//         })
-//     }
-
-//    handleDelete = (_id) => {
-//        axios.delete(`/bounties/${_id}`.then(response => {
-//            this.setState(prevState => ({
-//                bounties: prevState.bounties.filter(wizard => wizard._id !== _id)
-//            }))
-//        }))
-//    }
-
+    }
 
     render(){
         
         return(
             <div className="app-container">
-                <BountyForm></BountyForm>
+                <h1 className="header">Boba Fett's Bounty Hunting </h1>
+                <div className="background"></div>
+                <AddBountyForm
+                    btnText="Add Bounty"
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    {...this.state}
+                />
+                <BountyList
+                    bounties={this.props.bounties}
+                    deleteBounties={this.props.deleteBounties}
+                    updateBounties={this.props.updateBounties}
+                />
                 
             </div>
         )
@@ -77,4 +83,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default withBounties(App)

@@ -8,7 +8,7 @@ let bounties = [
         lastName: "Skywalker", 
         living: false,
         bountyAmount: 78,
-        type: 'Sith',
+        sith: true,
         _id: uuid()
 
     }, 
@@ -17,7 +17,7 @@ let bounties = [
         lastName: 'Binks',
         living: true,
         bountyAmount: 5000,
-        type: 'Sith',
+        sith: true,
         _id: uuid()
     },
     {
@@ -25,7 +25,7 @@ let bounties = [
         lastName: 'Bob',
         living: false,
         bountyAmount: 30000,
-        type: 'Sith',
+        sith: true,
         _id: uuid()
     }
 ]

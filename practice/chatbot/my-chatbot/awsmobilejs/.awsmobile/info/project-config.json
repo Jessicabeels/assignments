@@ -1,0 +1,6 @@
+{
+	"SourceDir": "jessicabeeli/dev/assignments/practice/chatbot",
+	"DistributionDir": "build",
+	"BuildCommand": "npm run-script build",
+	"StartCommand": "npm run-script start"
+}

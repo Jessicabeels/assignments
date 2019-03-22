@@ -1,6 +1,8 @@
 * {
     margin: 0;
+    
 }
+
 
 
 body {
@@ -23,6 +25,7 @@ body {
     border: grey solid 1px;
     margin: 20px;
     display: grid;
+    color: black;
     padding: 30px;
     grid-gap: 20px 10px;
     border: black solid 1px;

@@ -1,0 +1,52 @@
+{
+	"projectPath": "/Users/jessicabeeli/dev/assignments/practice/chatbot/my-chatbot",
+	"projectInfo": {
+		"ProjectName": "my-chatbot",
+		"ProjectPath": "/Users/jessicabeeli/dev/assignments/practice/chatbot/my-chatbot",
+		"InitializationTime": "",
+		"LastConfigurationTime": "",
+		"LastNPMInstallTime": "",
+		"FrontendLastBuildTime": "",
+		"LastPublishTime": "",
+		"BackendLastSyncTime": "",
+		"BackendLastBuildTime": "",
+		"BackendLastPushTime": "",
+		"BackendProjectID": "",
+		"BackendProjectName": "",
+		"BackendProjectConsoleUrl": "",
+		"BackendProjectCreationTime": "",
+		"BackendProjectLastUpdatedTime": "",
+		"Framework": "react"
+	},
+	"packageJson": {
+		"name": "my-chatbot",
+		"version": "0.1.0",
+		"private": true,
+		"dependencies": {
+			"aws-amplify": "^1.1.22",
+			"aws-amplify-react": "^2.3.2",
+			"react": "^16.8.4",
+			"react-dom": "^16.8.4",
+			"react-scripts": "2.1.8",
+			"v8": "^0.1.0"
+		},
+		"scripts": {
+			"start": "react-scripts start",
+			"build": "react-scripts build",
+			"test": "react-scripts test",
+			"eject": "react-scripts eject"
+		},
+		"eslintConfig": {
+			"extends": "react-app"
+		},
+		"browserslist": [
+			">0.2%",
+			"not dead",
+			"not ie <= 11",
+			"not op_mini all"
+		]
+	},
+	"framework": "react",
+	"initialStage": "clean-slate",
+	"strategy": "create"
+}
