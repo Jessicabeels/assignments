@@ -546,11 +546,45 @@ console.log(findEvenNums(100))
 //Create a function that takes in an array of numbers and
 //returns the sum of its cubes.
 
-nums =4 
-function sumOfCubes(nums) {
-	return Math.pow(nums, 3)
+// nums =4 
+// function sumOfCubes(nums) {
+// 	return Math.pow(nums, 3)
 
 	
-}
+// }
 
-console.log(sumOfCubes())
+// console.log(sumOfCubes())
+
+// function amplify(num) {
+// 	let res = num.split('')
+// 	for (let i = 0; i < res.length; i++) {
+// 		if (num % 4 === 0){
+// 			console.log(num* 10)
+// 		} else if (num % 4 != 0){
+// 			console.log(num)
+// 		}
+// 	}
+// }
+
+// console.log(amplify(4))
+
+function range( end) {
+	return Array(end - 1 + 1).fill().map((_, idx) => 1 + idx)
+  }
+//   var result = range(9, 18); // [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  console.log(range(9));
+
+
+  function amplify(num) {
+	  if (num % 4 === 0){
+		  let newNum = num * 10}
+			  else {
+				  let newNum = num
+			  }
+		 
+	  let res = Array(newNum -1 + 1).fill().map((_, idx) => 1 + idx)
+	  return res
+		}
+  
+//   var result = amplify(1, 4)
+  console.log(amplify(4))
