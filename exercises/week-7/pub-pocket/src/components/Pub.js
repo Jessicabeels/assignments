@@ -88,7 +88,7 @@ const Pub = (props) => {
             
             {/* <p>Subjects: { subjects }</p> */}
             <p>Language: { language }</p>
-            <button> Save </button>
+            <button className="save-button"> Save </button>
             
         </div>
     )

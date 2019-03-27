@@ -42,26 +42,7 @@ const realSubs = title.toString()
         currentIcon = "fas fa-bone"
     }
 
-
-
-
-
-
-
-
-
-
 // if button clicked then show in saved pub container
-
-
-
-
-
-
-
-
-
-
 
 
 return (
@@ -74,7 +55,7 @@ return (
         <p>Publisher: {publisher}</p>
         <p>Topics: {topics}</p>
         <p>Description: {description}</p>
-        <button onClick={() => props.saveStuff(props.title)}> Save </button>
+        <button onClick={() => props.saveStuff(props.title)} className="save-button"> Save </button>
         {/* <p>{descript}</p> */}
     </div>
 )
