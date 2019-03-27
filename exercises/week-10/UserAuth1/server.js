@@ -4,7 +4,9 @@ const app = express()
 require('dotenv').config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const expressJwt= require('express-jwt')
 const PORT = process.env.PORT || 7000
+const axios = require('axios')
 
 // Middlewares for every request
 app.use(express.json())
@@ -17,14 +19,25 @@ mongoose.connect('mongodb://localhost:27017/auth-lessons', {useNewUrlParser: tru
 })
 
 
+//security checkpoint - checking to see if the secret in the JWT matches our env secret
+app.use("api", expressJwt({secret: process.env.SECRET}))//req.use
+
+
+app.use("/auth", require('./routes/authRoutes.js'))
+app.use("/api/posts", require('./routes/postRoutes.js'))
+
 // Routes
 app.use("/auth", require('./routes/authRoutes.js'))
+app.use("api/posts", require('./routes/postRoutes.js'))
 
 
 
 // Global Server Error Handler
 app.use((err, req, res, next) => {
     console.error(err)
+    if (err.name === "UnauthorizedError"){
+        res.status(err.status)
+    }
     return res.send({errMsg: err.message})
 })
 
