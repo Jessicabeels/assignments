@@ -575,16 +575,39 @@ function range( end) {
   console.log(range(9));
 
 
-  function amplify(num) {
-	  if (num % 4 === 0){
-		  let newNum = num * 10}
-			  else {
-				  let newNum = num
-			  }
+//   function amplify(num) {
+// 	  if (num % 4 === 0){
+// 		  let newNum = num * 10}
+// 			  else {
+// 				  let newNum = num
+// 			  }
 		 
-	  let res = Array(newNum -1 + 1).fill().map((_, idx) => 1 + idx)
-	  return res
-		}
+// 	  let res = Array(newNum -1 + 1).fill().map((_, idx) => 1 + idx)
+// 	  return res
+// 		}
   
-//   var result = amplify(1, 4)
-  console.log(amplify(4))
+// //   var result = amplify(1, 4)
+//   console.log(amplify(4))
+
+
+// function societyName(friends) {
+// 	let secretName = []
+// 	for(let i = 0; i < friends.length; i++){
+// 		if(friends[0]){
+// 			secretName = friends[0].join('')
+// 		}
+		
+// 	}
+// 	return secretName
+// }
+
+// console.log(societyName(["Jim", "Orwell", "Bob"]))
+
+function societyName(friends){
+	let secretName = friends.sort().map((friend) => friend[0]).join('')
+	return secretName
+}
+
+console.log(societyName(["Jim", "Orwell", "Bob"]))
+///
+console.log("this is a lot of code")
