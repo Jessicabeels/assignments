@@ -6,15 +6,15 @@
 * {
     margin: 0;
     font-size: 35px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 
-#zen-grid-container {
+#grid-container {
     display: grid;
 }
 
-#zen-grid-container header:nth-child(1){
+.section1{
     background-color: green;
     background-image: url(http://www.csszengarden.com/214/huntington.jpg);
     background-size: cover;
@@ -26,6 +26,29 @@
     height: 250px;
     color: white;
     position: relative;
+    grid-area: a1;
+        font-size: 100%;
+        padding-top: 60px;
+        padding-left: 150px;
+        padding-right: 100px;
+    
+}
+
+.section2{
+    grid-area: a2;
+    font-size: 100%;
+    padding-left: 150px;
+    padding-right: 100px;
+}
+
+.section3{
+    grid-area: a3;
+    font-size: 100%;
+    padding-left: 150px;
+    padding-right: 100px;
+}
+
+.section4{
     
 }
 
@@ -92,7 +115,7 @@ body {
     margin: 20px;
 }
 
-section {
+.section2 {
     background-color: white;
     color: rgb(85, 83, 83);
     line-height: 25px;
@@ -271,36 +294,397 @@ section {
 
 
 
-
-/* 
-/* 
-#grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+/* FONTS AND ICONS */
+@font-face {
+    font-family: verdemoderna;
+    src: url(verdemoderna.woff);
+}
+@font-face {
+    font-family: juliussansone;
+    src: url(https://fonts.gstatic.com/s/juliussansone/v7/1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
+}
+@font-face {
+    font-family:  librebaskerville;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2)
+}
+@font-face {
+    font-family:  librebaskerville-bold;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2)
 }
 
-#grid-container div { */
-    /* width: 100%;
-    background-color: cornflowerblue;
-    border: 1px solid black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    background-image: url("http://www.csszengarden.com/214/contours.png"),url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/huntington.jpg");
+    background-size: auto, auto, auto, cover;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    border-top: 10px solid #2e484c;  
+    height: 250px;
+    width: 100%;
+    /* position: absolute; */
+}
+
+#header {
+    text-align: center;
+    height: 180px;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+#sub-header {
+    background-color: rgba(225,255,255,0.2);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    font-family: "juliussansone";
+    color: white;
+    font-size: 16px;
+    opacity: 0.9;
+    height: 80px;
+    width: 100%;
+
+}
+
+.ptag-text {
     display: flex;
     justify-content: center;
-    align-items: center; */
-    /* background-color: greenyellow;
-    padding: 20px 10px;
-    grid-column: 1 / 4;
-} 
+    align-items: center;
+    margin-left: 60px;
+    opacity: 0.7;
 
- #grid-container div h3,
-#grid-container div p {
-    font-family: sans-serif;
+}
+#arrow {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: verdemoderna;
+    font-size: 45px;
+    opacity: 0.6;
+}
+
+article {
+    padding-left: 40px;
+    padding-right: 35px;
+    font-family: librebaskerville-bold;
+    font-size: 0.85em;
+    line-height: 2em;
+    color: #325050;
+}
+#article-2 {
+    background-color: rgba(138,188,159,0.5);
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
+    background-size: auto, auto, cover;
+    background-repeat: repeat, repeat, no-repeat;
+    background-attachment: scroll, scroll, fixed;
+    padding-bottom: 22px;
+}
+
+h1 {
+    font-family: "juliussansone";
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 10px;
+    
+}
+
+h3 {
+    font-family: "juliussansone";
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+}
+ 
+h4 {
+    font-family: "librebaskerville";
+    opacity: 0.6;
+    color: white;
+    font-weight: lighter;
+    font-size: 12.5pt;
+
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+#footer {
+    background-image: url("http://www.csszengarden.com/214/contours.png"), url('"http://www.csszengarden.com/214/gridlines-opaque.png'), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
+    background-size: auto, auto, auto, cover;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    text-align: center;
+    font-size: 23px;
+    margin: 0;
+    width: auto;
+    height: 222px;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.footerText{
+    opacity: 0.7;
+
+}
+
+#footer > font {
+    opacity: 0.7;
+}
+
+#footer > p {
+    font-family: librebaskerville;
+}
+
+#sub-footer {
+    text-align: center;
+    background-color: #134347;
+    height: 110.19px;
+    font-family: verdemoderna;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 20px;
     font-weight: lighter;
 }
 
-#grid-container div h3 {
-    margin: 10px 0;
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#grid-container div p {
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: juliussansone;
+    background-color: #f1f7f2;    
+
+}
+
+.links a {
+    font-size: 1em;
+
+}
+#links-2 {
+    padding: 10px;
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color: rgba(138,188,159,0.5);
+}
+
+#links-2 a {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-bottom: 1px solid #a0b9ad;
+
+}
+.row{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.row p {
+    text-align: left; 
+
+}
+#border {
+    border-bottom: 1px solid #d9e3dc;
+    width: 50%;
+
+}
+.size {
+    font-family: librebaskerville;
+    display: inline-block;
+    font-size: 13px;
+}
+.span-font {
+    font-family: librebaskerville-bold;
+    display: inline-block;;
     font-size: 12px;
-} */ 
+}
+
+other {
+    text-decoration: underline dotted;
+}
+
+a {
+    text-decoration: none;
+}
+
+#transparent-text {
+    display: none;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 500px) {
+    #logo {
+        width: 60px;
+        height: 60px;
+        opacity: 0.6;
+        display: flex;
+        align-content: space-between;
+        margin-left: -70px;
+        position: absolute;
+
+    }
+   
+}
+
+@media (min-width: 601px) {
+    #logo {
+        width: 80px;
+        height: 80px;
+        opacity: 0.6;
+        display: flex;
+        align-content: space-between;
+        margin-left: -80px;
+        margin-top: -15px;
+        position: absolute;
+    } 
+    #transparent-text {
+        display: block;
+        font-family: librebaskerville-bold;
+    
+    }
+    #icon-text {
+        font-family: verdemoderna; 
+        color: #a9b995;
+        background-color: #d9e1cd;
+    }
+    #icon-font {
+        font-family: juliussansone;
+        color: #a9b995;
+    }
+}
+
+@media (min-width: 1130px) {
+    #container {
+        display: grid;
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr hdr hdr shdr shdr shdr shdr"
+            "a1 a1 a1 a1 a1 a1 a1 a1 l1 l1 l1 l1"
+            "a2 a2 a2 a2 a2 a2 a2 a2 l2 l2 l2 l2"
+            "a3 a3 a3 a3 a3 a3 a3 a3 . . . ."
+            "f f f f f f f f f f f f"
+            "sf sf sf sf sf sf sf sf sf sf sf sf";
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #header {
+        grid-area: hdr;
+        height: 250px;   
+         
+    }
+
+    #sub-header {
+        grid-area: shdr;
+        margin-top: 60px; 
+            
+
+    }
+    #logo {
+        margin-top: -20px;
+        margin-left: -100px;
+        width: 130px;
+        height: 130px;
+        opacity: 1;
+      
+
+    }
+    h1 {
+        margin-top: -10px;
+        margin-left: 60px;
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        margin-left: -80px;
+        font-size: 25px;
+    }
+
+    #article-1 {
+        grid-area: a1;
+        font-size: 100%;
+        padding-top: 60px;
+        padding-left: 150px;
+        padding-right: 100px;
+    }
+
+    #article-2 {
+        grid-area: a2;
+        font-size: 100%;
+        padding-left: 150px;
+        padding-right: 100px;
+
+
+    }
+
+    #article-3 {
+        grid-area: a3;
+        font-size: 100%;
+        padding-left: 150px;
+        padding-right: 100px;
+
+
+    }
+
+    #links-1 {
+        grid-area: l1;
+    }
+
+    #links-2 {
+        grid-area: l2;
+        color: #616857;
+        padding-left: 100px;
+    }
+   #links-2 a {
+       width: 300px;
+       height: 50px;
+
+   }
+
+    #footer {
+        grid-area: f;
+    }
+
+    #sub-footer {
+        grid-area: sf;
+    }
+    .links {
+        color: #616857;
+        grid-template-columns: 1fr;
+        padding-left: 100px;
+        
+    }
+    .row{
+        padding-left: 20px;
+
+    }
+    .row p {
+        text-align: left; 
+    
+    }
+    
+
+    
+}
