@@ -3,8 +3,6 @@ const User = require('../models/user.js')
 const authRouter = express.Router()
 const jwt = require('jsonwebtoken')
 
-
-
 authRouter.post("/signup", (req, res, next) => {
     //does a user by the submitted username already exist
     User.findOne({username: req.body.username.toLowerCase()}, (err, user) => {

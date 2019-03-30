@@ -611,3 +611,14 @@ function societyName(friends){
 console.log(societyName(["Jim", "Orwell", "Bob"]))
 ///
 console.log("this is a lot of code")
+
+
+function canCapture([yourRook, opponentsRook]) {
+	yourRook = yourRook.split('')
+	opponentsRook = opponentsRook.split('')
+	console.log(yourRook + "  " + opponentsRook  )
+	.sort 
+	
+}
+
+console.log(canCapture(['A4', 'B4']))
