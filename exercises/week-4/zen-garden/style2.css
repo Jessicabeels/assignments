@@ -1,0 +1,302 @@
+/* Specifing Row height */
+/* Media queries */
+/* When to set widths and heights */
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+* {
+    margin: 0;
+    font-size: 35px;
+    /* box-sizing: border-box; */
+}
+
+
+#zen-grid-container {
+    display: grid;
+}
+
+#zen-grid-container header:nth-child(1){
+    background-color: green;
+    background-image: url(http://www.csszengarden.com/214/huntington.jpg);
+    background-size: cover;
+    background-position: center;
+    /* 1131 make biggger image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    color: white;
+    position: relative;
+    
+}
+
+
+.overlay {
+    background-image: url("http://www.csszengarden.com/214/gridlines.png");
+    /* z-index: 10; */
+    /* background-size: cover; */
+    background-repeat: repeat;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border-top: 20px solid rgb(5, 61, 61);
+    
+}
+
+
+@font-face { 
+    font-family: 'verdemoderna';
+    src: url('verdemoderna.eot');
+    src: url('verdemoderna.eot?#iefix') format('embedded-opentype'),
+    url('verdemoderna.woff') format('woff'),
+    url('verdemoderna.ttf') format('truetype'),
+    url('verdemoderna.svg#verdemoderna') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* bar postion is absolute, when its full screen change to inline block */
+.header-text > h1 {
+    /* font-size: 10px; */
+    font-family: 'Julius Sans One';
+    /* download and import fonts */
+    font-weight: 40;
+    font-size: 28px;
+    text-align: center;
+    /* margin-bottom: 110px; */
+
+}
+
+.header-text > h4 {
+    font-family: 'Libre Baskerville';
+    font-size: 50%;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #ffffff99;
+}
+
+.icon {
+    /* /* background-image: url(enso.svg); */
+    height: 100px;
+    padding: 20px;
+    
+}
+
+body {
+    font-size: 13px;
+    margin: 20px;
+}
+
+section {
+    background-color: white;
+    color: rgb(85, 83, 83);
+    line-height: 25px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px;
+}
+
+section {
+    
+    font-size: 15px;
+    font-family: sans-serif;
+    
+}
+
+.section1 > p, .section2 > p, span, .section3 > p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.section1 > h2, .section2 > h2, .section3 > h2{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+#zen-grid-container section:nth-child(2){
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+
+
+
+#zen-grid-container section:nth-child(3){
+    background-color: rgb(210, 235, 217);
+    background-image: url(http://www.csszengarden.com/214/contours@2x.png), url(http://www.csszengarden.com/214/bamboo.png);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    font-size: 13px;
+    /* width: 100%; */
+    margin: 30px;
+
+}
+
+#zen-grid-container section:nth-child(4){
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    /* width: 100%; */
+    margin: 20px;
+}
+
+.section4 {
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url("http://www.csszengarden.com/214/koi.jpg") ;
+    background-color: teal;
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff99;
+    background-size: 100%;
+    height: 200px;
+}
+
+
+
+
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.link-container a {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 420px){
+    .vanish {
+        display: none;
+    }
+    .icon { 
+        /* position: absolute; */
+        top: 0;
+        height: 50px;
+        }
+    #zen-grid-container header:nth-child(1){
+        width: 400px;
+    }
+    .icon-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        
+    }
+    .overlay {
+        flex-direction: column;
+        background-image: url("http://www.csszengarden.com/214/gridlines.png"), url('http://www.csszengarden.com/214/contours@2x.png');
+        
+    }
+    .header-text {
+        margin-bottom: 90px;
+    }
+
+}
+
+
+@media (min-width: 420px) {
+    .overlay {
+        background-image: url("http://www.csszengarden.com/214/gridlines.png"), url('http://www.csszengarden.com/214/contours@2x.png');
+        
+    }
+}
+
+
+
+@media only screen and (min-width: 700px){
+    #zen-grid-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #zen-grid-container header:nth-child(1){
+        grid-column: 1 / 3;
+    }
+    
+    #zen-grid-container section:nth-child(2){
+        grid-column: 1 / 2;
+    }
+
+    #zen-grid-container section:nth-child(3){
+        grid-column: 1 / 2;
+    }
+
+    #zen-grid-container section:nth-child(4){
+        grid-column: 1 / 2;
+    }
+
+    #zen-grid-container footer:nth-child(5){
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly
+    }
+
+    .link-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+    
+}                          
+
+
+
+
+
+/* 
+/* 
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#grid-container div { */
+    /* width: 100%;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: greenyellow;
+    padding: 20px 10px;
+    grid-column: 1 / 4;
+} 
+ #grid-container div h3,
+#grid-container div p {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#grid-container div h3 {
+    margin: 10px 0;
+}
+#grid-container div p {
+    font-size: 12px;
+} */ 
