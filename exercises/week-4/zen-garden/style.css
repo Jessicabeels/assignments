@@ -110,6 +110,8 @@
     font-family: 'Libre Baskerville', sans-serif;
 }
 
+
+
 /* /////////////////////SECTION 0 HEADER /////////////////////////////////// */
 
 /* ///////////////////////SECTION pre-sets ////////////////////////////// */
@@ -141,6 +143,8 @@ dotted {
 .section1{
 
 }
+
+
 
 .section2 {
     
@@ -283,7 +287,7 @@ dotted {
 
 /* ///////////////MOBILE ///////////////////////////////////////// */
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 440px){
     .vanish {
         display: none;
     }
@@ -293,11 +297,18 @@ dotted {
         right: 150px;
         height: 95px;
         }
-    
-    /* .overlay-crosses {
-        display: none;
-    } */
 
+        .trans-button2 > h2, .arrow {
+            display: none;
+        }
+    
+       
+}
+
+@media only screen and (max-width: 1130px){
+    .trans-button2 > h2, .arrow {
+        display: none;
+    }
 }
 
 
@@ -333,21 +344,16 @@ dotted {
 @media(min-width: 1130px) {
     .container {
         display: grid;
-        grid-template-areas:
-            "hdr hdr hdr hdr hdr hdr hdr hdr shdr shdr shdr shdr"
-            "a1 a1 a1 a1 a1 a1 a1 a1 l1 l1 l1 l1"
-            "a2 a2 a2 a2 a2 a2 a2 a2 l2 l2 l2 l2"
-            "a3 a3 a3 a3 a3 a3 a3 a3 . . . ."
-            "f f f f f f f f f f f f"
-            "sf sf sf sf sf sf sf sf sf sf sf sf";
-        grid-template-columns: repeat(12, 1fr);
         grid-template-columns: 2fr 1fr;
     }
 
 
+
+
     .header-container {
         /* //or overlay-crosses */
-        grid-area: hdr;
+        grid-column: 1/2;
+        grid-row: 1/2;
         height: 310px; 
     }
 
@@ -358,8 +364,6 @@ dotted {
         width: 100%;
         color: white;
         display: flex; 
-        align-items: center;
-        justify-content: center;
     }
     
     .overlay-crosses{
@@ -367,24 +371,25 @@ dotted {
     }
     
     .icon {
-        height: 180px;
-        width: 180px;
+        height: 150px;
+        width: 150px;
         padding: 20px; 
-        opacity: 0.6;
-       
+        opacity: 0.8;
+        display: flex;
+        
     }
     
     
     .header-text > h1 {
         font-family:'juliussansone';
         font-weight: 40;
-        font-size: 28px;
+        font-size: 48px;
         text-align: center;
     }
     
     .header-text > h4 {
         font-family: 'Libre Baskerville';
-        font-size: 20px;
+        font-size: 25px;
         padding: 10px;
         font-weight: 40;
         text-align: center;
@@ -393,18 +398,17 @@ dotted {
     }
     
     .trans-button {
-        display: grid;
+        /* display: grid; */
         position: absolute;
         height: 70px;
         width: 100%;
         background-color:rgba(225,255,255,0.18);
-        display: grid;
         margin-top: 80px;
         grid-template-columns: 4fr 1fr;
-        
+        display: none;
     }
     
-    .trans-button > h2 {
+    .trans-button > h2{
         padding: 20px 20px 40px 80px; 
         font-size: 15px;
         color: #ffffff99;
@@ -425,13 +429,38 @@ dotted {
     }
     
 
-    .trans-button {
-        grid-area: shdr;
-        display: none;
-        height: 250px;
+    .trans-button2 {
+        /* position: absolute; */
+        border-top: 10px solid rgb(10, 64, 58);
+        height: 310px;
         grid-column: 2/3;
-        grid-row: 1/3;
+        grid-row: 1/2;
+        background-image: url("http://www.csszengarden.com/214/contours.png"),url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/huntington.jpg")
     }
+
+    .trans-button2 > h2 {
+        text-align: center;
+        margin-left: 90px;
+        background-color:rgba(225,255,255,0.18);
+        padding: 20px;
+        width: 60%;
+        color: #ffffff99;
+        font-family:'juliussansone';
+        margin-top: 150px;
+        font-size: 20px;
+    }
+
+    .trans-button2 > .arrow {
+        display: flex;
+        font-size: 50px;
+        margin-left: 490px;
+        margin-top: 0px;
+        color: #ffffff99;
+       
+        font-family: 'Libre Baskerville', sans-serif;
+    }
+
+
 
     h1 {
         margin-top: -10px;
@@ -448,7 +477,8 @@ dotted {
     }
 
     .section1 {
-        grid-area: a1;
+        grid-column: 1/2;
+        grid-row: 2/3;
         font-size: 100%;
         padding-top: 60px;
         padding-left: 150px;
@@ -456,69 +486,71 @@ dotted {
     }
 
     .section2 {
-        grid-area: a2;
+        grid-column: 1/2;
+        grid-row: 3/4;
         font-size: 100%;
         padding-left: 150px;
         padding-right: 100px;
     }
 
     .section3 {
-        grid-area: a3;
+        grid-column: 1/2;
+        grid-row: 4/5;
         font-size: 100%;
         padding-left: 150px;
         padding-right: 100px;
     }
 
     .bio {
-        grid-area: f;
+        grid-column: 1/3;
+        grid-row: 5/6;
     }
 
     .icons-circles{
-        grid-area: sf;
+        grid-column: 1/3;
+        grid-row: 7/8;
     }
 
 
-    
-
-
-    /* .links1 {
-        grid-area: l1;
+    .links1 {
         flex-direction: column;
         display: flex;
         grid-column: 2/3;
         grid-row: 2/3;
-        grid-template-columns: 1fr;
+        width: 100%;
+       
     }
 
     .links2 {
         grid-area: l2;
         color: #616857;
         padding-left: 100px;
+        grid-column: 2/3;
+        grid-row: 3/3;
         display: flex;
+        flex-direction: column;
+
     }
 
-    .links2 > a {
-        width: 300px;
+
+
+    /* .links2 > a {
+        width: 200px;
         height: 50px;
  
-    }
+    } */
 
     .links {
         color: #616857;
-        grid-template-columns: 1fr;
-        padding-left: 100px;
-        
+        background-color: #edf4f0;
+        display: flex;
+        flex-direction: column;
+        grid-row: 2;
+        grid-column: 2/3;
+        width: 100%;
+        height: 100%;
     }
-    .row{
-        padding-left: 20px;
-
-    }
-    .row p {
-        text-align: left; 
-    
-    }
-    
- */
+  
 
 
 }
