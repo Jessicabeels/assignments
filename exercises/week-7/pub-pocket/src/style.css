@@ -139,6 +139,7 @@ a:link {
     flex-direction: row;
     height: 35px;
     margin-bottom: 50px;
+    
 }
 .search {
     margin-top: 35px;
@@ -627,8 +628,8 @@ div.transbox {
     left: 0;
     transition: left 800ms linear ;
     z-index: 3; /* nav is the top layer */
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,72,121,0.07746848739495793) 0%, rgba(55,112,193,0.6292892156862745) 42%);
+    background: rgb(1, 1, 8);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,72,121,0.07746848739495793) 0%, rgba(55,112,193,0.6292892156862745) 42%); */
 }
 
 .nav-open {
