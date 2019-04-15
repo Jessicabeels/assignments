@@ -1,14 +1,6 @@
 const asciiConvert = (c) => {
-    if (c =  65){
-        return "A"
-    } else if (c = 109 ){
-        return 'm'
-    } else if (c = 91){
-        return ']'
-    } else if (c = 92){
-        return '/'
-    }
+    return c.charCodeAt(0)
 }
 
 
-console.log(asciiConvert(65))
+console.log(asciiConvert('A m / [ '))
