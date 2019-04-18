@@ -40,3 +40,10 @@ const syllaCount = (word) => {
 }
 
 console.log(syllaCount('on-o-mat-o-poe-ia'))
+
+
+function numberArgs(...args) {
+	return args.length
+}
+
+console.log(numberArgs("1", "2", "3", " 4"))
