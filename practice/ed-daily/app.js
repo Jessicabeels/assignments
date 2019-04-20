@@ -47,3 +47,30 @@ function numberArgs(...args) {
 }
 
 console.log(numberArgs("1", "2", "3", " 4"))
+
+
+//additiveInverse([5, -7, 8, 3]) ➞ [-5, 7, -8, -3]
+
+function additiveInverse(arr) {
+	return arr.map ( x => x * -1)
+}
+
+console.log(additiveInverse([-25, 17, 4, -57]))
+
+
+const fizzBuzz = () => {
+    for (let num = 0; num <= 100; num++){
+        if (num % 5  && num % 3){ 
+            console.log('fizzbuzz')
+        } else if (num %  3){
+            console.log('fizz')
+        } else if ( num % 5){
+            console.log('buzz')
+        } else {
+            console.log(num)
+        }
+}
+
+}
+
+console.log(fizzBuzz(100))
