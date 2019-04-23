@@ -74,3 +74,16 @@ const fizzBuzz = () => {
 }
 
 console.log(fizzBuzz(100))
+
+//You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) 
+//on your farm. Return the total number of legs on your farm.
+
+const numLegs = (chickens, cows, pigs) => {
+    let legsC = chickens * 2
+    let legsCow = cows * 4
+    let legsPigs = pigs * 4
+    return legsC + legsCow  + legsPigs
+}
+
+
+console.log(numLegs(5, 2, 8))
