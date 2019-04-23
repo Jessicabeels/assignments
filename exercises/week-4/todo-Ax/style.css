@@ -5,7 +5,7 @@
 
 .header {
     text-align: center;
-    font-size: 40pt;
+    font-size: 50pt;
     color: rgb(0, 0, 0);
     letter-spacing: 20px;
     background-image: url("https://previews.123rf.com/images/leungchopan/leungchopan1506/leungchopan150600626/41731819-cork-board-background.jpg");
@@ -14,8 +14,8 @@
 }
 
 .header:hover {
-   color: #45a049;
-   -webkit-text-stroke: black 3px;
+   
+   /* -webkit-text-stroke: black 3px; */
 }
 
 

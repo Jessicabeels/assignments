@@ -87,3 +87,12 @@ const numLegs = (chickens, cows, pigs) => {
 
 
 console.log(numLegs(5, 2, 8))
+
+
+//triArea(3, 2) ➞ 3
+
+const triArea = (base, height) => {
+    return (base * height) / 2
+}
+
+console.log(triArea(10, 10))
