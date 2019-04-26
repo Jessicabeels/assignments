@@ -103,3 +103,12 @@ function concat(arr1, arr2) {
 }
 
 console.log(concat([1, 3, 5], [2, 6, 8]))
+
+
+//smallerNum("21", "44") ➞ "21"
+
+const smallerNum = (n1, n2) => {
+   return Math.min(n1, n2).toString()
+}
+
+console.log(smallerNum('1500', '16'))
