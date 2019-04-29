@@ -114,4 +114,4 @@ const smallerNum = (n1, n2) => {
 console.log(smallerNum('1500', '16'))
 
 
-console.log('hi')
+console.log('hi you')
