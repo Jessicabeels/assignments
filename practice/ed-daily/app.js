@@ -114,4 +114,28 @@ const smallerNum = (n1, n2) => {
 console.log(smallerNum('1500', '16'))
 
 
-console.log('hi you')
+//reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+
+const revArr = (arr) => {
+    return arr.reverse()
+}
+
+console.log(revArr([ 1, 2, 3, 4]))
+
+const nextElement = (arr) => {
+    let increment =  -1 * (arr[arr.length - 2] - arr[arr.length -1])
+    return increment + arr[arr.length - 1]
+}
+
+console.log(nextElement([2, 2, 2, 2, 2]))
+
+//check([1, 2, 3, 4, 5], 3) ➞ true
+
+const checkElement  = ( arr, el) => {
+   if (arr.includes(el)){
+       return true
+   } else {
+       return false
+   }
+}
+console.log(checkElement([1, 2, 3, 4, 5], 3))
