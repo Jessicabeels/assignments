@@ -163,3 +163,15 @@ const Match = (s1, s2) => {
 }
 
 console.log(Match("hello", "hELLo"))
+
+//kToK(4, 2) ➞ true
+
+const kToK = (n,k) => {
+    if(Math.pow(k,k) === n){
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(kToK(4, 2))
