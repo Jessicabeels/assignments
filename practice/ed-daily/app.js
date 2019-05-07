@@ -141,14 +141,25 @@ const checkElement  = ( arr, el) => {
 console.log(checkElement([1, 2, 3, 4, 5], 3))
 
 
-//existsHigher([5, 3, 15, 22, 4], 10) ➞ true
-const existsHigher = (arr, el) => {
-    if (arr.some()){
+// //existsHigher([5, 3, 15, 22, 4], 10) ➞ true
+// const existsHigher = (arr, el) => {
+//     if (arr.some()){
+//         return true
+//     } else  {
+//         return false
+//     }
+    
+// }
+
+// console.log(existsHigher([5, 3, 15, 22, 4], 10))
+
+//match("hello", "hELLo") ➞ true
+const Match = (s1, s2) => {
+    if (s1.toLowerCase( ) === s2.toLowerCase()){
         return true
-    } else  {
+    } else {
         return false
     }
-    
 }
 
-console.log(existsHigher([5, 3, 15, 22, 4], 10))
+console.log(Match("hello", "hELLo"))
