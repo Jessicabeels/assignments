@@ -138,7 +138,7 @@ const checkElement  = ( arr, el) => {
        return false
    }
 }
-console.log(checkElement([1, 2, 3, 4, 5], 3))
+// console.log(checkElement([1, 2, 3, 4, 5], 3))
 
 
 // //existsHigher([5, 3, 15, 22, 4], 10) ➞ true
@@ -162,7 +162,7 @@ const Match = (s1, s2) => {
     }
 }
 
-console.log(Match("hello", "hELLo"))
+// console.log(Match("hello", "hELLo"))
 
 //kToK(4, 2) ➞ true
 
@@ -174,4 +174,9 @@ const kToK = (n,k) => {
     }
 }
 
-console.log(kToK(4, 2))
+// console.log(kToK(4, 2))
+
+let x = /\d/
+x = 'pg14950v'
+console.log(x)
+
