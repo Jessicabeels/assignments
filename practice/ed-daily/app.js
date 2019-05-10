@@ -180,3 +180,20 @@ let x = /\d/
 x = 'pg14950v'
 console.log(x)
 
+//differenceMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82
+// Smallest number is -50, biggest is 32.
+
+const differenceMaxMin = (arr) => {
+    let result = Math.max(...arr) - Math.min(...arr)
+    return result
+}
+
+console.log(differenceMaxMin([10, 4, 1, 4, -10, -50, 32, 21]))
+
+//additiveInverse([5, -7, 8, 3]) ➞ [-5, 7, -8, -3]
+
+const addInverse = (arr) => {
+    return arr.map ( i => i * -1)
+}
+
+console.log(addInverse([5, -7, 8, 3]))
