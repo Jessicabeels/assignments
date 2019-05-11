@@ -207,5 +207,11 @@ function removeVowels(str) {
   //sameCase("hello") ➞ true
 
   const sameCase = (str) => {
-      if (str[i] ===)
+      if (/^[a-z]+$/.test(str) || (/^[A-Z]+$/.test(str))){
+          return true
+      } else {
+          return false
+      }
   }
+
+  console.log(sameCase('HELLO'))
