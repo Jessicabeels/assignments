@@ -197,3 +197,15 @@ const addInverse = (arr) => {
 }
 
 console.log(addInverse([5, -7, 8, 3]))
+
+function removeVowels(str) {
+    return str.replace(/[aeiou]/g, "")
+  }
+
+  console.log(removeVowels('apple'))
+
+  //sameCase("hello") ➞ true
+
+  const sameCase = (str) => {
+      if (str[i] ===)
+  }
