@@ -215,3 +215,16 @@ function removeVowels(str) {
   }
 
   console.log(sameCase('HELLO'))
+
+  function isOmnipresent(arr, val) {
+    for ( let i = 0; i < 100; i++){
+        if (arr[i].includes( val)){
+            return true
+        } else {
+            return false
+        }
+    }
+	
+}
+
+console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 9))
