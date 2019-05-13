@@ -228,3 +228,30 @@ function removeVowels(str) {
 }
 
 console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 9))
+
+// retrieveMajor("6.1.9") ➞ "6"
+
+// retrieveMinor("6.1.9") ➞ "1"
+
+// retrievePatch("6.1.9") ➞ "9"
+
+const retrieveMajor = (str) => {
+    let splitted = str.split('.')
+    return splitted[0]
+}
+
+console.log(retrieveMajor("6.1.9"))
+
+const retrieveMinor = (str) => {
+    let splitted = str.split('.')
+    return splitted[1]
+}
+
+console.log(retrieveMinor("6.1.9"))
+
+const retrievePatch = (str) => {
+    let splitted = str.split('.')
+    return splitted[2]
+}
+
+console.log(retrievePatch("6.1.9"))
