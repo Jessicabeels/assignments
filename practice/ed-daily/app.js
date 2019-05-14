@@ -255,3 +255,25 @@ const retrievePatch = (str) => {
 }
 
 console.log(retrievePatch("6.1.9"))
+
+//addUp(4) ➞ 10
+
+const addUp = (num) => {
+  return(num*(num+1))/2
+}
+
+console.log(addUp(600))
+
+// calcDeterminant([
+//     [5, 3],
+//     [3, 1]
+//   ]) ➞ -4
+
+const calcDeterminant =(M) => {
+    return  (M[0][0]*M[1][1])-(M[0][1]*M[1][0]);
+}
+
+console.log(calcDeterminant( [
+    [1, 2],
+    [3, 4]
+  ]))
