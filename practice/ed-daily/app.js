@@ -277,3 +277,13 @@ console.log(calcDeterminant( [
     [1, 2],
     [3, 4]
   ]))
+
+
+  
+
+  const hashPlusCount = str => [
+      (str.match(/#/g) || []).length,
+      (str.match(/\+/g) || []).length,
+  ]
+
+  console.log(hashPlusCount("##+++#"))
