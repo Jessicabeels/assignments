@@ -287,3 +287,19 @@ console.log(calcDeterminant( [
   ]
 
   console.log(hashPlusCount("##+++#"))
+
+  //addEnding(["clever", "meek", "hurried", "nice"], "ly")
+//➞ ["cleverly", "meekly", "hurriedly", "nicely"]
+
+
+
+const addEnding = (arr, end) => {
+    let result = []
+    for (let i = 0; i < arr.length; i++){
+        result[i] = arr[i] + end
+    }
+    return result
+  
+}
+
+console.log(addEnding(["clever", "meek", "hurried", "nice"], "ly"))
