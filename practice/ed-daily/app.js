@@ -303,3 +303,14 @@ const addEnding = (arr, end) => {
 }
 
 console.log(addEnding(["clever", "meek", "hurried", "nice"], "ly"))
+
+function checkAllEven(arr) {
+    
+    if( arr.every( x=> x % 2 === 0)){
+        return true
+    } else {
+        return false
+    }
+  }
+
+  console.log(checkAllEven([ 2, 2, 4]))
