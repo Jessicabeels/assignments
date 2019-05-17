@@ -314,3 +314,34 @@ function checkAllEven(arr) {
   }
 
   console.log(checkAllEven([ 2, 2, 4]))
+
+  //joinPath("portion1", "portion2") ➞ "portion1/portion2"
+
+
+//   const joinPath = (portion1, portion2) => {
+//       if (portion2.startsWith("/") || portion1.endsWith("/")){
+//           return portion1.concat(portion2)
+//       } else if (!portion1.endsWith("/") || !portion2.startsWith("/")){
+//         return portion1.concat("/" + portion2)
+//       } else if (portion2.startsWith("/") && portion1.endsWith("/")){
+//           return portion1.replace('/', '//').concat(+ portion2)
+//       }
+      
+    
+//   }
+
+//   console.log(joinPath("portion1/", "/portion2"))
+
+//   function joinPath(portion1, portion2) {
+// 	let p1 = portion1.includes('/')? portion1.slice(0,-1) : portion1
+// 	let p2 = portion2.includes('/')? portion2.slice(1) : portion2
+// 	return `${p1}/${p2}`
+// }
+
+const joinPath = (portion1, portion2) => {
+    let p1 = portion1.includes('/')? portion1.slice(0,-1) : portion1
+    let p2 = portion2.includes('/')? portion2.slice(1) : portion2
+    return `${p1}/${p2}`
+}
+
+console.log(joinPath("portion1/", "/portion2"))
