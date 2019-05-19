@@ -345,3 +345,19 @@ const joinPath = (portion1, portion2) => {
 }
 
 console.log(joinPath("portion1/", "/portion2"))
+
+//firstArg(1, 2, 3) ➞ 1
+
+//lastArg(1, 2, 3) ➞ 3
+
+const firstArg = (...arr) => {
+    return arr.shift()
+}
+
+console.log(firstArg(1, 2, 3))
+
+const lastArg = (...arr) => {
+    return arr.pop()
+}
+
+console.log(lastArg(1, 2, 3))
