@@ -361,3 +361,16 @@ const lastArg = (...arr) => {
 }
 
 console.log(lastArg(1, 2, 3))
+
+//firstVowel("apple") ➞ 0
+
+const firstVowel = (str) => {
+    for (let i =0; i < str.length; i++ ){
+        if (str[i] === 'a'|| 'e'|| 'i'|| 'o'|| 'u'){
+            return str.indexOf(str[i])
+        }
+    }
+    
+}
+
+console.log(firstVowel('hello'))
