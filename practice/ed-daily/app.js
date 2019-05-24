@@ -365,12 +365,16 @@ console.log(lastArg(1, 2, 3))
 //firstVowel("apple") ➞ 0
 
 const firstVowel = (str) => {
-    for (let i =0; i < str.length; i++ ){
-        if (str[i] === 'a'|| 'e'|| 'i'|| 'o'|| 'u'){
-            return str.indexOf(str[i])
-        }
-    }
+    return str.search('a'|| 'e'|| 'i'|| 'o'|| 'u')
+    // for (let i =0; i < str.length; i++ ){
+    //     if (str.search('a'|| 'e'|| 'i'|| 'o'|| 'u')){
+    //         return str.indexOf(str[i])
+    //     }
+    // }
     
 }
 
 console.log(firstVowel('hello'))
+
+
+console.log('hi bye hiii')
