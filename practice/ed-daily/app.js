@@ -382,3 +382,12 @@ console.log('hi bye hiii')
 console.log('sfgjhksdfghsfjhkg')
 
 console.log("i need to code more")
+
+
+
+function nextEdge(side1, side2) {
+	let res = (side1 + side2) - 1
+	return res
+}
+
+console.log(nextEdge(1,6))
