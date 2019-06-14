@@ -391,3 +391,12 @@ function nextEdge(side1, side2) {
 }
 
 console.log(nextEdge(1,6))
+
+
+const helloName = name => {
+    return "Hello " + name
+}
+
+
+
+console.log(helloName("Gerald"))
