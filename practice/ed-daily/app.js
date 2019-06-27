@@ -58,22 +58,22 @@ function additiveInverse(arr) {
 console.log(additiveInverse([-25, 17, 4, -57]))
 
 
-const fizzBuzz = () => {
-    for (let num = 0; num <= 100; num++){
-        if (num % 5  && num % 3){ 
-            console.log('fizzbuzz')
-        } else if (num %  3){
-            console.log('fizz')
-        } else if ( num % 5){
-            console.log('buzz')
-        } else {
-            console.log(num)
-        }
-}
+// const fizzBuzz = () => {
+//     for (let num = 0; num <= 100; num++){
+//         if (num % 5  && num % 3){ 
+//             console.log('fizzbuzz')
+//         } else if (num %  3){
+//             console.log('fizz')
+//         } else if ( num % 5){
+//             console.log('buzz')
+//         } else {
+//             console.log(num)
+//         }
+// }
 
-}
+// }
 
-console.log(fizzBuzz(100))
+// console.log(fizzBuzz(100))
 
 //You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) 
 //on your farm. Return the total number of legs on your farm.
@@ -400,3 +400,31 @@ const helloName = name => {
 
 
 console.log(helloName("Gerald"))
+
+//volumeOfBox({ width: 2, length: 5, height: 1 }) ➞ 10
+
+
+
+function volumeOfBox(sizes) {
+	return sizes.width * sizes.length * sizes.height;
+}
+
+console.log(volumeOfBox(6))
+
+
+const fizzBuzz = (i) => {
+    for ( let i = 0; i <= 100; i++ ){
+        if(i % 5 === 0){
+            console.log("fizz")
+        }else if (i % 3 === 0){
+            console.log("buzz")
+        } else if (i % 3 === 0 && i % 5 === 0){
+            console.log("fizzbuzz")
+        } else {
+            console.log(i)
+        }
+    }
+    
+}
+
+console.log(fizzBuzz(90))
