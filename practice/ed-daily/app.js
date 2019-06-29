@@ -427,4 +427,18 @@ const fizzBuzz = (i) => {
     
 }
 
-console.log(fizzBuzz(90))
+console.log(fizzBuzz())
+
+
+//stackOfBoxes(3) -> 7
+//stackOfBoxes(4) -> 13
+
+const stackOfBoxes = (n) => {
+	return Math.pow(n, 2)
+}
+
+console.log(stackOfBoxes(2))
+
+
+
+
