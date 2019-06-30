@@ -441,4 +441,35 @@ console.log(stackOfBoxes(2))
 
 
 
+// isBetween(start_word, end_word, word)
+// Examples
+// isBetween("apple", "banana", "azure") ➞ true
 
+// isBetween("monk", "monument", "monkey") ➞ true
+
+// isBetween("bookend", "boolean", "boost") ➞ false
+
+
+const isBetween = (first, last, word) => {
+    
+    if (first < word < last ){
+        return true
+    }  else {
+        return false
+    }
+
+}
+
+console.log(isBetween("monk", "monument", "monkey"))
+
+const alpsha = (w1, w2) => {
+    if (w1 > w2){
+        return true
+    }
+}
+
+console.log(alpsha('Glow', 'Glee'))
+
+const sorting = () => {
+    
+}
