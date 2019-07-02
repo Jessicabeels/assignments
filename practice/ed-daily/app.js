@@ -450,9 +450,9 @@ console.log(stackOfBoxes(2))
 // isBetween("bookend", "boolean", "boost") ➞ false
 
 
-const isBetween = (first, last, word) => {
-    
-    if (first < word < last ){
+const isBetween = (w1, w2, mid) => {
+
+    if (w1 < mid && mid  < w2 ){
         return true
     }  else {
         return false
@@ -460,16 +460,18 @@ const isBetween = (first, last, word) => {
 
 }
 
-console.log(isBetween("monk", "monument", "monkey"))
+console.log(isBetween("apple", "banana", "azure") )
 
-const alpsha = (w1, w2) => {
-    if (w1 > w2){
-        return true
-    }
-}
+// const alpsha = (w1, w2) => {
+//     if (w1 < w2){
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
-console.log(alpsha('Glow', 'Glee'))
+// console.log(alpsha('Z', 'A'))
 
-const sorting = () => {
-    
-}
+// const sorting = () => {
+
+// }
