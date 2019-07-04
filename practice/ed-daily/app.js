@@ -437,13 +437,13 @@ const stackOfBoxes = (n) => {
 	return Math.pow(n, 2)
 }
 
-console.log(stackOfBoxes(2))
+console.log(stackOfBoxes(9))
 
 
 
 // isBetween(start_word, end_word, word)
 // Examples
-// isBetween("apple", "banana", "azure") ➞ true
+// isBetween("apple", "banana", "azure") ➞ true , true
 
 // isBetween("monk", "monument", "monkey") ➞ true
 
@@ -475,3 +475,11 @@ console.log(isBetween("apple", "banana", "azure") )
 // const sorting = () => {
 
 // }
+
+console.log("hi")
+
+const Mathy = (m, n) => {
+    return m + n
+}
+
+console.log(Mathy(1,2))
