@@ -491,3 +491,25 @@ const length =(n) => {
 }
 
 console.log(length("apple"))
+
+//search([1, 5, 3], 5) ➞ 1
+
+const search = (arr, num) => {
+    return arr.indexOf(num)
+}
+
+console.log(search([9,8,3], 3))
+
+//search([1, 2, 3, 4], 3) ➞ 2
+
+// const search2 = (arr,i ) => {
+//     if (arr.every() > i ){
+//         return arr.indexOf(num)
+//     } else if (arr[i] < arr(i + 1)) {
+//         return arr.indexOf(num)
+//     } else {
+//         return -1
+//     }
+// }
+
+// console.log(search2(1,2,3,4), 3)
