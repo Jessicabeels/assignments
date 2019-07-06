@@ -483,3 +483,11 @@ const Mathy = (m, n) => {
 }
 
 console.log(Mathy(1,2))
+
+//length("apple") ➞ 5
+
+const length =(n) => {
+    return n.length
+}
+
+console.log(length("apple"))
