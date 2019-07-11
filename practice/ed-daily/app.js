@@ -513,3 +513,9 @@ console.log(search([9,8,3], 3))
 // }
 
 // console.log(search2(1,2,3,4), 3)
+
+const mathies = (b,h) => {
+    return (b * h)/2
+}
+
+console.log(mathies(1,7))
